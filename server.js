@@ -15,6 +15,8 @@ var getPolicies = require("./data/getPolicies");
 var getUsers = require("./data/getUsers");
 var getRoleWithUsers = require("./data/getRoleWithUsers");
 var getGroupWithUsers = require("./data/getGroupWithUsers");
+var getRoleWithPolicies = require("./data/getRoleWithPolicies");
+var getRoleWithGroups = require("./data/getRoleWithGroups");
 
 app.get("/getuserDetails", function (req, res) {
   console.log("/getuserDetails");
@@ -76,6 +78,16 @@ app.get("/getGroupWithUsers", function (req, res) {
   res.status(200).send(getGroupWithUsers());
 });
 
+app.get("/getRoleWithPolicies", function (req, res) {
+  console.log("/getRoleWithPolicies");
+  res.status(200).send(getRoleWithPolicies());
+});
+
+app.get("/getRoleWithGroups", function (req, res) {
+  console.log("/getRoleWithGroups");
+  res.status(200).send(getRoleWithGroups());
+});
+
 app.post("/postUserRole", function (req, res) {
   console.log("/postUserRole");
   res.status(200).send({ id: 1 });
@@ -88,6 +100,26 @@ app.post("/postUserGroup", function (req, res) {
 
 app.put("/postUserRole/:id", function (req, res) {
   console.log("/postUserRole");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/postRoleGroup", function (req, res) {
+  console.log("/postRoleGroup");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/postRolePolicy", function (req, res) {
+  console.log("/postRolePolicy");
+  res.status(200).send({ id: 1 });
+});
+
+app.put("/postRolePolicy/:id", function (req, res) {
+  console.log("/postRolePolicy");
+  res.status(200).send({ id: 1 });
+});
+
+app.put("/postRoleGroup/:id", function (req, res) {
+  console.log("/postRoleGroup");
   res.status(200).send({ id: 1 });
 });
 
