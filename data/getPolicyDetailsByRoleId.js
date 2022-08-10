@@ -2,7 +2,7 @@ module.exports = () => {
   return [
     {
       id: "1",
-      name: "Asset Management",
+      name: "Application Framework",
       nodeId: "1",
       pages: [
         {
@@ -46,32 +46,58 @@ module.exports = () => {
       pages: [
         {
           id: "1",
-          name: "User Management",
+          name: "Entity Management",
           nodeId: "8",
           policies: [
             {
               id: "1",
-              name: "Create user",
+              name: "Create entity",
               nodeId: "9",
               isAccessible: true,
             },
             {
               id: "2",
-              name: "Update user",
+              name: "Update entity",
               nodeId: "10",
               isAccessible: false,
             },
             {
               id: "3",
-              name: "Delete user",
+              name: "Delete entity",
               nodeId: "11",
               isAccessible: false,
             },
             {
               id: "4",
               nodeId: "12",
-              name: "View user",
+              name: "View entity",
               isAccessible: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Asset Management",
+      nodeId: "13",
+      pages: [
+        {
+          id: "1",
+          name: "Asset Management",
+          nodeId: "14",
+          policies: [
+            {
+              id: "1",
+              name: "Add Aset",
+              nodeId: "15",
+              isAccessible: true,
+            },
+            {
+              id: "1",
+              name: "Update Asset",
+              nodeId: "16",
+              isAccessible: true,
             },
           ],
         },
