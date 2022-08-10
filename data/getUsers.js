@@ -2,6 +2,7 @@ module.exports = () => {
   return [
     {
       id: "1",
+      title: { id: "1", name: "Mr" },
       userName: "John Doe",
       firstName: "John",
       lastName: "Doe",
