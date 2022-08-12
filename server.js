@@ -307,6 +307,11 @@ app.get("/getPolicyDetailsByRoleId", function (req, res) {
   res.status(200).send(getPolicyDetailsByRoleId());
 });
 
+app.post("/role/getActionTree", function (req, res) {
+  console.log("/role/getActionTree");
+  res.status(200).send(getPolicyDetailsByRoleId());
+});
+
 app.get("/role/getRolePolicies", function (req, res) {
   console.log("/getRolePolicies");
   res.status(200).send(getRolePolicies());
