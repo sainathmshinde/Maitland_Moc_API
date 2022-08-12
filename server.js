@@ -21,7 +21,8 @@ var getUserDetailsList = require("./data/getUserDetailsList");
 var getApplications = require("./data/getApplications");
 var getPages = require("./data/getPages");
 var getPolicyDetailsByRoleId = require("./data/getPolicyDetailsByRoleId");
-var getPagesByApplicationId = require("./data/getPagesByApplicationId");
+var getPagesByApplicationIds = require("./data/getPagesByApplicationIds");
+var getRolePolicies = require("./data/getRolePolicies");
 
 app.get("/Home/GetUserDetails", function (req, res) {
   console.log("/getuserDetails");
@@ -122,14 +123,24 @@ app.get("/user/getTitles", function (req, res) {
   ]);
 });
 
-app.get("/getPagesByApplicationId", function (req, res) {
-  console.log("/getPagesByApplicationId");
-  res.status(200).send(getPagesByApplicationId());
+app.get("/getPagesByAppIds", function (req, res) {
+  console.log("/getPagesByAppIds");
+  res.status(200).send(getPagesByApplicationIds());
+});
+
+app.get("/getActionsByPageIds", function (req, res) {
+  console.log("/getActionsByPageIds");
+  res.status(200).send(getActionsByPageIds());
 });
 
 app.get("/getPolicyDetailsByRoleId", function (req, res) {
   console.log("/getUserDetailsByRoleId");
   res.status(200).send(getPolicyDetailsByRoleId());
+});
+
+app.get("/role/getRolePolicies", function (req, res) {
+  console.log("/getRolePolicies");
+  res.status(200).send(getRolePolicies());
 });
 
 app.post("/postUserRole", function (req, res) {
