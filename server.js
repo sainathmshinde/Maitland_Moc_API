@@ -41,7 +41,22 @@ app.get("/home/getDashboardDetails", function (req, res) {
 
 app.get("/role/getRoles", function (req, res) {
   console.log("/roles");
-  res.status(200).send(getRoles());
+  if (Object.keys(req.query).length > 0) {
+    res.status(200).send(getRoles());
+  } else {
+    res.status(200).send([
+      { id: 1, name: "admin", description: "Description for the role" },
+      { id: 2, name: "user", description: "Description for the role" },
+      { id: 3, name: "guest", description: "Description for the role" },
+      { id: 4, name: "superuser", description: "Description for the role" },
+      { id: 5, name: "superadmin", description: "Description for the role" },
+      { id: 6, name: "Owner​​", description: "Description for the role" },
+      { id: 7, name: "contributor​", description: "Description for the role" },
+      { id: 8, name: "​custom Role​", description: "Description for the role" },
+      { id: 9, name: "​api User​", description: "Description for the role" },
+      { id: 10, name: "ui User​", description: "Description for the role" },
+    ]);
+  }
 });
 
 app.get("/group/getGroups", function (req, res) {
@@ -106,7 +121,161 @@ app.get("/getRoleWithGroups", function (req, res) {
 
 app.get("/user/getUsers", function (req, res) {
   console.log("/getUserList");
-  res.status(200).send(getUserDetailsList());
+  if (Object.keys(req.query).length > 0) {
+    res.status(200).send(getUserDetailsList());
+  } else {
+    res.status(200).send([
+      {
+        id: 1,
+        title: { id: 1, name: "Mr" },
+        firstName: "John",
+        surName: "Doe",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 2,
+        title: { id: 2, name: "Mrs" },
+        firstName: "John",
+        surName: "Doe",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 3,
+        title: { id: 3, name: "Mr" },
+        firstName: "Wick",
+        surName: "Jow",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 4,
+        title: { id: 4, name: "Mr" },
+        firstName: "Wick",
+        surName: "Jow",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 5,
+        title: { id: 5, name: "Mr" },
+        firstName: "Adam",
+        surName: "Gill",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 6,
+        title: { id: 6, name: "Mr" },
+        firstName: "Adam",
+        surName: "Gill",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 7,
+        title: { id: 7, name: "Mr" },
+        firstName: "Adam",
+        surName: "Gill",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "JD",
+        userName: "jdoe",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 8,
+        title: { id: 8, name: "Mr" },
+        firstName: "Adam",
+        surName: "Gill",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "AG",
+        userName: "Adam",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 9,
+        title: { id: 9, name: "Mr" },
+        firstName: "Adam",
+        surName: "Gill",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "AG",
+        userName: "Adam",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+
+      {
+        id: 10,
+        title: { id: 10, name: "Mr" },
+        firstName: "Chris",
+        surName: "john",
+        dateOfBirth: "2015-03-25T12:00:00-06:30",
+        initials: "CJ",
+        userName: "john",
+        description: "This is a description",
+        roles: [
+          { id: 1, name: "admin" },
+          { id: 2, name: "user" },
+        ],
+      },
+    ]);
+  }
 });
 
 app.get("/getPages", function (req, res) {
