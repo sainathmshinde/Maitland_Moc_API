@@ -23,6 +23,7 @@ var getPages = require("./data/getPages");
 var getPolicyDetailsByRoleId = require("./data/getPolicyDetailsByRoleId");
 var getPagesByApplicationIds = require("./data/getPagesByApplicationIds");
 var getRolePolicies = require("./data/getRolePolicies");
+const getActionTree = require("./data/getActionTree");
 
 app.get("/Home/GetUserDetails", function (req, res) {
   console.log("/getuserDetails");
@@ -307,9 +308,9 @@ app.get("/getPolicyDetailsByRoleId", function (req, res) {
   res.status(200).send(getPolicyDetailsByRoleId());
 });
 
-app.post("/role/getActionTree", function (req, res) {
+app.get("/role/getActionTree", function (req, res) {
   console.log("/role/getActionTree");
-  res.status(200).send(getPolicyDetailsByRoleId());
+  res.status(200).send(getActionTree());
 });
 
 app.get("/role/getRolePolicies", function (req, res) {
@@ -337,8 +338,23 @@ app.put("/postUserRole/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.put("/users/updateUser/:id", function (req, res) {
+  console.log("/updateUser");
+  res.status(200).send({ id: 1 });
+});
+
 app.post("/postRoleGroup", function (req, res) {
   console.log("/postRoleGroup");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/role/addRole", function (req, res) {
+  console.log("/addRole");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/user/addUser", function (req, res) {
+  console.log("/addUser");
   res.status(200).send({ id: 1 });
 });
 
