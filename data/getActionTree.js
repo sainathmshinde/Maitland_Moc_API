@@ -13,7 +13,7 @@ module.exports = () => {
             id: "1",
             name: "Create user",
             nodeId: "3",
-            isSelected: false,
+            isSelected: true,
           },
           {
             id: "2",
