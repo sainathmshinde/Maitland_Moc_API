@@ -24,6 +24,7 @@ var getPolicyDetailsByRoleId = require("./data/getPolicyDetailsByRoleId");
 var getPagesByApplicationIds = require("./data/getPagesByApplicationIds");
 var getRolePolicies = require("./data/getRolePolicies");
 const getActionTree = require("./data/getActionTree");
+const getAccessibility = require("./data/getAccessibility");
 
 app.get("/Home/GetUserDetails", function (req, res) {
   console.log("/getuserDetails");
@@ -60,6 +61,26 @@ app.get("/role/getRoles", function (req, res) {
   }
 });
 
+app.get("/preset/getRoles", function (req, res) {
+  console.log("/roles");
+  if (Object.keys(req.query).length > 0) {
+    res.status(200).send(getRoles());
+  } else {
+    res.status(200).send([
+      { id: 1, name: "admin", description: "Description for the role" },
+      { id: 2, name: "user", description: "Description for the role" },
+      { id: 3, name: "guest", description: "Description for the role" },
+      { id: 4, name: "superuser", description: "Description for the role" },
+      { id: 5, name: "superadmin", description: "Description for the role" },
+      { id: 6, name: "Owner​​", description: "Description for the role" },
+      { id: 7, name: "contributor​", description: "Description for the role" },
+      { id: 8, name: "​custom Role​", description: "Description for the role" },
+      { id: 9, name: "​api User​", description: "Description for the role" },
+      { id: 10, name: "ui User​", description: "Description for the role" },
+    ]);
+  }
+});
+
 app.get("/group/getGroups", function (req, res) {
   console.log("/groups");
   res.status(200).send(getGroups());
@@ -70,7 +91,7 @@ app.get("/policies", function (req, res) {
   res.status(200).send(getPolicies());
 });
 
-app.get("/users", function (req, res) {
+app.get("/preset/getUsers", function (req, res) {
   console.log("/users");
   res.status(200).send(getUsers());
 });
@@ -100,7 +121,7 @@ app.get("/getRoleWithUsers", function (req, res) {
   res.status(200).send(getRoleWithUsers());
 });
 
-app.get("/getApplications", function (req, res) {
+app.get("/preset/getApplications", function (req, res) {
   console.log("/getApplications");
   res.status(200).send(getApplications());
 });
@@ -284,12 +305,12 @@ app.get("/getPages", function (req, res) {
   res.status(200).send(getPages());
 });
 
-app.get("/user/getTitles", function (req, res) {
+app.get("/preset/getTitles", function (req, res) {
   console.log("/user/getTitles");
   res.status(200).send([
-    { id: 1, name: "Mr." },
-    { id: 2, name: "Mrs." },
-    { id: 3, name: "Ms." },
+    { titleId: 1, titleName: "Mr." },
+    { titleId: 2, titleName: "Mrs." },
+    { titleId: 3, titleName: "Ms." },
   ]);
 });
 
@@ -316,6 +337,11 @@ app.get("/role/getActionTree", function (req, res) {
 app.get("/role/getRolePolicies", function (req, res) {
   console.log("/getRolePolicies");
   res.status(200).send(getRolePolicies());
+});
+
+app.get("/getAccessibility", function (req, res) {
+  console.log("/getAccessibility");
+  res.status(200).send(getAccessibility());
 });
 
 app.post("/postUserRole", function (req, res) {

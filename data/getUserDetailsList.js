@@ -3,7 +3,7 @@ module.exports = () => {
     items: [
       {
         id: 1,
-        title: { id: 1, name: "Mr" },
+        title: { titleId: 1, titleName: "Mr" },
         firstName: "John",
         surName: "Doe",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -18,7 +18,7 @@ module.exports = () => {
 
       {
         id: 2,
-        title: { id: 2, name: "Mrs" },
+        title: { titleId: 2, titleName: "Mrs" },
         firstName: "John",
         surName: "Doe",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -33,7 +33,7 @@ module.exports = () => {
 
       {
         id: 3,
-        title: { id: 3, name: "Mr" },
+        title: { titleId: 3, titleName: "Mr" },
         firstName: "Wick",
         surName: "Jow",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -48,7 +48,7 @@ module.exports = () => {
 
       {
         id: 4,
-        title: { id: 4, name: "Mr" },
+        title: { titleId: 4, titleName: "Mr" },
         firstName: "Wick",
         surName: "Jow",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -63,7 +63,7 @@ module.exports = () => {
 
       {
         id: 5,
-        title: { id: 5, name: "Mr" },
+        title: { titleId: 5, titleName: "Mr" },
         firstName: "Adam",
         surName: "Gill",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -78,7 +78,7 @@ module.exports = () => {
 
       {
         id: 6,
-        title: { id: 6, name: "Mr" },
+        title: { titleId: 6, titleName: "Mr" },
         firstName: "Adam",
         surName: "Gill",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -93,7 +93,7 @@ module.exports = () => {
 
       {
         id: 7,
-        title: { id: 7, name: "Mr" },
+        title: { titleId: 7, titleName: "Mr" },
         firstName: "Adam",
         surName: "Gill",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -108,7 +108,7 @@ module.exports = () => {
 
       {
         id: 8,
-        title: { id: 8, name: "Mr" },
+        title: { titleId: 8, titleName: "Mr" },
         firstName: "Adam",
         surName: "Gill",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -123,7 +123,7 @@ module.exports = () => {
 
       {
         id: 9,
-        title: { id: 9, name: "Mr" },
+        title: { titleId: 9, titleName: "Mr" },
         firstName: "Adam",
         surName: "Gill",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
@@ -138,7 +138,7 @@ module.exports = () => {
 
       {
         id: 10,
-        title: { id: 10, name: "Mr" },
+        title: { titleId: 10, titleName: "Mr" },
         firstName: "Chris",
         surName: "john",
         dateOfBirth: "2015-03-25T12:00:00-06:30",
