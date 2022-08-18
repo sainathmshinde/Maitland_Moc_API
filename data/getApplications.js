@@ -12,7 +12,7 @@ module.exports = () => {
       name: "Entity Master",
       description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "https://www.google.com",
+      redirectUrl: "http://localhost:3001/",
     },
     {
       id: "3",

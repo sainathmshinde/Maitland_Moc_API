@@ -121,7 +121,7 @@ app.get("/api/role/getrolepolicies/:id", function (req, res) {
   });
 });
 
-app.get("/api/getRoleWithUsers", function (req, res) {
+app.get("/api/userRole/getRoleWithUsers", function (req, res) {
   console.log("/api/getRoleWithUsers");
   res.status(200).send(getRoleWithUsers());
 });
@@ -349,9 +349,9 @@ app.get("/api/getAccessibility", function (req, res) {
   res.status(200).send(getAccessibility());
 });
 
-app.post("/api/postUserRole", function (req, res) {
+app.post("/api/userRole/addUserRole", function (req, res) {
   console.log("/api/postUserRole");
-  res.status(200).send({ id: 1 });
+  res.status(400).send({ message: "User already exists" });
 });
 
 app.post("/api/postUserGroup", function (req, res) {
@@ -364,13 +364,18 @@ app.put("/api/postUserGroup/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.put("/api/postUserRole/:id", function (req, res) {
+app.put("/api/userRole/UserRole/:id", function (req, res) {
   console.log("/api/postUserRole");
   res.status(200).send({ id: 1 });
 });
 
 app.put("/api/users/updateUser/:id", function (req, res) {
   console.log("/api/updateUser");
+  res.status(200).send({ id: 1 });
+});
+
+app.put("/api/role/updateRole/:id", function (req, res) {
+  console.log("/api/updateRole");
   res.status(200).send({ id: 1 });
 });
 
