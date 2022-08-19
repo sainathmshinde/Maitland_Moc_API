@@ -4,6 +4,7 @@ module.exports = () => {
       {
         id: 1,
         name: "admin",
+        applicationName: "app1",
         users: [
           {
             id: "1",
@@ -50,6 +51,7 @@ module.exports = () => {
       {
         id: 2,
         name: "user",
+        applicationName: "app1",
         users: [
           {
             id: "1",

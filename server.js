@@ -25,6 +25,7 @@ var getPagesByApplicationIds = require("./data/getPagesByApplicationIds");
 var getRolePolicies = require("./data/getRolePolicies");
 const getActionTree = require("./data/getActionTree");
 const getAccessibility = require("./data/getAccessibility");
+const getLegalEntuties = require("./data/getLegalEntuties");
 
 app.get("/api/Home/GetUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -344,7 +345,7 @@ app.get("/api/role/getRolePolicies", function (req, res) {
   res.status(200).send(getRolePolicies());
 });
 
-app.get("/api/getAccessibility", function (req, res) {
+app.get("/api/home/getAccessibility", function (req, res) {
   console.log("/api/getAccessibility");
   res.status(200).send(getAccessibility());
 });
@@ -406,6 +407,28 @@ app.put("/api/postRolePolicy/:id", function (req, res) {
 
 app.put("/api/postRoleGroup/:id", function (req, res) {
   console.log("/api/postRoleGroup");
+  res.status(200).send({ id: 1 });
+});
+
+// entity master
+
+app.get("/api/entity/getEntities", function (req, res) {
+  console.log("/api/getEntities");
+  res.status(200).send(getLegalEntuties());
+});
+
+app.put("/api/entity/updateEntity/:id", function (req, res) {
+  console.log("/api/updateEntity");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/entity/addEntity", function (req, res) {
+  console.log("/api/addEntity");
+  res.status(200).send({ id: 1 });
+});
+
+app.delete("/api/entity/deleteEntity/:id", function (req, res) {
+  console.log("/api/deleteEntity");
   res.status(200).send({ id: 1 });
 });
 
