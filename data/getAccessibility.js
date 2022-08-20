@@ -18,7 +18,7 @@ module.exports = () => {
       delete: true,
       create: true,
     },
-    userRole: {
+    userrole: {
       view: true,
       edit: true,
       delete: true,
@@ -37,6 +37,12 @@ module.exports = () => {
       create: true,
     },
     entity: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    asset: {
       view: true,
       edit: true,
       delete: true,
