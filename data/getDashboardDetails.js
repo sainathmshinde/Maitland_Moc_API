@@ -12,14 +12,14 @@ module.exports = () => {
       name: "Entity Master",
       description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "http://localhost:3001/",
+      redirectUrl: "http://localhost:3001/entity",
     },
     {
       id: "3",
       name: "Asset acllocation",
       description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "/assetmanagement",
+      redirectUrl: "http://localhost:3004/assets",
     },
     // {
     //   id: "4",

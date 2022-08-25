@@ -26,6 +26,7 @@ var getRolePolicies = require("./data/getRolePolicies");
 const getActionTree = require("./data/getActionTree");
 const getAccessibility = require("./data/getAccessibility");
 const getLegalEntuties = require("./data/getLegalEntuties");
+const getAssets = require("./data/getAssets");
 
 app.get("/api/Home/GetUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -429,6 +430,28 @@ app.post("/api/entity/addEntity", function (req, res) {
 
 app.delete("/api/entity/deleteEntity/:id", function (req, res) {
   console.log("/api/deleteEntity");
+  res.status(200).send({ id: 1 });
+});
+
+// asset allocation
+
+app.get("/api/asset/getAssets", function (req, res) {
+  console.log("/api/getEntities");
+  res.status(200).send(getAssets());
+});
+
+app.put("/api/asset/updateAsset/:id", function (req, res) {
+  console.log("/api/updateasset");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/asset/addAsset", function (req, res) {
+  console.log("/api/addasset");
+  res.status(200).send({ id: 1 });
+});
+
+app.delete("/api/asset/deleteAsset/:id", function (req, res) {
+  console.log("/api/deleteasset");
   res.status(200).send({ id: 1 });
 });
 

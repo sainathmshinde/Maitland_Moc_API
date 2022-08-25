@@ -36,7 +36,7 @@ module.exports = () => {
       delete: true,
       create: true,
     },
-    entity: {
+    legalentity: {
       view: true,
       edit: true,
       delete: true,
