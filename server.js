@@ -28,12 +28,12 @@ const getAccessibility = require("./data/getAccessibility");
 const getLegalEntuties = require("./data/getLegalEntuties");
 const getAssets = require("./data/getAssets");
 
-app.get("/api/Home/GetUserDetails", function (req, res) {
+app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
 });
 
-app.get("/api/home/getDashboardDetails", function (req, res) {
+app.get("/api/user/getDashboardDetails", function (req, res) {
   console.log("/api/getDashboardDetails");
   res.status(200).send(getDashboardDetails());
 });
@@ -63,24 +63,24 @@ app.get("/api/role/getRoles", function (req, res) {
   }
 });
 
-app.get("/api/preset/getRoles", function (req, res) {
+app.get("/api/role/getallroles", function (req, res) {
   console.log("/api/roles");
-  if (Object.keys(req.query).length > 0) {
-    res.status(200).send(getRoles());
-  } else {
-    res.status(200).send([
-      { id: 1, name: "admin", description: "Description for the role" },
-      { id: 2, name: "user", description: "Description for the role" },
-      { id: 3, name: "guest", description: "Description for the role" },
-      { id: 4, name: "superuser", description: "Description for the role" },
-      { id: 5, name: "superadmin", description: "Description for the role" },
-      { id: 6, name: "Owner​​", description: "Description for the role" },
-      { id: 7, name: "contributor​", description: "Description for the role" },
-      { id: 8, name: "​custom Role​", description: "Description for the role" },
-      { id: 9, name: "​api User​", description: "Description for the role" },
-      { id: 10, name: "ui User​", description: "Description for the role" },
-    ]);
-  }
+  // if (Object.keys(req.query).length > 0) {
+  //   res.status(200).send(getRoles());
+  // } else {
+  res.status(200).send([
+    { id: 1, name: "admin", description: "Description for the role" },
+    { id: 2, name: "user", description: "Description for the role" },
+    { id: 3, name: "guest", description: "Description for the role" },
+    { id: 4, name: "superuser", description: "Description for the role" },
+    { id: 5, name: "superadmin", description: "Description for the role" },
+    { id: 6, name: "Owner​​", description: "Description for the role" },
+    { id: 7, name: "contributor​", description: "Description for the role" },
+    { id: 8, name: "​custom Role​", description: "Description for the role" },
+    { id: 9, name: "​api User​", description: "Description for the role" },
+    { id: 10, name: "ui User​", description: "Description for the role" },
+  ]);
+  // }
 });
 
 app.get("/api/group/getGroups", function (req, res) {
@@ -98,7 +98,7 @@ app.get("/api/policies", function (req, res) {
   res.status(200).send(getPolicies());
 });
 
-app.get("/api/preset/getUsers", function (req, res) {
+app.get("/api/user/GetAllUsers", function (req, res) {
   console.log("/api/users");
   res.status(200).send(getUsers());
 });
@@ -123,12 +123,12 @@ app.get("/api/role/getrolepolicies/:id", function (req, res) {
   });
 });
 
-app.get("/api/userRole/getRoleWithUsers", function (req, res) {
+app.get("/api/user/getRoleWithUsers", function (req, res) {
   console.log("/api/getRoleWithUsers");
   res.status(200).send(getRoleWithUsers());
 });
 
-app.get("/api/preset/getApplications", function (req, res) {
+app.get("/api/user/getApplications", function (req, res) {
   console.log("/api/getApplications");
   res.status(200).send(getApplications());
 });
@@ -151,7 +151,9 @@ app.get("/api/getRoleWithGroups", function (req, res) {
 app.get("/api/user/getUsers", function (req, res) {
   console.log("/api/getUserList");
   if (Object.keys(req.query).length > 0) {
-    res.status(200).send(getUserDetailsList());
+    setTimeout(() => {
+      res.status(200).send(getUserDetailsList());
+    }, 0);
   } else {
     res.status(200).send([
       {
@@ -331,7 +333,7 @@ app.get("/api/getActionsByPageIds", function (req, res) {
   res.status(200).send(getActionsByPageIds());
 });
 
-app.get("/api/getPolicyDetailsByRoleId", function (req, res) {
+app.get("/api/user/getPolicyDetailsByRoleId", function (req, res) {
   console.log("/api/getUserDetailsByRoleId");
   res.status(200).send(getPolicyDetailsByRoleId());
 });
@@ -346,7 +348,7 @@ app.get("/api/role/getRolePolicies", function (req, res) {
   res.status(200).send(getRolePolicies());
 });
 
-app.get("/api/home/getAccessibility", function (req, res) {
+app.get("/api/user/getAccessibility", function (req, res) {
   console.log("/api/getAccessibility");
   res.status(200).send(getAccessibility());
 });
@@ -371,7 +373,7 @@ app.put("/api/userRole/UserRole/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.put("/api/users/updateUser/:id", function (req, res) {
+app.put("/api/user/updateUser/:id", function (req, res) {
   console.log("/api/updateUser");
   res.status(200).send({ id: 1 });
 });

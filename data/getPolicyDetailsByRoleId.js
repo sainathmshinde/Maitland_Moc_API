@@ -103,5 +103,57 @@ module.exports = () => {
         },
       ],
     },
+    {
+      id: "3",
+      name: "Asset Management 1",
+      nodeId: "17",
+      pages: [
+        {
+          id: "1",
+          name: "Asset Management",
+          nodeId: "18",
+          policies: [
+            {
+              id: "1",
+              name: "Add Aset",
+              nodeId: "19",
+              isSelected: true,
+            },
+            {
+              id: "1",
+              name: "Update Asset",
+              nodeId: "20",
+              isSelected: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Asset Management 2",
+      nodeId: "21",
+      pages: [
+        {
+          id: "1",
+          name: "Asset Management",
+          nodeId: "22",
+          policies: [
+            {
+              id: "1",
+              name: "Add Aset",
+              nodeId: "22",
+              isSelected: true,
+            },
+            {
+              id: "1",
+              name: "Update Asset",
+              nodeId: "23",
+              isSelected: true,
+            },
+          ],
+        },
+      ],
+    },
   ];
 };

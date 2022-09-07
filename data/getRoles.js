@@ -68,7 +68,7 @@ module.exports = () => {
         application: null,
       },
     ],
-    totalCoungt: 1000,
+    totalCount: 1000,
     totalPages: 100,
     currentPage: 1,
   };
