@@ -27,6 +27,12 @@ const getActionTree = require("./data/getActionTree");
 const getAccessibility = require("./data/getAccessibility");
 const getLegalEntuties = require("./data/getLegalEntuties");
 const getAssets = require("./data/getAssets");
+const getCurrencies = require("./data/getCurrencies");
+const lagalEntityStatus = require("./data/lagalEntityStatus");
+const getJurisdictions = require("./data/getJurisdictions");
+const getEntityTypeGroups = require("./data/getEntityTypeGroups");
+const getKycStatus = require("./data/getKycStatus");
+const getRAuthority = require("./data/getRAuthority");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -415,7 +421,7 @@ app.put("/api/postRoleGroup/:id", function (req, res) {
 
 // entity master
 
-app.get("/api/entity/getEntities", function (req, res) {
+app.get("/api/legalentity/getlegalentities", function (req, res) {
   console.log("/api/getEntities");
   res.status(200).send(getLegalEntuties());
 });
@@ -455,6 +461,38 @@ app.post("/api/asset/addAsset", function (req, res) {
 app.delete("/api/asset/deleteAsset/:id", function (req, res) {
   console.log("/api/deleteasset");
   res.status(200).send({ id: 1 });
+});
+
+//entity master
+
+app.get("/api/legalentity/getallbasecurrency", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(getCurrencies());
+});
+
+app.get("/api/legalentity/getalllegalentitystatus", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(lagalEntityStatus());
+});
+
+app.get("/api/legalentity/getalljurisdiction", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(getJurisdictions());
+});
+
+app.get("/api/legalentity/getallentitygroup", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(getEntityTypeGroups());
+});
+
+app.get("/api/legalentity/getallkycstatus", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(getKycStatus());
+});
+
+app.get("/api/legalentity/getallregulatoryauthority", function (req, res) {
+  console.log("/api/getCurrencies");
+  res.status(200).send(getRAuthority());
 });
 
 app.listen(5001, () => {
