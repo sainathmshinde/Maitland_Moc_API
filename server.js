@@ -33,10 +33,24 @@ const getJurisdictions = require("./data/getJurisdictions");
 const getEntityTypeGroups = require("./data/getEntityTypeGroups");
 const getKycStatus = require("./data/getKycStatus");
 const getRAuthority = require("./data/getRAuthority");
+const getEntityTypes = require("./data/getEntityTypes");
+const getLegalEntityById = require("./data/getLegalEntityById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
+});
+
+app.get("/api/user/getuserbyid", function (req, res) {
+  console.log("/api/getUserById");
+  res.status(200).send({
+    id: 6496,
+    firstName: "Vilas",
+    surname: "Sagar",
+    designation: "Consultant FS - ICT",
+    contactNumber: "",
+    emailAddress: "Vilas.Sagar@maitlandgroup.com",
+  });
 });
 
 app.get("/api/user/getDashboardDetails", function (req, res) {
@@ -465,6 +479,11 @@ app.delete("/api/asset/deleteAsset/:id", function (req, res) {
 
 //entity master
 
+app.get("/api/legalentity/getlegalentitybyid", function (req, res) {
+  console.log("/api/getlegalentitybyid");
+  res.status(200).send(getLegalEntityById());
+});
+
 app.get("/api/legalentity/getallbasecurrency", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getCurrencies());
@@ -485,6 +504,11 @@ app.get("/api/legalentity/getallentitygroup", function (req, res) {
   res.status(200).send(getEntityTypeGroups());
 });
 
+app.get("/api/legalentity/getallentitytype", function (req, res) {
+  console.log("/api/getallentitytypebygroupid");
+  res.status(200).send(getEntityTypes());
+});
+
 app.get("/api/legalentity/getallkycstatus", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getKycStatus());
@@ -493,6 +517,21 @@ app.get("/api/legalentity/getallkycstatus", function (req, res) {
 app.get("/api/legalentity/getallregulatoryauthority", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getRAuthority());
+});
+
+app.post("/api/legalentity/addlegalentity", function (req, res) {
+  console.log("/api/addlegalentity");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/legalentity/updatelegalentity/:id", function (req, res) {
+  console.log("/api/updatelegalentity");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/legalentity/deletelegalentity/:id", function (req, res) {
+  console.log("/api/deletelegalentity");
+  res.status(200).send({ id: 1 });
 });
 
 app.listen(5001, () => {
