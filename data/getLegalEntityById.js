@@ -4,7 +4,7 @@ module.exports = () => {
     entityName: "GIA",
     registrationNumber: "ABC123",
     financialYearEnd: "01/May",
-    kycNextReviewdate: "2022-09-13T00:00:00",
+    kycNextReviewdate: "2022-09-19T09:07:33+0000",
     entityGroup: {
       id: 5,
       name: "Country",
@@ -84,5 +84,31 @@ module.exports = () => {
     ],
     commercialContacts: [],
     reportingContacts: [],
+    entityHistory: [
+      {
+        id: 1,
+        modifiedOn: "19/9/22, 5:00 PM",
+        modifiedBy: "Vilas Sagar",
+        comment: "Request to create entity.",
+      },
+      {
+        id: 2,
+        modifiedOn: "19/9/22, 5:00 PM",
+        modifiedBy: "Vilas Sagar",
+        comment: "Request to create entity.",
+      },
+      {
+        id: 3,
+        modifiedOn: "19/9/22, 5:00 PM",
+        modifiedBy: "Vilas Sagar",
+        comment: "Request to create entity.",
+      },
+      {
+        id: 4,
+        modifiedOn: "19/9/22, 5:00 PM",
+        modifiedBy: "Vilas Sagar",
+        comment: "Request to create entity.",
+      },
+    ],
   };
 };
