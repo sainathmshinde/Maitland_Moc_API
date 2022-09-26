@@ -35,6 +35,10 @@ const getKycStatus = require("./data/getKycStatus");
 const getRAuthority = require("./data/getRAuthority");
 const getEntityTypes = require("./data/getEntityTypes");
 const getLegalEntityById = require("./data/getLegalEntityById");
+const getEntityHistory = require("./data/getEntityHistory");
+const getServices = require("./data/getServices");
+const getServiceById = require("./data/getServiceById");
+const getServiceGroups = require("./data/getServiceGroups");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -479,7 +483,7 @@ app.delete("/api/asset/deleteAsset/:id", function (req, res) {
 
 //entity master
 
-app.get("/api/legalentity/getlegalentitybyid", function (req, res) {
+app.get("/api/legalentity/getlegalentitybyid/:id", function (req, res) {
   console.log("/api/getlegalentitybyid");
   res.status(200).send(getLegalEntityById());
 });
@@ -519,6 +523,11 @@ app.get("/api/legalentity/getallregulatoryauthority", function (req, res) {
   res.status(200).send(getRAuthority());
 });
 
+app.get("/api/legalentity/getlegalentityauditlog", function (req, res) {
+  console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
 app.post("/api/legalentity/addlegalentity", function (req, res) {
   console.log("/api/addlegalentity");
   res.status(200).send({ id: 1 });
@@ -531,6 +540,38 @@ app.post("/api/legalentity/updatelegalentity/:id", function (req, res) {
 
 app.post("/api/legalentity/deletelegalentity/:id", function (req, res) {
   console.log("/api/deletelegalentity");
+  res.status(200).send({ id: 1 });
+});
+
+//service--------------------------------------------
+
+app.get("/api/service/getservicegroups", function (req, res) {
+  console.log("/api/getservicegroups");
+  res.status(200).send(getServiceGroups());
+});
+
+app.get("/api/service/getservices", function (req, res) {
+  console.log("/api/getservices");
+  res.status(200).send(getServices());
+});
+
+app.get("/api/service/getservicebyid/:id", function (req, res) {
+  console.log("/api/getservicebyid");
+  res.status(200).send(getServiceById());
+});
+
+app.post("/api/service/addservice", function (req, res) {
+  console.log("/api/addservice");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/service/updateService/:id", function (req, res) {
+  console.log("/api/updateService");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/service/deleteService/:id", function (req, res) {
+  console.log("/api/deleteService");
   res.status(200).send({ id: 1 });
 });
 

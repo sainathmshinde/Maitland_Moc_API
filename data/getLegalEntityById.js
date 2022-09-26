@@ -1,6 +1,7 @@
 module.exports = () => {
   return {
     legalEntityId: 2,
+    entityApprovalStatus: "Pending for approval",
     entityName: "GIA",
     registrationNumber: "ABC123",
     financialYearEnd: "01/May",
@@ -83,31 +84,16 @@ module.exports = () => {
       },
     ],
     commercialContacts: [],
-    reportingContacts: [],
-    entityHistory: [
+    reportingContacts: [
       {
-        id: 1,
-        modifiedOn: "19/9/22, 5:00 PM",
-        modifiedBy: "Vilas Sagar",
-        comment: "Request to create entity.",
-      },
-      {
-        id: 2,
-        modifiedOn: "19/9/22, 5:00 PM",
-        modifiedBy: "Vilas Sagar",
-        comment: "Request to create entity.",
-      },
-      {
-        id: 3,
-        modifiedOn: "19/9/22, 5:00 PM",
-        modifiedBy: "Vilas Sagar",
-        comment: "Request to create entity.",
-      },
-      {
-        id: 4,
-        modifiedOn: "19/9/22, 5:00 PM",
-        modifiedBy: "Vilas Sagar",
-        comment: "Request to create entity.",
+        id: 6496,
+        contactTypeID: 0,
+        contactTypeName: "Operational",
+        firstName: "Vilas",
+        surname: "Sagar",
+        emailAddress: "Vilas.Sagar@maitlandgroup.com",
+        contactNumber: "3845346347",
+        designation: "xyz",
       },
     ],
   };
