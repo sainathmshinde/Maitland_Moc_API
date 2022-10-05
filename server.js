@@ -39,6 +39,15 @@ const getEntityHistory = require("./data/getEntityHistory");
 const getServices = require("./data/getServices");
 const getServiceById = require("./data/getServiceById");
 const getServiceGroups = require("./data/getServiceGroups");
+const getLegalEntitiesByName = require("./data/getLegalEntitiesByName");
+const getContactTypes = require("./data/getContactTypes");
+const getUsersByIds = require("./data/getUsersByIds");
+const getContractById = require("./data/getContractById");
+const getContractStatus = require("./data/getContractStatus");
+const getDelieveryRequirements = require("./data/getDelieveryRequirements");
+const getServicesByTagId = require("./data/getServicesByTagId");
+const getServiceEntityTags = require("./data/getServiceEntityTags");
+const getContracts = require("./data/getContracts");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -508,6 +517,21 @@ app.get("/api/legalentity/getallentitygroup", function (req, res) {
   res.status(200).send(getEntityTypeGroups());
 });
 
+app.get("/api/legalentity/getallcontacttype", function (req, res) {
+  console.log("/api/getallcontacttype");
+  res.status(200).send(getContactTypes());
+});
+
+app.get("/api/legalentity/getlegalentitiesbyname", function (req, res) {
+  console.log("/api/getlegalentitiesbyname");
+  res.status(200).send(getLegalEntitiesByName());
+});
+
+app.get("/api/user/getusersbyaccessibility", function (req, res) {
+  console.log("/api/user/getusersbyaccessibility");
+  res.status(200).send(getUsers());
+});
+
 app.get("/api/legalentity/getallentitytype", function (req, res) {
   console.log("/api/getallentitytypebygroupid");
   res.status(200).send(getEntityTypes());
@@ -516,6 +540,11 @@ app.get("/api/legalentity/getallentitytype", function (req, res) {
 app.get("/api/legalentity/getallkycstatus", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getKycStatus());
+});
+
+app.get("/api/user/getusersbyids", function (req, res) {
+  console.log("/api/getusersbyids");
+  res.status(200).send(getUsersByIds());
 });
 
 app.get("/api/legalentity/getallregulatoryauthority", function (req, res) {
@@ -573,6 +602,63 @@ app.post("/api/service/updateService/:id", function (req, res) {
 app.post("/api/service/deleteService/:id", function (req, res) {
   console.log("/api/deleteService");
   res.status(200).send({ id: 1 });
+});
+
+//contract --------------------------------------------
+
+app.get("/api/contract/getcontracts", function (req, res) {
+  console.log("/api/getontracts");
+  res.status(200).send(getContracts());
+});
+
+app.get("/api/contract/getcontractbyid/:id", function (req, res) {
+  console.log("/api/getcontractbyid");
+  res.status(200).send(getContractById());
+});
+
+//get entitites
+// getserviceentitytags
+
+app.get("/api/contract/getServiceentitytags", function (req, res) {
+  console.log("/api/getServiceentitytags");
+  res.status(200).send(getServiceEntityTags());
+});
+
+// getContractStatus
+app.get("/api/contract/getcontractstatus", function (req, res) {
+  console.log("/api/getcontractstatus");
+  res.status(200).send(getContractStatus());
+});
+
+// getDelieveryrequirements
+app.get("/api/contract/getdelieveryrequirements", function (req, res) {
+  console.log("/api/getdelieveryrequirements");
+  res.status(200).send(getDelieveryRequirements());
+});
+
+// getKams
+// getServiceTags - getServicegroups (endpoint already present)
+
+// getServicesByTagId
+app.get("/api/contract/getservicesbygroupids", function (req, res) {
+  console.log("/api/getservicesbygroupid");
+  res.status(200).send(getServicesByTagId());
+});
+
+//approval
+app.post("/api/approvalprocess/addaproverdetails", function (req, res) {
+  console.log("/api/addaproverdetails");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
+  console.log("/api/getcheckerapproverdetails");
+  res.status(200).send(true);
+});
+
+app.post("/api/contract/deletecontract/:id", function (req, res) {
+  console.log("/api/deletecontract");
+  res.status(200).send(true);
 });
 
 app.listen(5001, () => {

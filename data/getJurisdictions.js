@@ -2,1218 +2,1218 @@ module.exports = () => {
   return [
     {
       id: 1,
-      name: "AFG",
-      description: "Afghanistan",
+
+      name: "Afghanistan",
     },
     {
       id: 2,
-      name: "ALB",
-      description: "Albania",
+
+      name: "Albania",
     },
     {
       id: 3,
-      name: "DZA",
-      description: "Algeria",
+
+      name: "Algeria",
     },
     {
       id: 4,
-      name: "AND",
-      description: "Andorra",
+
+      name: "Andorra",
     },
     {
       id: 5,
-      name: "AGO",
-      description: "Angola",
+
+      name: "Angola",
     },
     {
       id: 6,
-      name: "ATG",
-      description: "Antigua and Barbuda",
+
+      name: "Antigua and Barbuda",
     },
     {
       id: 7,
-      name: "ARG",
-      description: "Argentina",
+
+      name: "Argentina",
     },
     {
       id: 8,
-      name: "ARM",
-      description: "Armenia",
+
+      name: "Armenia",
     },
     {
       id: 9,
-      name: "AUS",
-      description: "Australia",
+
+      name: "Australia",
     },
     {
       id: 10,
-      name: "AUT",
-      description: "Austria",
+
+      name: "Austria",
     },
     {
       id: 11,
-      name: "AZE",
-      description: "Azerbaijan",
+
+      name: "Azerbaijan",
     },
     {
       id: 12,
-      name: "BHS",
-      description: "Bahamas, The",
+
+      name: "Bahamas, The",
     },
     {
       id: 13,
-      name: "BHR",
-      description: "Bahrain",
+
+      name: "Bahrain",
     },
     {
       id: 14,
-      name: "BGD",
-      description: "Bangladesh",
+
+      name: "Bangladesh",
     },
     {
       id: 15,
-      name: "BRB",
-      description: "Barbados",
+
+      name: "Barbados",
     },
     {
       id: 16,
-      name: "BLR",
-      description: "Belarus",
+
+      name: "Belarus",
     },
     {
       id: 17,
-      name: "BEL",
-      description: "Belgium",
+
+      name: "Belgium",
     },
     {
       id: 18,
-      name: "BLZ",
-      description: "Belize",
+
+      name: "Belize",
     },
     {
       id: 19,
-      name: "BEN",
-      description: "Benin",
+
+      name: "Benin",
     },
     {
       id: 20,
-      name: "BTN",
-      description: "Bhutan",
+
+      name: "Bhutan",
     },
     {
       id: 21,
-      name: "BOL",
-      description: "Bolivia",
+
+      name: "Bolivia",
     },
     {
       id: 22,
-      name: "BIH",
-      description: "Bosnia and Herzegovina",
+
+      name: "Bosnia and Herzegovina",
     },
     {
       id: 23,
-      name: "BWA",
-      description: "Botswana",
+
+      name: "Botswana",
     },
     {
       id: 24,
-      name: "BRA",
-      description: "Brazil",
+
+      name: "Brazil",
     },
     {
       id: 25,
-      name: "BRN",
-      description: "Brunei",
+
+      name: "Brunei",
     },
     {
       id: 26,
-      name: "BGR",
-      description: "Bulgaria",
+
+      name: "Bulgaria",
     },
     {
       id: 27,
-      name: "BFA",
-      description: "Burkina Faso",
+
+      name: "Burkina Faso",
     },
     {
       id: 28,
-      name: "BDI",
-      description: "Burundi",
+
+      name: "Burundi",
     },
     {
       id: 29,
-      name: "KHM",
-      description: "Cambodia",
+
+      name: "Cambodia",
     },
     {
       id: 30,
-      name: "CMR",
-      description: "Cameroon",
+
+      name: "Cameroon",
     },
     {
       id: 31,
-      name: "CAN",
-      description: "Canada",
+
+      name: "Canada",
     },
     {
       id: 32,
-      name: "CPV",
-      description: "Cape Verde",
+
+      name: "Cape Verde",
     },
     {
       id: 33,
-      name: "CAF",
-      description: "Central African Republic",
+
+      name: "Central African Republic",
     },
     {
       id: 34,
-      name: "TCD",
-      description: "Chad",
+
+      name: "Chad",
     },
     {
       id: 35,
-      name: "CHL",
-      description: "Chile",
+
+      name: "Chile",
     },
     {
       id: 36,
-      name: "CHN",
-      description: "China, People's Republic of",
+
+      name: "China, People's Republic of",
     },
     {
       id: 37,
-      name: "COL",
-      description: "Colombia",
+
+      name: "Colombia",
     },
     {
       id: 38,
-      name: "COM",
-      description: "Comoros",
+
+      name: "Comoros",
     },
     {
       id: 39,
-      name: "COD",
-      description: "Congo, (Congo ? Kinshasa)",
+
+      name: "Congo, (Congo ? Kinshasa)",
     },
     {
       id: 40,
-      name: "COG",
-      description: "Congo, (Congo ? Brazzaville)",
+
+      name: "Congo, (Congo ? Brazzaville)",
     },
     {
       id: 41,
-      name: "CRI",
-      description: "Costa Rica",
+
+      name: "Costa Rica",
     },
     {
       id: 42,
-      name: "CIV",
-      description: "Cote d'Ivoire (Ivory Coast)",
+
+      name: "Cote d'Ivoire (Ivory Coast)",
     },
     {
       id: 43,
-      name: "HRV",
-      description: "Croatia",
+
+      name: "Croatia",
     },
     {
       id: 44,
-      name: "CUB",
-      description: "Cuba",
+
+      name: "Cuba",
     },
     {
       id: 45,
-      name: "CYP",
-      description: "Cyprus",
+
+      name: "Cyprus",
     },
     {
       id: 46,
-      name: "CZE",
-      description: "Czech Republic",
+
+      name: "Czech Republic",
     },
     {
       id: 47,
-      name: "DNK",
-      description: "Denmark",
+
+      name: "Denmark",
     },
     {
       id: 48,
-      name: "DJI",
-      description: "Djibouti",
+
+      name: "Djibouti",
     },
     {
       id: 49,
-      name: "DMA",
-      description: "Dominica",
+
+      name: "Dominica",
     },
     {
       id: 50,
-      name: "DOM",
-      description: "Dominican Republic",
+
+      name: "Dominican Republic",
     },
     {
       id: 51,
-      name: "ECU",
-      description: "Ecuador",
+
+      name: "Ecuador",
     },
     {
       id: 52,
-      name: "EGY",
-      description: "Egypt",
+
+      name: "Egypt",
     },
     {
       id: 53,
-      name: "SLV",
-      description: "El Salvador",
+
+      name: "El Salvador",
     },
     {
       id: 54,
-      name: "GNQ",
-      description: "Equatorial Guinea",
+
+      name: "Equatorial Guinea",
     },
     {
       id: 55,
-      name: "ERI",
-      description: "Eritrea",
+
+      name: "Eritrea",
     },
     {
       id: 56,
-      name: "EST",
-      description: "Estonia",
+
+      name: "Estonia",
     },
     {
       id: 57,
-      name: "ETH",
-      description: "Ethiopia",
+
+      name: "Ethiopia",
     },
     {
       id: 58,
-      name: "FJI",
-      description: "Fiji",
+
+      name: "Fiji",
     },
     {
       id: 59,
-      name: "FIN",
-      description: "Finland",
+
+      name: "Finland",
     },
     {
       id: 60,
-      name: "FRA",
-      description: "France",
+
+      name: "France",
     },
     {
       id: 61,
-      name: "GAB",
-      description: "Gabon",
+
+      name: "Gabon",
     },
     {
       id: 62,
-      name: "GMB",
-      description: "Gambia, The",
+
+      name: "Gambia, The",
     },
     {
       id: 63,
-      name: "GEO",
-      description: "Georgia",
+
+      name: "Georgia",
     },
     {
       id: 64,
-      name: "DEU",
-      description: "Germany",
+
+      name: "Germany",
     },
     {
       id: 65,
-      name: "GHA",
-      description: "Ghana",
+
+      name: "Ghana",
     },
     {
       id: 66,
-      name: "GRC",
-      description: "Greece",
+
+      name: "Greece",
     },
     {
       id: 67,
-      name: "GRD",
-      description: "Grenada",
+
+      name: "Grenada",
     },
     {
       id: 68,
-      name: "GTM",
-      description: "Guatemala",
+
+      name: "Guatemala",
     },
     {
       id: 69,
-      name: "GIN",
-      description: "Guinea",
+
+      name: "Guinea",
     },
     {
       id: 70,
-      name: "GNB",
-      description: "Guinea-Bissau",
+
+      name: "Guinea-Bissau",
     },
     {
       id: 71,
-      name: "GUY",
-      description: "Guyana",
+
+      name: "Guyana",
     },
     {
       id: 72,
-      name: "HTI",
-      description: "Haiti",
+
+      name: "Haiti",
     },
     {
       id: 73,
-      name: "HND",
-      description: "Honduras",
+
+      name: "Honduras",
     },
     {
       id: 74,
-      name: "HUN",
-      description: "Hungary",
+
+      name: "Hungary",
     },
     {
       id: 75,
-      name: "ISL",
-      description: "Iceland",
+
+      name: "Iceland",
     },
     {
       id: 76,
-      name: "IND",
-      description: "India",
+
+      name: "India",
     },
     {
       id: 77,
-      name: "IDN",
-      description: "Indonesia",
+
+      name: "Indonesia",
     },
     {
       id: 78,
-      name: "IRN",
-      description: "Iran",
+
+      name: "Iran",
     },
     {
       id: 79,
-      name: "IRQ",
-      description: "Iraq",
+
+      name: "Iraq",
     },
     {
       id: 80,
-      name: "IRL",
-      description: "Ireland",
+
+      name: "Ireland",
     },
     {
       id: 81,
-      name: "ISR",
-      description: "Israel",
+
+      name: "Israel",
     },
     {
       id: 82,
-      name: "ITA",
-      description: "Italy",
+
+      name: "Italy",
     },
     {
       id: 83,
-      name: "JAM",
-      description: "Jamaica",
+
+      name: "Jamaica",
     },
     {
       id: 84,
-      name: "JPN",
-      description: "Japan",
+
+      name: "Japan",
     },
     {
       id: 85,
-      name: "JOR",
-      description: "Jordan",
+
+      name: "Jordan",
     },
     {
       id: 86,
-      name: "KAZ",
-      description: "Kazakhstan",
+
+      name: "Kazakhstan",
     },
     {
       id: 87,
-      name: "KEN",
-      description: "Kenya",
+
+      name: "Kenya",
     },
     {
       id: 88,
-      name: "KIR",
-      description: "Kiribati",
+
+      name: "Kiribati",
     },
     {
       id: 89,
-      name: "PRK",
-      description: "Korea, North",
+
+      name: "Korea, North",
     },
     {
       id: 90,
-      name: "KOR",
-      description: "Korea, South",
+
+      name: "Korea, South",
     },
     {
       id: 91,
-      name: "KWT",
-      description: "Kuwait",
+
+      name: "Kuwait",
     },
     {
       id: 92,
-      name: "KGZ",
-      description: "Kyrgyzstan",
+
+      name: "Kyrgyzstan",
     },
     {
       id: 93,
-      name: "LAO",
-      description: "Laos",
+
+      name: "Laos",
     },
     {
       id: 94,
-      name: "LVA",
-      description: "Latvia",
+
+      name: "Latvia",
     },
     {
       id: 95,
-      name: "LBN",
-      description: "Lebanon",
+
+      name: "Lebanon",
     },
     {
       id: 96,
-      name: "LSO",
-      description: "Lesotho",
+
+      name: "Lesotho",
     },
     {
       id: 97,
-      name: "LBR",
-      description: "Liberia",
+
+      name: "Liberia",
     },
     {
       id: 98,
-      name: "LBY",
-      description: "Libya",
+
+      name: "Libya",
     },
     {
       id: 99,
-      name: "LIE",
-      description: "Liechtenstein",
+
+      name: "Liechtenstein",
     },
     {
       id: 100,
-      name: "LTU",
-      description: "Lithuania",
+
+      name: "Lithuania",
     },
     {
       id: 101,
-      name: "LUX",
-      description: "Luxembourg",
+
+      name: "Luxembourg",
     },
     {
       id: 102,
-      name: "MKD",
-      description: "Macedonia",
+
+      name: "Macedonia",
     },
     {
       id: 103,
-      name: "MDG",
-      description: "Madagascar",
+
+      name: "Madagascar",
     },
     {
       id: 104,
-      name: "MWI",
-      description: "Malawi",
+
+      name: "Malawi",
     },
     {
       id: 105,
-      name: "MYS",
-      description: "Malaysia",
+
+      name: "Malaysia",
     },
     {
       id: 106,
-      name: "MDV",
-      description: "Maldives",
+
+      name: "Maldives",
     },
     {
       id: 107,
-      name: "MLI",
-      description: "Mali",
+
+      name: "Mali",
     },
     {
       id: 108,
-      name: "MLT",
-      description: "Malta",
+
+      name: "Malta",
     },
     {
       id: 109,
-      name: "MHL",
-      description: "Marshall Islands",
+
+      name: "Marshall Islands",
     },
     {
       id: 110,
-      name: "MRT",
-      description: "Mauritania",
+
+      name: "Mauritania",
     },
     {
       id: 111,
-      name: "MUS",
-      description: "Mauritius",
+
+      name: "Mauritius",
     },
     {
       id: 112,
-      name: "MEX",
-      description: "Mexico",
+
+      name: "Mexico",
     },
     {
       id: 113,
-      name: "FSM",
-      description: "Micronesia",
+
+      name: "Micronesia",
     },
     {
       id: 114,
-      name: "MDA",
-      description: "Moldova",
+
+      name: "Moldova",
     },
     {
       id: 115,
-      name: "MCO",
-      description: "Monaco",
+
+      name: "Monaco",
     },
     {
       id: 116,
-      name: "MNG",
-      description: "Mongolia",
+
+      name: "Mongolia",
     },
     {
       id: 117,
-      name: "MNE",
-      description: "Montenegro",
+
+      name: "Montenegro",
     },
     {
       id: 118,
-      name: "MAR",
-      description: "Morocco",
+
+      name: "Morocco",
     },
     {
       id: 119,
-      name: "MOZ",
-      description: "Mozambique",
+
+      name: "Mozambique",
     },
     {
       id: 120,
-      name: "MMR",
-      description: "Myanmar (Burma)",
+
+      name: "Myanmar (Burma)",
     },
     {
       id: 121,
-      name: "NAM",
-      description: "Namibia",
+
+      name: "Namibia",
     },
     {
       id: 122,
-      name: "NRU",
-      description: "Nauru",
+
+      name: "Nauru",
     },
     {
       id: 123,
-      name: "NPL",
-      description: "Nepal",
+
+      name: "Nepal",
     },
     {
       id: 124,
-      name: "NLD",
-      description: "Netherlands",
+
+      name: "Netherlands",
     },
     {
       id: 125,
-      name: "NZL",
-      description: "New Zealand",
+
+      name: "New Zealand",
     },
     {
       id: 126,
-      name: "NIC",
-      description: "Nicaragua",
+
+      name: "Nicaragua",
     },
     {
       id: 127,
-      name: "NER",
-      description: "Niger",
+
+      name: "Niger",
     },
     {
       id: 128,
-      name: "NGA",
-      description: "Nigeria",
+
+      name: "Nigeria",
     },
     {
       id: 129,
-      name: "NOR",
-      description: "Norway",
+
+      name: "Norway",
     },
     {
       id: 130,
-      name: "OMN",
-      description: "Oman",
+
+      name: "Oman",
     },
     {
       id: 131,
-      name: "PAK",
-      description: "Pakistan",
+
+      name: "Pakistan",
     },
     {
       id: 132,
-      name: "PLW",
-      description: "Palau",
+
+      name: "Palau",
     },
     {
       id: 133,
-      name: "PAN",
-      description: "Panama",
+
+      name: "Panama",
     },
     {
       id: 134,
-      name: "PNG",
-      description: "Papua New Guinea",
+
+      name: "Papua New Guinea",
     },
     {
       id: 135,
-      name: "PRY",
-      description: "Paraguay",
+
+      name: "Paraguay",
     },
     {
       id: 136,
-      name: "PER",
-      description: "Peru",
+
+      name: "Peru",
     },
     {
       id: 137,
-      name: "PHL",
-      description: "Philippines",
+
+      name: "Philippines",
     },
     {
       id: 138,
-      name: "POL",
-      description: "Poland",
+
+      name: "Poland",
     },
     {
       id: 139,
-      name: "PRT",
-      description: "Portugal",
+
+      name: "Portugal",
     },
     {
       id: 140,
-      name: "QAT",
-      description: "Qatar",
+
+      name: "Qatar",
     },
     {
       id: 141,
-      name: "ROU",
-      description: "Romania",
+
+      name: "Romania",
     },
     {
       id: 142,
-      name: "RUS",
-      description: "Russia",
+
+      name: "Russia",
     },
     {
       id: 143,
-      name: "RWA",
-      description: "Rwanda",
+
+      name: "Rwanda",
     },
     {
       id: 144,
-      name: "KNA",
-      description: "Saint Kitts and Nevis",
+
+      name: "Saint Kitts and Nevis",
     },
     {
       id: 145,
-      name: "LCA",
-      description: "Saint Lucia",
+
+      name: "Saint Lucia",
     },
     {
       id: 146,
-      name: "VCT",
-      description: "Saint Vincent and the Grenadines",
+
+      name: "Saint Vincent and the Grenadines",
     },
     {
       id: 147,
-      name: "WSM",
-      description: "Samoa",
+
+      name: "Samoa",
     },
     {
       id: 148,
-      name: "SMR",
-      description: "San Marino",
+
+      name: "San Marino",
     },
     {
       id: 149,
-      name: "STP",
-      description: "Sao Tome and Principe",
+
+      name: "Sao Tome and Principe",
     },
     {
       id: 150,
-      name: "SAU",
-      description: "Saudi Arabia",
+
+      name: "Saudi Arabia",
     },
     {
       id: 151,
-      name: "SEN",
-      description: "Senegal",
+
+      name: "Senegal",
     },
     {
       id: 152,
-      name: "SRB",
-      description: "Serbia",
+
+      name: "Serbia",
     },
     {
       id: 153,
-      name: "SYC",
-      description: "Seychelles",
+
+      name: "Seychelles",
     },
     {
       id: 154,
-      name: "SLE",
-      description: "Sierra Leone",
+
+      name: "Sierra Leone",
     },
     {
       id: 155,
-      name: "SGP",
-      description: "Singapore",
+
+      name: "Singapore",
     },
     {
       id: 156,
-      name: "SVK",
-      description: "Slovakia",
+
+      name: "Slovakia",
     },
     {
       id: 157,
-      name: "SVN",
-      description: "Slovenia",
+
+      name: "Slovenia",
     },
     {
       id: 158,
-      name: "SLB",
-      description: "Solomon Islands",
+
+      name: "Solomon Islands",
     },
     {
       id: 159,
-      name: "SOM",
-      description: "Somalia",
+
+      name: "Somalia",
     },
     {
       id: 160,
-      name: "ZAF",
-      description: "South Africa",
+
+      name: "South Africa",
     },
     {
       id: 161,
-      name: "ESP",
-      description: "Spain",
+
+      name: "Spain",
     },
     {
       id: 162,
-      name: "LKA",
-      description: "Sri Lanka",
+
+      name: "Sri Lanka",
     },
     {
       id: 163,
-      name: "SDN",
-      description: "Sudan",
+
+      name: "Sudan",
     },
     {
       id: 164,
-      name: "SUR",
-      description: "Suriname",
+
+      name: "Suriname",
     },
     {
       id: 165,
-      name: "SWZ",
-      description: "Swaziland",
+
+      name: "Swaziland",
     },
     {
       id: 166,
-      name: "SWE",
-      description: "Sweden",
+
+      name: "Sweden",
     },
     {
       id: 167,
-      name: "CHE",
-      description: "Switzerland",
+
+      name: "Switzerland",
     },
     {
       id: 168,
-      name: "SYR",
-      description: "Syria",
+
+      name: "Syria",
     },
     {
       id: 169,
-      name: "TJK",
-      description: "Tajikistan",
+
+      name: "Tajikistan",
     },
     {
       id: 170,
-      name: "TZA",
-      description: "Tanzania",
+
+      name: "Tanzania",
     },
     {
       id: 171,
-      name: "THA",
-      description: "Thailand",
+
+      name: "Thailand",
     },
     {
       id: 172,
-      name: "TLS",
-      description: "Timor-Leste (East Timor)",
+
+      name: "Timor-Leste (East Timor)",
     },
     {
       id: 173,
-      name: "TGO",
-      description: "Togo",
+
+      name: "Togo",
     },
     {
       id: 174,
-      name: "TON",
-      description: "Tonga",
+
+      name: "Tonga",
     },
     {
       id: 175,
-      name: "TTO",
-      description: "Trinidad and Tobago",
+
+      name: "Trinidad and Tobago",
     },
     {
       id: 176,
-      name: "TUN",
-      description: "Tunisia",
+
+      name: "Tunisia",
     },
     {
       id: 177,
-      name: "TUR",
-      description: "Turkey",
+
+      name: "Turkey",
     },
     {
       id: 178,
-      name: "TKM",
-      description: "Turkmenistan",
+
+      name: "Turkmenistan",
     },
     {
       id: 179,
-      name: "TUV",
-      description: "Tuvalu",
+
+      name: "Tuvalu",
     },
     {
       id: 180,
-      name: "UGA",
-      description: "Uganda",
+
+      name: "Uganda",
     },
     {
       id: 181,
-      name: "UKR",
-      description: "Ukraine",
+
+      name: "Ukraine",
     },
     {
       id: 182,
-      name: "ARE",
-      description: "United Arab Emirates",
+
+      name: "United Arab Emirates",
     },
     {
       id: 183,
-      name: "GBR",
-      description: "United Kingdom",
+
+      name: "United Kingdom",
     },
     {
       id: 184,
-      name: "USA",
-      description: "United States",
+
+      name: "United States",
     },
     {
       id: 185,
-      name: "URY",
-      description: "Uruguay",
+
+      name: "Uruguay",
     },
     {
       id: 186,
-      name: "UZB",
-      description: "Uzbekistan",
+
+      name: "Uzbekistan",
     },
     {
       id: 187,
-      name: "VUT",
-      description: "Vanuatu",
+
+      name: "Vanuatu",
     },
     {
       id: 188,
-      name: "VAT",
-      description: "Vatican City",
+
+      name: "Vatican City",
     },
     {
       id: 189,
-      name: "VEN",
-      description: "Venezuela",
+
+      name: "Venezuela",
     },
     {
       id: 190,
-      name: "VNM",
-      description: "Vietnam",
+
+      name: "Vietnam",
     },
     {
       id: 191,
-      name: "YEM",
-      description: "Yemen",
+
+      name: "Yemen",
     },
     {
       id: 192,
-      name: "ZMB",
-      description: "Zambia",
+
+      name: "Zambia",
     },
     {
       id: 193,
-      name: "ZWE",
-      description: "Zimbabwe",
+
+      name: "Zimbabwe",
     },
     {
       id: 194,
-      name: "TWN",
-      description: "China, Republic of (Taiwan)",
+
+      name: "China, Republic of (Taiwan)",
     },
     {
       id: 195,
-      name: "CXR",
-      description: "Christmas Island",
+
+      name: "Christmas Island",
     },
     {
       id: 196,
-      name: "CCK",
-      description: "Cocos (Keeling) Islands",
+
+      name: "Cocos (Keeling) Islands",
     },
     {
       id: 197,
-      name: "HMD",
-      description: "Heard Island and McDonald Islands",
+
+      name: "Heard Island and McDonald Islands",
     },
     {
       id: 198,
-      name: "NFK",
-      description: "Norfolk Island",
+
+      name: "Norfolk Island",
     },
     {
       id: 199,
-      name: "NCL",
-      description: "New Caledonia",
+
+      name: "New Caledonia",
     },
     {
       id: 200,
-      name: "PYF",
-      description: "French Polynesia",
+
+      name: "French Polynesia",
     },
     {
       id: 201,
-      name: "MYT",
-      description: "Mayotte",
+
+      name: "Mayotte",
     },
     {
       id: 202,
-      name: "GLP",
-      description: "Saint Barthelemy",
+
+      name: "Saint Barthelemy",
     },
     {
       id: 203,
-      name: "SPM",
-      description: "Saint Pierre and Miquelon",
+
+      name: "Saint Pierre and Miquelon",
     },
     {
       id: 204,
-      name: "WLF",
-      description: "Wallis and Futuna",
+
+      name: "Wallis and Futuna",
     },
     {
       id: 205,
-      name: "ATF",
-      description: "French Southern and Antarctic Lands",
+
+      name: "French Southern and Antarctic Lands",
     },
     {
       id: 206,
-      name: "BVT",
-      description: "Bouvet Island",
+
+      name: "Bouvet Island",
     },
     {
       id: 207,
-      name: "COK",
-      description: "Cook Islands",
+
+      name: "Cook Islands",
     },
     {
       id: 208,
-      name: "NIU",
-      description: "Niue",
+
+      name: "Niue",
     },
     {
       id: 209,
-      name: "TKL",
-      description: "Tokelau",
+
+      name: "Tokelau",
     },
     {
       id: 210,
-      name: "GGY",
-      description: "Guernsey",
+
+      name: "Guernsey",
     },
     {
       id: 211,
-      name: "IMN",
-      description: "Isle of Man",
+
+      name: "Isle of Man",
     },
     {
       id: 212,
-      name: "JEY",
-      description: "Jersey",
+
+      name: "Jersey",
     },
     {
       id: 213,
-      name: "AIA",
-      description: "Anguilla",
+
+      name: "Anguilla",
     },
     {
       id: 214,
-      name: "BMU",
-      description: "Bermuda",
+
+      name: "Bermuda",
     },
     {
       id: 215,
-      name: "IOT",
-      description: "British Indian Ocean Territory",
+
+      name: "British Indian Ocean Territory",
     },
     {
       id: 216,
-      name: "VGB",
-      description: "British Virgin Islands",
+
+      name: "British Virgin Islands",
     },
     {
       id: 217,
-      name: "CYM",
-      description: "Cayman Islands",
+
+      name: "Cayman Islands",
     },
     {
       id: 218,
-      name: "FLK",
-      description: "Falkland Islands (Islas Malvinas)",
+
+      name: "Falkland Islands (Islas Malvinas)",
     },
     {
       id: 219,
-      name: "GIB",
-      description: "Gibraltar",
+
+      name: "Gibraltar",
     },
     {
       id: 220,
-      name: "MSR",
-      description: "Montserrat",
+
+      name: "Montserrat",
     },
     {
       id: 221,
-      name: "PCN",
-      description: "Pitcairn Islands",
+
+      name: "Pitcairn Islands",
     },
     {
       id: 222,
-      name: "SHN",
-      description: "Saint Helena",
+
+      name: "Saint Helena",
     },
     {
       id: 223,
-      name: "SGS",
-      description: "South Georgia & South Sandwich Islands",
+
+      name: "South Georgia & South Sandwich Islands",
     },
     {
       id: 224,
-      name: "TCA",
-      description: "Turks and Caicos Islands",
+
+      name: "Turks and Caicos Islands",
     },
     {
       id: 225,
-      name: "MNP",
-      description: "Northern Mariana Islands",
+
+      name: "Northern Mariana Islands",
     },
     {
       id: 226,
-      name: "PRI",
-      description: "Puerto Rico",
+
+      name: "Puerto Rico",
     },
     {
       id: 227,
-      name: "ASM",
-      description: "American Samoa",
+
+      name: "American Samoa",
     },
     {
       id: 228,
-      name: "UMI",
-      description: "Baker Island",
+
+      name: "Baker Island",
     },
     {
       id: 229,
-      name: "GUM",
-      description: "Guam",
+
+      name: "Guam",
     },
     {
       id: 230,
-      name: "VIR",
-      description: "U.S. Virgin Islands",
+
+      name: "U.S. Virgin Islands",
     },
     {
       id: 231,
-      name: "HKG",
-      description: "Hong Kong",
+
+      name: "Hong Kong",
     },
     {
       id: 232,
-      name: "MAC",
-      description: "Macau",
+
+      name: "Macau",
     },
     {
       id: 233,
-      name: "FRO",
-      description: "Faroe Islands",
+
+      name: "Faroe Islands",
     },
     {
       id: 234,
-      name: "GRL",
-      description: "Greenland",
+
+      name: "Greenland",
     },
     {
       id: 235,
-      name: "GUF",
-      description: "French Guiana",
+
+      name: "French Guiana",
     },
     {
       id: 236,
-      name: "MTQ",
-      description: "Martinique",
+
+      name: "Martinique",
     },
     {
       id: 237,
-      name: "REU",
-      description: "Reunion",
+
+      name: "Reunion",
     },
     {
       id: 238,
-      name: "ALA",
-      description: "Aland",
+
+      name: "Aland",
     },
     {
       id: 239,
-      name: "ABW",
-      description: "Aruba",
+
+      name: "Aruba",
     },
     {
       id: 240,
-      name: "ANT",
-      description: "Netherlands Antilles",
+
+      name: "Netherlands Antilles",
     },
     {
       id: 241,
-      name: "SJM",
-      description: "Svalbard",
+
+      name: "Svalbard",
     },
     {
       id: 242,
-      name: "ASC",
-      description: "Ascension",
+
+      name: "Ascension",
     },
     {
       id: 243,
-      name: "TAA",
-      description: "Tristan da Cunha",
+
+      name: "Tristan da Cunha",
     },
   ];
 };

@@ -4,7 +4,7 @@ module.exports = () => {
       id: 1,
       modifiedOn: "19/9/22, 5:00 PM",
       modifiedBy: "Vilas Sagar",
-      comment: "Request to create entity.",
+      comment: "Entity lokks good but jurisdiction needs to change",
     },
     {
       id: 2,
