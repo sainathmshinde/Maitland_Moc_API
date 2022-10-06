@@ -16,7 +16,7 @@ return {
     id: 1,
     name: "TA",
   },
-  contractStatu: {
+  contractStatus: {
     id: 1,
     name: "active",
   },

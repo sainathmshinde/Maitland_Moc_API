@@ -4,19 +4,19 @@ module.exports = () => {
       id: 1,
       name: "cash recon",
       code: "cs1",
-      groupId: 1,
+      serviceGroupId: 1,
     },
     {
       id: 2,
       name: "checque recon",
       code: "cr1",
-      groupId: 1,
+      serviceGroupId: 1,
     },
     {
       id: 3,
       name: "NEFT recon",
       code: "nr1",
-      groupId: 2,
+      serviceGroupId: 2,
     },
   ];
 };

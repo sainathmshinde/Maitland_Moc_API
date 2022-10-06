@@ -48,6 +48,7 @@ const getDelieveryRequirements = require("./data/getDelieveryRequirements");
 const getServicesByTagId = require("./data/getServicesByTagId");
 const getServiceEntityTags = require("./data/getServiceEntityTags");
 const getContracts = require("./data/getContracts");
+const getServicesByName = require("./data/getServicesByName");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -640,13 +641,23 @@ app.get("/api/contract/getdelieveryrequirements", function (req, res) {
 // getServiceTags - getServicegroups (endpoint already present)
 
 // getServicesByTagId
-app.get("/api/contract/getservicesbygroupids", function (req, res) {
+app.get("/api/service/getservicesbygroupids", function (req, res) {
   console.log("/api/getservicesbygroupid");
   res.status(200).send(getServicesByTagId());
 });
 
+app.get("/api/contract/getcontractauditlog", function (req, res) {
+  console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/service/getservicebyname", function (req, res) {
+  console.log("/api/getservicebyname");
+  res.status(200).send(getServicesByName());
+});
+
 //approval
-app.post("/api/approvalprocess/addaproverdetails", function (req, res) {
+app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
   res.status(200).send({ id: 1 });
 });

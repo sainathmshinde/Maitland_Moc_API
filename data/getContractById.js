@@ -1,6 +1,7 @@
 module.exports = () => {
   return {
     contractId: 1,
+    contractApprovalStatus: "Approved",
     contractName: "test name",
     contractCode: "ABC1",
     clientEntity: {
@@ -16,11 +17,11 @@ module.exports = () => {
       id: 1,
       name: "TA",
     },
-    contractStatu: {
+    contractStatus: {
       id: 1,
       name: "active",
     },
-    nextReviewDate: "",
+    nextReviewDate: "2022-09-30T06:55:00",
     clientReportingDelievery: {
       id: 1,
       name: "email",
@@ -39,13 +40,12 @@ module.exports = () => {
         name: "Replication Admin",
       },
     ],
-    service: [
+    services: [
       {
         id: 1,
         name: "cash recon",
         code: "c1",
-        tagId: 1,
-        canDelete: true / false,
+        serviceGroupId: 1,
       },
     ],
     checkerIds: "1,2,3,4",

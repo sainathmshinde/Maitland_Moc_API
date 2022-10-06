@@ -49,7 +49,7 @@ module.exports = () => {
       edit: true,
       delete: true,
       create: true,
-      checker: false,
+      checker: true,
       approver: false,
     },
     service: {
