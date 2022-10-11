@@ -15,6 +15,7 @@ module.exports = () => {
             name: "SA Cisca UT",
           },
         ],
+        serviceApprovalStatus: "Approved",
       },
       {
         id: 2,
@@ -30,6 +31,7 @@ module.exports = () => {
             name: "Offshore Admin",
           },
         ],
+        serviceApprovalStatus: "Rejected",
       },
     ],
     totalPages: 1,

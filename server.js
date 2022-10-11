@@ -53,6 +53,8 @@ const getContactList = require("./data/getContactList");
 const getContactDetails = require("./data/getContactDetails");
 const getEntityContacts = require("./data/getEntityContacts");
 const getLegalEtityTree = require("./data/getLegalEtityTree");
+const getServiceGroupList = require("./data/getServiceGroupList");
+const getServiceGroupById = require("./data/getServiceGroupById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -609,6 +611,11 @@ app.get("/api/service/getservicegroups", function (req, res) {
   res.status(200).send(getServiceGroups());
 });
 
+app.get("/api/service/getservicegrouplist", function (req, res) {
+  console.log("/api/getservicegrouplist");
+  res.status(200).send(getServiceGroupList());
+});
+
 app.get("/api/service/getservices", function (req, res) {
   console.log("/api/getservices");
   res.status(200).send(getServices());
@@ -617,6 +624,11 @@ app.get("/api/service/getservices", function (req, res) {
 app.get("/api/service/getservicebyid/:id", function (req, res) {
   console.log("/api/getservicebyid");
   res.status(200).send(getServiceById());
+});
+
+app.get("/api/service/getservicegroupbyid/:id", function (req, res) {
+  console.log("/api/getservicegroupbyid");
+  res.status(200).send(getServiceGroupById());
 });
 
 app.post("/api/service/addservice", function (req, res) {
@@ -631,6 +643,11 @@ app.post("/api/service/updateService/:id", function (req, res) {
 
 app.post("/api/service/deleteService/:id", function (req, res) {
   console.log("/api/deleteService");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/service/deleteServicegroup/:id", function (req, res) {
+  console.log("/api/deleteServicegroup");
   res.status(200).send({ id: 1 });
 });
 
@@ -677,6 +694,16 @@ app.get("/api/service/getservicesbygroupids", function (req, res) {
 
 app.get("/api/contract/getcontractauditlog", function (req, res) {
   console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/service/getserviceauditlog", function (req, res) {
+  console.log("/api/getserviceauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/service/getservicegroupauditlog", function (req, res) {
+  console.log("/api/getservicegroupauditlog");
   res.status(200).send(getEntityHistory());
 });
 
