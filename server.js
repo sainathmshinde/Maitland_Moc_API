@@ -49,6 +49,10 @@ const getServicesByTagId = require("./data/getServicesByTagId");
 const getServiceEntityTags = require("./data/getServiceEntityTags");
 const getContracts = require("./data/getContracts");
 const getServicesByName = require("./data/getServicesByName");
+const getContactList = require("./data/getContactList");
+const getContactDetails = require("./data/getContactDetails");
+const getEntityContacts = require("./data/getEntityContacts");
+const getLegalEtityTree = require("./data/getLegalEtityTree");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -165,6 +169,11 @@ app.get("/api/user/getRoleWithUsers", function (req, res) {
 app.get("/api/user/getApplications", function (req, res) {
   console.log("/api/getApplications");
   res.status(200).send(getApplications());
+});
+
+app.get("/api/legalentity/getlegalentitytree", function (req, res) {
+  console.log("/api/getlegalentitytree");
+  res.status(200).send(getLegalEtityTree());
 });
 
 app.get("/api/getGroupWithUsers", function (req, res) {
@@ -518,6 +527,11 @@ app.get("/api/legalentity/getallentitygroup", function (req, res) {
   res.status(200).send(getEntityTypeGroups());
 });
 
+app.get("/api/legalentity/getentitycontacts", function (req, res) {
+  console.log("/api/getentitycontacts");
+  res.status(200).send(getEntityContacts());
+});
+
 app.get("/api/legalentity/getallcontacttype", function (req, res) {
   console.log("/api/getallcontacttype");
   res.status(200).send(getContactTypes());
@@ -538,9 +552,24 @@ app.get("/api/legalentity/getallentitytype", function (req, res) {
   res.status(200).send(getEntityTypes());
 });
 
+app.get("/api/legalentity/getcontactbyemail", function (req, res) {
+  console.log("/api/getcontactbyemail");
+  res.status(200).send(getContactDetails());
+});
+
 app.get("/api/legalentity/getallkycstatus", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getKycStatus());
+});
+
+app.get("/api/legalentity/getcontactlist", function (req, res) {
+  console.log("/api/getcontactlist");
+  res.status(200).send(getContactList());
+});
+
+app.get("/api/legalentity/getcontactdetailsbyid/:id", function (req, res) {
+  console.log("/api/getcontactdetailsbyid");
+  res.status(200).send(getContactDetails());
 });
 
 app.get("/api/user/getusersbyids", function (req, res) {
@@ -620,8 +649,8 @@ app.get("/api/contract/getcontractbyid/:id", function (req, res) {
 //get entitites
 // getserviceentitytags
 
-app.get("/api/contract/getServiceentitytags", function (req, res) {
-  console.log("/api/getServiceentitytags");
+app.get("/api/contract/getServiceentitytag", function (req, res) {
+  console.log("/api/getServiceentitytag");
   res.status(200).send(getServiceEntityTags());
 });
 
@@ -632,7 +661,7 @@ app.get("/api/contract/getcontractstatus", function (req, res) {
 });
 
 // getDelieveryrequirements
-app.get("/api/contract/getdelieveryrequirements", function (req, res) {
+app.get("/api/contract/getclientreportingdelivery", function (req, res) {
   console.log("/api/getdelieveryrequirements");
   res.status(200).send(getDelieveryRequirements());
 });
@@ -654,6 +683,16 @@ app.get("/api/contract/getcontractauditlog", function (req, res) {
 app.get("/api/service/getservicebyname", function (req, res) {
   console.log("/api/getservicebyname");
   res.status(200).send(getServicesByName());
+});
+
+app.post("/api/contract/addcontract", function (req, res) {
+  console.log("/api/addcontract");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/contract/updatecontract/:id", function (req, res) {
+  console.log("/api/addcontract");
+  res.status(200).send({ id: 1 });
 });
 
 //approval

@@ -60,6 +60,14 @@ module.exports = () => {
       checker: false,
       approver: false,
     },
+    servicegroup: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+      checker: false,
+      approver: false,
+    },
     portfolio: {
       view: true,
       edit: true,
