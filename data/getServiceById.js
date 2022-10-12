@@ -16,5 +16,6 @@ module.exports = () => {
     ],
     checkerIds: "1, 2,3",
     approverIds: "1, 23,3",
+    description: "Service description",
   };
 };

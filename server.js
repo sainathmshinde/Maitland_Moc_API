@@ -606,12 +606,12 @@ app.post("/api/legalentity/deletelegalentity/:id", function (req, res) {
 
 //service--------------------------------------------
 
-app.get("/api/service/getservicegroups", function (req, res) {
+app.get("/api/servicegroup/getservicegroups", function (req, res) {
   console.log("/api/getservicegroups");
   res.status(200).send(getServiceGroups());
 });
 
-app.get("/api/service/getservicegrouplist", function (req, res) {
+app.get("/api/servicegroup/getservicegrouplist", function (req, res) {
   console.log("/api/getservicegrouplist");
   res.status(200).send(getServiceGroupList());
 });
@@ -626,7 +626,7 @@ app.get("/api/service/getservicebyid/:id", function (req, res) {
   res.status(200).send(getServiceById());
 });
 
-app.get("/api/service/getservicegroupbyid/:id", function (req, res) {
+app.get("/api/servicegroup/getservicegroupbyid/:id", function (req, res) {
   console.log("/api/getservicegroupbyid");
   res.status(200).send(getServiceGroupById());
 });
@@ -641,12 +641,17 @@ app.post("/api/service/updateService/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/servicegroup/updateServicegroup/:id", function (req, res) {
+  console.log("/api/updateService");
+  res.status(200).send({ id: 1 });
+});
+
 app.post("/api/service/deleteService/:id", function (req, res) {
   console.log("/api/deleteService");
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/service/deleteServicegroup/:id", function (req, res) {
+app.post("/api/servicegroup/deleteServicegroup/:id", function (req, res) {
   console.log("/api/deleteServicegroup");
   res.status(200).send({ id: 1 });
 });
@@ -702,7 +707,7 @@ app.get("/api/service/getserviceauditlog", function (req, res) {
   res.status(200).send(getEntityHistory());
 });
 
-app.get("/api/service/getservicegroupauditlog", function (req, res) {
+app.get("/api/servicegroup/getservicegroupauditlog", function (req, res) {
   console.log("/api/getservicegroupauditlog");
   res.status(200).send(getEntityHistory());
 });
