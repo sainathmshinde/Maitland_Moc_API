@@ -55,6 +55,9 @@ const getEntityContacts = require("./data/getEntityContacts");
 const getLegalEtityTree = require("./data/getLegalEtityTree");
 const getServiceGroupList = require("./data/getServiceGroupList");
 const getServiceGroupById = require("./data/getServiceGroupById");
+const getContractTypes = require("./data/getContractTypes");
+const getMasterContractList = require("./data/getMasterContractList");
+const getClientByContractId = require("./data/getClientByContractId");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -692,7 +695,7 @@ app.get("/api/contract/getclientreportingdelivery", function (req, res) {
 // getServiceTags - getServicegroups (endpoint already present)
 
 // getServicesByTagId
-app.get("/api/service/getservicesbygroupids", function (req, res) {
+app.get("/api/servicegroup/getservicesbygroupids", function (req, res) {
   console.log("/api/getservicesbygroupid");
   res.status(200).send(getServicesByTagId());
 });
@@ -700,6 +703,21 @@ app.get("/api/service/getservicesbygroupids", function (req, res) {
 app.get("/api/contract/getcontractauditlog", function (req, res) {
   console.log("/api/getlegalentityauditlog");
   res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/contract/getcontracttypes", function (req, res) {
+  console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getContractTypes());
+});
+
+app.get("/api/contract/getmastercontractlist", function (req, res) {
+  console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getMasterContractList());
+});
+
+app.get("/api/contract/getclientbycontractid/:id", function (req, res) {
+  console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getClientByContractId());
 });
 
 app.get("/api/service/getserviceauditlog", function (req, res) {
