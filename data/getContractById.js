@@ -4,6 +4,14 @@ module.exports = () => {
     contractApprovalStatus: "Approved",
     contractName: "test name",
     contractCode: "ABC1",
+    contractType: {
+      id: 2,
+      name: "Service",
+    },
+    masterContract: {
+      id: 1,
+      name: "TFS contract with ABSA",
+    },
     clientEntity: {
       id: 1,
       name: "ABSA",
@@ -39,64 +47,16 @@ module.exports = () => {
     ],
     services: [
       {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
+        id: 5,
+        name: "Trade settlement",
+        description: "",
+        code: "",
       },
       {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
-      },
-      {
-        id: 1,
-        name: "cash recon",
-        code: "c1",
-        serviceGroupId: 1,
+        id: 6,
+        name: "Investment accounting",
+        description: "",
+        code: "",
       },
     ],
     contacts: [

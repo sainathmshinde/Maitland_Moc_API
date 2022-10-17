@@ -3,6 +3,7 @@ module.exports = () => {
     items: [
       {
         id: 1,
+        contractType: "Master Contract",
         contractName: "TFS contract with ABSA",
         clientName: "ABSA",
         serviceEntity: "Maitland",
@@ -12,6 +13,7 @@ module.exports = () => {
 
       {
         id: 2,
+        contractType: "Service Contract",
         contractName: "TFS contract with VISEL",
         clientName: "ABSA",
         serviceEntity: "Maitland",

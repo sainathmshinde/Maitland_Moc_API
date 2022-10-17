@@ -715,7 +715,7 @@ app.get("/api/contract/getmastercontractlist", function (req, res) {
   res.status(200).send(getMasterContractList());
 });
 
-app.get("/api/contract/getclientbycontractid/:id", function (req, res) {
+app.get("/api/contract/getclientbycontractid", function (req, res) {
   console.log("/api/getlegalentityauditlog");
   res.status(200).send(getClientByContractId());
 });
@@ -737,6 +737,11 @@ app.get("/api/service/getservicebyname", function (req, res) {
 
 app.post("/api/contract/addcontract", function (req, res) {
   console.log("/api/addcontract");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/portfolio/bulkportfolioupload", function (req, res) {
+  console.log("/api/bulkportfolioupload");
   res.status(200).send({ id: 1 });
 });
 
