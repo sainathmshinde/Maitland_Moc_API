@@ -76,7 +76,7 @@ module.exports = () => {
       checker: false,
       approver: false,
     },
-    asset: {
+    allocations: {
       view: true,
       edit: true,
       delete: true,

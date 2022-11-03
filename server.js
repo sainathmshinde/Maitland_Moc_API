@@ -126,6 +126,23 @@ app.get("/api/role/getallroles", function (req, res) {
   // }
 });
 
+app.get("/api/role/getrolesbyapplicationid", function (req, res) {
+  console.log("/api/roles");
+
+  res.status(200).send([
+    { id: 1, name: "admin", description: "Description for the role" },
+    { id: 2, name: "user", description: "Description for the role" },
+    { id: 3, name: "guest", description: "Description for the role" },
+    { id: 4, name: "superuser", description: "Description for the role" },
+    { id: 5, name: "superadmin", description: "Description for the role" },
+    { id: 6, name: "Owner​​", description: "Description for the role" },
+    { id: 7, name: "contributor​", description: "Description for the role" },
+    { id: 8, name: "​custom Role​", description: "Description for the role" },
+    { id: 9, name: "​api User​", description: "Description for the role" },
+    { id: 10, name: "ui User​", description: "Description for the role" },
+  ]);
+});
+
 app.get("/api/group/getGroups", function (req, res) {
   console.log("/api/groups");
   res.status(200).send(getGroups());
@@ -401,6 +418,10 @@ app.get("/api/user/getAccessibility", function (req, res) {
   res.status(200).send(getAccessibility());
 });
 
+app.post("/api/user/exporttoexcel", function (req, res) {
+  console.log("/api/exporttoexcel");
+  res.status(200).send(true);
+});
 app.post("/api/userRole/addUserRole", function (req, res) {
   console.log("/api/postUserRole");
   res.status(400).send({ message: "User already exists" });
@@ -710,7 +731,7 @@ app.get("/api/contract/getcontracttypes", function (req, res) {
   res.status(200).send(getContractTypes());
 });
 
-app.get("/api/contract/getmastercontractlist", function (req, res) {
+app.get("/api/contract/getcontractlistbytype", function (req, res) {
   console.log("/api/getlegalentityauditlog");
   res.status(200).send(getMasterContractList());
 });
@@ -764,6 +785,38 @@ app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
 app.post("/api/contract/deletecontract/:id", function (req, res) {
   console.log("/api/deletecontract");
   res.status(200).send(true);
+});
+
+//asset allocator
+
+app.get("/api/allocation/getevents", function (req, res) {
+  console.log("/api/getevents");
+  // res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/allocation/getpolicies", function (req, res) {
+  console.log("/api/getpolicies");
+  // res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/allocation/getevent", function (req, res) {
+  console.log("/api/getevent");
+  // res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/allocation/geteventnotes", function (req, res) {
+  console.log("/api/geteventnotes");
+  // res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/allocation/getpolicy", function (req, res) {
+  console.log("/api/getpolicy");
+  // res.status(200).send(getEntityHistory());
+});
+
+app.post("/api/allocation/updatenotes", function (req, res) {
+  console.log("/api/addcontract");
+  // res.status(200).send({ id: 1 });
 });
 
 app.listen(5001, () => {
