@@ -82,5 +82,11 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    policy: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };

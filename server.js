@@ -58,6 +58,9 @@ const getServiceGroupById = require("./data/getServiceGroupById");
 const getContractTypes = require("./data/getContractTypes");
 const getMasterContractList = require("./data/getMasterContractList");
 const getClientByContractId = require("./data/getClientByContractId");
+const getEvents = require("./data/getEvents");
+const getEventPolicies = require("./data/getEventPolicies");
+const getMasterFunds = require("./data/getMasterFunds");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -791,12 +794,12 @@ app.post("/api/contract/deletecontract/:id", function (req, res) {
 
 app.get("/api/allocation/getevents", function (req, res) {
   console.log("/api/getevents");
-  // res.status(200).send(getEntityHistory());
+  res.status(200).send(getEvents());
 });
 
 app.get("/api/allocation/getpolicies", function (req, res) {
   console.log("/api/getpolicies");
-  // res.status(200).send(getEntityHistory());
+  res.status(200).send(getMasterFunds());
 });
 
 app.get("/api/allocation/getevent", function (req, res) {
@@ -811,7 +814,7 @@ app.get("/api/allocation/geteventnotes", function (req, res) {
 
 app.get("/api/allocation/getpolicy", function (req, res) {
   console.log("/api/getpolicy");
-  // res.status(200).send(getEntityHistory());
+  res.status(200).send(getEventPolicies());
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
