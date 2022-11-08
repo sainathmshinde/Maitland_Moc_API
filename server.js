@@ -61,6 +61,8 @@ const getClientByContractId = require("./data/getClientByContractId");
 const getEvents = require("./data/getEvents");
 const getEventPolicies = require("./data/getEventPolicies");
 const getMasterFunds = require("./data/getMasterFunds");
+const getEvent = require("./data/getEvent");
+const getEventHeader = require("./data/getEventHeader");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -804,7 +806,12 @@ app.get("/api/allocation/getpolicies", function (req, res) {
 
 app.get("/api/allocation/getevent", function (req, res) {
   console.log("/api/getevent");
-  // res.status(200).send(getEntityHistory());
+  res.status(200).send(getEvent());
+});
+
+app.get("/api/allocation/geteventallocationsheader", function (req, res) {
+  console.log("/api/geteventallocationsheader");
+  res.status(200).send(getEventHeader());
 });
 
 app.get("/api/allocation/geteventnotes", function (req, res) {
