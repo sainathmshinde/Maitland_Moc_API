@@ -88,5 +88,11 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    companyMapping: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };

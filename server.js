@@ -63,6 +63,9 @@ const getEventPolicies = require("./data/getEventPolicies");
 const getMasterFunds = require("./data/getMasterFunds");
 const getEvent = require("./data/getEvent");
 const getEventHeader = require("./data/getEventHeader");
+const getCompaniesByUser = require("./data/getCompaniesByUser");
+const getCompanies = require("./data/getCompanies");
+const getUserCompanies = require("./data/getUserCompanies");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -827,6 +830,21 @@ app.get("/api/allocation/getpolicy", function (req, res) {
 app.post("/api/allocation/updatenotes", function (req, res) {
   console.log("/api/addcontract");
   // res.status(200).send({ id: 1 });
+});
+
+app.get("/api/allocation/getcompaniesbyuser", function (req, res) {
+  console.log("/api/getCompaniesbyuser");
+  res.status(200).send(getCompaniesByUser());
+});
+
+app.get("/api/allocation/getcompanies", function (req, res) {
+  console.log("/api/getcompanies");
+  res.status(200).send(getCompanies());
+});
+
+app.get("/api/allocation/getusercompanies", function (req, res) {
+  console.log("/api/getusercompanies");
+  res.status(200).send(getUserCompanies());
 });
 
 app.listen(5001, () => {
