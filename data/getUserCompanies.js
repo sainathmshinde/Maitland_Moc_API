@@ -3,12 +3,13 @@ module.exports = () => {
     items: [
       {
         id: 1,
-        userName: "aashiq salie",
         userId: 1,
+        name: "aashiq salie",
+        userName: "!ashiq",
         companies: [
           {
             companyCode: "1",
-            companyName: "Brewin Dlphin",
+            companyName: "Brewin Dolphin",
           },
         ],
       },

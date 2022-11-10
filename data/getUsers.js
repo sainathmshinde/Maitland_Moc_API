@@ -162,18 +162,18 @@ module.exports = () => {
   // ];
 
   return [
-    { id: 1265, name: "-" },
-    { id: 1343, name: " PSILReporting" },
-    { id: 1829, name: "!Aashiq" },
-    { id: 33, name: "!Abdul-Raaziq" },
-    { id: 2272, name: "!Asheeqah" },
-    { id: 1821, name: "!Azola" },
-    { id: 1963, name: "!bc4" },
-    { id: 2284, name: "!Brandon" },
-    { id: 599, name: "!Callan" },
-    { id: 1961, name: "!christofm" },
-    { id: 1273, name: "!Christopher" },
-    { id: 2328, name: "!Cleo" },
-    { id: 617, name: "!Daniel" },
+    { id: 1265, name: "-", userName: "abc" },
+    { id: 1343, name: " PSILReporting", userName: "abc" },
+    { id: 1829, name: "!Aashiq", userName: "abc" },
+    { id: 33, name: "!Abdul-Raaziq", userName: "abc" },
+    { id: 2272, name: "!Asheeqah", userName: "abc" },
+    { id: 1821, name: "!Azola", userName: "abc" },
+    { id: 1963, name: "!bc4", userName: "abc" },
+    { id: 2284, name: "!Brandon", userName: "abc" },
+    { id: 599, name: "!Callan", userName: "abc" },
+    { id: 1961, name: "!christofm", userName: "abc" },
+    { id: 1273, name: "!Christopher", userName: "abc" },
+    { id: 2328, name: "!Cleo", userName: "abc" },
+    { id: 617, name: "!Daniel", userName: "abc" },
   ];
 };

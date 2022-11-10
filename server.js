@@ -832,6 +832,16 @@ app.post("/api/allocation/updatenotes", function (req, res) {
   // res.status(200).send({ id: 1 });
 });
 
+app.post("/api/allocation/addusercompanies", function (req, res) {
+  console.log("/api/addusercompanies");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/allocation/updateusercompanies/:id", function (req, res) {
+  console.log("/api/updateusercompanies");
+  res.status(200).send({ id: 1 });
+});
+
 app.get("/api/allocation/getcompaniesbyuser", function (req, res) {
   console.log("/api/getCompaniesbyuser");
   res.status(200).send(getCompaniesByUser());
