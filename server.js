@@ -842,6 +842,14 @@ app.post("/api/allocation/updateusercompanies/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post(
+  "/api/allocation/updatemastersubportfolioallocation",
+  function (req, res) {
+    console.log("/api/updatemastersubportfolioallocation");
+    res.status(200).send({ id: 1 });
+  }
+);
+
 app.get("/api/allocation/getcompaniesbyuser", function (req, res) {
   console.log("/api/getCompaniesbyuser");
   res.status(200).send(getCompaniesByUser());

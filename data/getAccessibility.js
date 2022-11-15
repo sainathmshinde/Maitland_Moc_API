@@ -81,14 +81,18 @@ module.exports = () => {
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
     policy: {
       view: true,
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
-    companyMapping: {
+    companymapping: {
       view: true,
       edit: true,
       delete: true,
