@@ -66,6 +66,7 @@ const getEventHeader = require("./data/getEventHeader");
 const getCompaniesByUser = require("./data/getCompaniesByUser");
 const getCompanies = require("./data/getCompanies");
 const getUserCompanies = require("./data/getUserCompanies");
+const getMasterPortfolios = require("./data/getMasterPortfolios");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -827,6 +828,21 @@ app.get("/api/allocation/getpolicy", function (req, res) {
   res.status(200).send(getEventPolicies());
 });
 
+app.get("/api/allocation/getmasterfunds", function (req, res) {
+  console.log("/api/getmasterfunds");
+  res.status(200).send(getMasterPortfolios());
+});
+
+app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
+  console.log("/api/getsubfundlistbyid");
+  res.status(200).send(getEventPolicies());
+});
+
+app.get("/api/approvalprocess/getapprovalaccesslevel", function (req, res) {
+  console.log("/api/getapprovalaccesslevel");
+  res.status(200).send({ level: 3 });
+});
+
 app.post("/api/allocation/updatenotes", function (req, res) {
   console.log("/api/addcontract");
   // res.status(200).send({ id: 1 });
@@ -849,6 +865,11 @@ app.post(
     res.status(200).send({ id: 1 });
   }
 );
+
+app.post("/api/allocation/updateeventnotes", function (req, res) {
+  console.log("/api/allocation/updateeventnotes");
+  res.status(200).send({ id: 1 });
+});
 
 app.get("/api/allocation/getcompaniesbyuser", function (req, res) {
   console.log("/api/getCompaniesbyuser");

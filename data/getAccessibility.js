@@ -83,6 +83,7 @@ module.exports = () => {
       create: true,
       checker: true,
       approver: true,
+      createnote: true,
     },
     policy: {
       view: true,

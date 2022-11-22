@@ -195,7 +195,7 @@ module.exports = () => {
         masterCompanyCode: "BREW",
         companyName: "Brewin Dolphin",
         masterPortfolioCode: "702",
-        eventStatus: "Created",
+        eventStatus: "Completed",
         eventTypeCode: "PD12",
         eventType: "Pre-dealing (12pm)",
         creationsAmountInc: 0,

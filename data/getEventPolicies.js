@@ -4,6 +4,11 @@ module.exports = () => {
     checkerIds: "6496",
     approverIds: "6496",
     approvalStatus: "Approved",
+    masterortfolioName: "UK fund",
+    masterPortfolio: {
+      portfolioCode: "700",
+      masterPortfolioName: "MI Select Manager UK Equity Fund (MASTER)",
+    },
     policies: [
       {
         policyID: 1,
