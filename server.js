@@ -838,9 +838,9 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
   res.status(200).send(getEventPolicies());
 });
 
-app.get("/api/approvalprocess/getapprovalaccesslevel", function (req, res) {
+app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 3 });
+  res.status(200).send({ level: 2 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {

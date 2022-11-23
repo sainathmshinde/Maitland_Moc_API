@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     policyID: 1,
-    checkerIds: "6496",
+    checkerIds: "",
     approverIds: "6496",
     approvalStatus: "Approved",
     masterortfolioName: "UK fund",
