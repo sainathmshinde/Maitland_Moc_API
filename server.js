@@ -853,6 +853,11 @@ app.post("/api/allocation/addusercompanies", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/allocation/updatepolicyallocation", function (req, res) {
+  console.log("/api/updatepolicyallocation");
+  res.status(200).send({ id: 1 });
+});
+
 app.post("/api/allocation/updateusercompanies/:id", function (req, res) {
   console.log("/api/updateusercompanies");
   res.status(200).send({ id: 1 });

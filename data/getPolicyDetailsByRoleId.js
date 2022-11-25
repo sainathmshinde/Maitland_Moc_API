@@ -9,6 +9,7 @@ module.exports = () => {
           id: "1",
           name: "User Management",
           nodeId: "2",
+          isSelected: true,
           policies: [
             {
               id: "1",
@@ -48,6 +49,7 @@ module.exports = () => {
           id: "1",
           name: "Entity Management",
           nodeId: "8",
+          isSelected: true,
           policies: [
             {
               id: "1",
@@ -86,6 +88,7 @@ module.exports = () => {
           id: "1",
           name: "Asset Management",
           nodeId: "14",
+          isSelected: true,
           policies: [
             {
               id: "1",
@@ -112,6 +115,7 @@ module.exports = () => {
           id: "1",
           name: "Asset Management",
           nodeId: "18",
+          isSelected: true,
           policies: [
             {
               id: "1",
@@ -138,6 +142,7 @@ module.exports = () => {
           id: "1",
           name: "Asset Management",
           nodeId: "22",
+          isSelected: true,
           policies: [
             {
               id: "1",

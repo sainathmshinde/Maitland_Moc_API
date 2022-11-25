@@ -1,6 +1,6 @@
 module.exports = () => {
   return {
-    id: "1",
+    id: 1,
     name: "Application Framework",
     nodeId: "1",
     pages: [
@@ -8,6 +8,7 @@ module.exports = () => {
         id: "1",
         name: "User Management",
         nodeId: "2",
+        isSelected: true,
         policies: [
           {
             id: "1",
@@ -40,12 +41,13 @@ module.exports = () => {
         id: "2",
         name: "Role Master",
         nodeId: "7",
+        isSelected: true,
         policies: [
           {
             id: "5",
             name: "Create role",
             nodeId: "8",
-            isSelected: true,
+            isSelected: false,
           },
         ],
       },
