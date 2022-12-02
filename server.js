@@ -67,6 +67,9 @@ const getCompaniesByUser = require("./data/getCompaniesByUser");
 const getCompanies = require("./data/getCompanies");
 const getUserCompanies = require("./data/getUserCompanies");
 const getMasterPortfolios = require("./data/getMasterPortfolios");
+const getEventTypes = require("./data/getEventTypes");
+const getEventStatus = require("./data/getEventStatus");
+const getFundCodes = require("./data/getFundCodes");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -798,7 +801,7 @@ app.post("/api/contract/deletecontract/:id", function (req, res) {
 
 //asset allocator
 
-app.get("/api/allocation/getevents", function (req, res) {
+app.post("/api/allocation/getevents", function (req, res) {
   console.log("/api/getevents");
   res.status(200).send(getEvents());
 });
@@ -889,6 +892,21 @@ app.get("/api/allocation/getcompanies", function (req, res) {
 app.get("/api/allocation/getusercompanies", function (req, res) {
   console.log("/api/getusercompanies");
   res.status(200).send(getUserCompanies());
+});
+
+app.get("/api/allocation/geteventtypes", function (req, res) {
+  console.log("/api/eventTypes");
+  res.status(200).send(getEventTypes());
+});
+
+app.get("/api/allocation/geteventstatus", function (req, res) {
+  console.log("/api/statusCodes");
+  res.status(200).send(getEventStatus());
+});
+
+app.get("/api/allocation/getfundcodes", function (req, res) {
+  console.log("/api/getusercompanies");
+  res.status(200).send(getFundCodes());
 });
 
 app.listen(5001, () => {

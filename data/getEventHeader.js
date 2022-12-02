@@ -1,5 +1,7 @@
 module.exports = () => {
   return {
+    displayName: "BP Parker",
+    createdOn: "0001-01-01T00:00:00",
     eventID: 4366663,
     masterCompanyCode: "BREW",
     companyName: null,
@@ -11,8 +13,8 @@ module.exports = () => {
     liquidationsAmountInc: 3720.76,
     creationsAmountCap: 527197.37,
     liquidationsAmountCap: 425862.56,
-    capBalAmount: 314833.6601,
-    incBalAmount: -25822.27,
+    capBalAmount: 0.0,
+    incBalAmount: 0.0,
     notes:
       "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
     declinedNotes: null,
