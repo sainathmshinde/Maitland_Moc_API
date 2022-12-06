@@ -909,6 +909,16 @@ app.get("/api/allocation/getfundcodes", function (req, res) {
   res.status(200).send(getFundCodes());
 });
 
+app.get("/api/allocation/getallocationauditlog", function (req, res) {
+  console.log("/api/getallocationauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/allocation/getpolicyauditlog", function (req, res) {
+  console.log("/api/getallocationauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
 app.listen(5001, () => {
   console.log("Server started at 5001");
 });

@@ -2,7 +2,7 @@ module.exports = () => {
   return {
     policyID: 1,
     checkerIds: "",
-    displayName: "BP Parker",
+    maker: "BP Parker",
     approverIds: "6496",
     approvalStatus: "Approved",
     masterortfolioName: "UK fund",
