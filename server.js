@@ -155,14 +155,17 @@ app.get("/api/role/getrolesbyapplicationid", function (req, res) {
   ]);
 });
 
-app.get("/api/group/getGroups", function (req, res) {
-  console.log("/api/groups");
+app.get("/api/group/getgroups", function (req, res) {
+  console.log("/api/getgrouplist");
   res.status(200).send(getGroups());
 });
 
-app.get("/api/preset/getGroups", function (req, res) {
-  console.log("/api/groups");
-  res.status(200).send(getGroups());
+app.get("/api/group/getgrouplist", function (req, res) {
+  console.log("/api/getgrouplist");
+  res.status(200).send([
+    { id: 1, name: "visel" },
+    { id: 2, name: "maitland" },
+  ]);
 });
 
 app.get("/api/policies", function (req, res) {
@@ -464,8 +467,13 @@ app.put("/api/role/updateRole/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/postRoleGroup", function (req, res) {
-  console.log("/api/postRoleGroup");
+app.post("/api/group/addgrouprole", function (req, res) {
+  console.log("/api/addgrouprole");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/group/updategrouprole/:id", function (req, res) {
+  console.log("/api/updategrouprole");
   res.status(200).send({ id: 1 });
 });
 

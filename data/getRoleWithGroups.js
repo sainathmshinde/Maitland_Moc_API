@@ -2,7 +2,8 @@ module.exports = () => {
   return {
     items: [
       {
-        role: { id: 1, name: "admin" },
+        id: 1,
+        name: "admin",
         groups: [
           { id: 1, name: "Add User" },
           { id: 2, name: "Edit User" },
@@ -13,7 +14,8 @@ module.exports = () => {
         ],
       },
       {
-        role: { id: 2, name: "user" },
+        id: 2,
+        name: "user",
         groups: [
           { id: 1, name: "Add User" },
           { id: 2, name: "Edit User" },
