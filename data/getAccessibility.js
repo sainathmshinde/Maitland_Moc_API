@@ -24,13 +24,7 @@ module.exports = () => {
       delete: true,
       create: true,
     },
-    userGroup: {
-      view: true,
-      edit: true,
-      delete: true,
-      create: true,
-    },
-    roleGroup: {
+    grouprole: {
       view: true,
       edit: true,
       delete: true,
