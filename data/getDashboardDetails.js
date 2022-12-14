@@ -19,7 +19,7 @@ module.exports = () => {
       name: "Asset acllocation",
       description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "http://localhost:3004/assets",
+      redirectUrl: "http://localhost:663",
     },
     // {
     //   id: "4",

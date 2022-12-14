@@ -4,6 +4,7 @@ module.exports = () => {
       {
         id: 1,
         name: "admin",
+        application: { id: 1, name: "app1" },
         groups: [
           { id: 1, name: "Add User" },
           { id: 2, name: "Edit User" },
@@ -16,6 +17,7 @@ module.exports = () => {
       {
         id: 2,
         name: "user",
+        application: { id: 1, name: "app2" },
         groups: [
           { id: 1, name: "Add User" },
           { id: 2, name: "Edit User" },

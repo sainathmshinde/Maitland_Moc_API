@@ -223,8 +223,8 @@ app.get("/api/getRoleWithPolicies", function (req, res) {
   res.status(200).send(getRoleWithPolicies());
 });
 
-app.get("/api/getRoleWithGroups", function (req, res) {
-  console.log("/api/getRoleWithGroups");
+app.get("/api/group/getgrouproles", function (req, res) {
+  console.log("/api/getgrouproles");
   res.status(200).send(getRoleWithGroups());
 });
 
