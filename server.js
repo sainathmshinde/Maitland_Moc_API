@@ -70,6 +70,8 @@ const getMasterPortfolios = require("./data/getMasterPortfolios");
 const getEventTypes = require("./data/getEventTypes");
 const getEventStatus = require("./data/getEventStatus");
 const getFundCodes = require("./data/getFundCodes");
+const getMetadata = require("./data/getMetadata");
+const getMetaDataContext = require("./data/getMetaDataContext");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -437,9 +439,9 @@ app.post("/api/user/exporttoexcel", function (req, res) {
   console.log("/api/exporttoexcel");
   res.status(200).send(true);
 });
-app.post("/api/userRole/addUserRole", function (req, res) {
+app.post("/api/user/addUserRole", function (req, res) {
   console.log("/api/postUserRole");
-  res.status(400).send({ message: "User already exists" });
+  res.status(200).send({ message: "User already exists" });
 });
 
 app.post("/api/postUserGroup", function (req, res) {
@@ -925,6 +927,31 @@ app.get("/api/allocation/getallocationauditlog", function (req, res) {
 app.get("/api/allocation/getpolicyauditlog", function (req, res) {
   console.log("/api/getallocationauditlog");
   res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/metadatas/getmetadata", function (req, res) {
+  console.log("/api/getmetadata");
+  res.status(200).send(getMetadata());
+});
+
+app.get("/api/metadatas/getmetadatacontext", function (req, res) {
+  console.log("/api/getmetadatacontext");
+  res.status(200).send(getMetaDataContext());
+});
+
+app.post("/api/metadatas/updatemetadata", function (req, res) {
+  console.log("/api/getmetadata");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/metadatas/savemetadata", function (req, res) {
+  console.log("/api/savemetadata");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/metadatas/deletemetadata", function (req, res) {
+  console.log("/api/deletemetadata");
+  res.status(200).send({ id: 1 });
 });
 
 app.listen(5001, () => {

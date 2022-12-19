@@ -6,6 +6,12 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    metadata: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
     role: {
       view: true,
       edit: true,
