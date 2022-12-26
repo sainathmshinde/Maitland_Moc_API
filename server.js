@@ -72,6 +72,7 @@ const getEventStatus = require("./data/getEventStatus");
 const getFundCodes = require("./data/getFundCodes");
 const getMetadata = require("./data/getMetadata");
 const getMetaDataContext = require("./data/getMetaDataContext");
+const getCountries = require("./data/getCountries");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -931,7 +932,8 @@ app.get("/api/allocation/getpolicyauditlog", function (req, res) {
 
 app.get("/api/metadatas/getmetadata", function (req, res) {
   console.log("/api/getmetadata");
-  res.status(200).send(getMetadata());
+  let context = req.query.context;
+  res.status(200).send(getMetadata(context));
 });
 
 app.get("/api/metadatas/getmetadatacontext", function (req, res) {
@@ -952,6 +954,11 @@ app.post("/api/metadatas/savemetadata", function (req, res) {
 app.get("/api/metadatas/deletemetadata", function (req, res) {
   console.log("/api/deletemetadata");
   res.status(200).send({ id: 1 });
+});
+
+app.get("/api/metadatas/getcountries", function (req, res) {
+  console.log("/api/getcountries");
+  res.status(200).send(getCountries());
 });
 
 app.listen(5001, () => {

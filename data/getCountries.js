@@ -1,0 +1,80 @@
+module.exports = () => {
+  return {
+    items: [
+      {
+        id: 1,
+        isoCountryCode2: "AE",
+        isoCountryCode3: "ARE",
+        ioCountryCode: "AE",
+        countryName: "United Arab Emirates",
+      },
+      {
+        id: 2,
+        isoCountryCode2: "AF",
+        isoCountryCode3: "AFG",
+        ioCountryCode: "AF",
+        countryName: "Afghanistan",
+      },
+      {
+        id: 3,
+        isoCountryCode2: "AG",
+        isoCountryCode3: "ATG",
+        ioCountryCode: "AG",
+        countryName: "Antigua and Barbuda",
+      },
+      {
+        id: 4,
+        isoCountryCode2: "AL",
+        isoCountryCode3: "ALB",
+        ioCountryCode: "AL",
+        countryName: "Albania",
+      },
+      {
+        id: 5,
+        isoCountryCode2: "AS",
+        isoCountryCode3: "ASM",
+        ioCountryCode: "AM",
+        countryName: "American Samoa",
+      },
+      {
+        id: 6,
+        isoCountryCode2: "AO",
+        isoCountryCode3: "AGO",
+        ioCountryCode: "AO",
+        countryName: "Angola",
+      },
+      {
+        id: 7,
+        isoCountryCode2: "AR",
+        isoCountryCode3: "ARG",
+        ioCountryCode: "AR",
+        countryName: "Argentina",
+      },
+      {
+        id: 8,
+        isoCountryCode2: "AT",
+        isoCountryCode3: "AUT",
+        ioCountryCode: "AT",
+        countryName: "Austria",
+      },
+      {
+        id: 9,
+        isoCountryCode2: "AU",
+        isoCountryCode3: "AUS",
+        ioCountryCode: "AU",
+        countryName: "Australia",
+      },
+      {
+        id: 10,
+        isoCountryCode2: "AW",
+        isoCountryCode3: "ABW",
+        ioCountryCode: "AW",
+        countryName: "Aruba",
+      },
+    ],
+    totalPages: 2,
+    currentPage: 0,
+    pageSize: 10,
+    totalCount: 26,
+  };
+};
