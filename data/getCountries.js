@@ -7,6 +7,7 @@ module.exports = () => {
         isoCountryCode3: "ARE",
         ioCountryCode: "AE",
         countryName: "United Arab Emirates",
+        status: "Active",
       },
       {
         id: 2,
@@ -14,6 +15,7 @@ module.exports = () => {
         isoCountryCode3: "AFG",
         ioCountryCode: "AF",
         countryName: "Afghanistan",
+        status: "Active",
       },
       {
         id: 3,
@@ -21,6 +23,7 @@ module.exports = () => {
         isoCountryCode3: "ATG",
         ioCountryCode: "AG",
         countryName: "Antigua and Barbuda",
+        status: "Active",
       },
       {
         id: 4,
@@ -28,6 +31,7 @@ module.exports = () => {
         isoCountryCode3: "ALB",
         ioCountryCode: "AL",
         countryName: "Albania",
+        status: "Active",
       },
       {
         id: 5,
@@ -35,6 +39,7 @@ module.exports = () => {
         isoCountryCode3: "ASM",
         ioCountryCode: "AM",
         countryName: "American Samoa",
+        status: "Active",
       },
       {
         id: 6,
@@ -42,6 +47,7 @@ module.exports = () => {
         isoCountryCode3: "AGO",
         ioCountryCode: "AO",
         countryName: "Angola",
+        status: "Active",
       },
       {
         id: 7,
@@ -49,6 +55,7 @@ module.exports = () => {
         isoCountryCode3: "ARG",
         ioCountryCode: "AR",
         countryName: "Argentina",
+        status: "InActive",
       },
       {
         id: 8,
@@ -56,6 +63,7 @@ module.exports = () => {
         isoCountryCode3: "AUT",
         ioCountryCode: "AT",
         countryName: "Austria",
+        status: "InActive",
       },
       {
         id: 9,
@@ -63,6 +71,7 @@ module.exports = () => {
         isoCountryCode3: "AUS",
         ioCountryCode: "AU",
         countryName: "Australia",
+        status: "InActive",
       },
       {
         id: 10,
@@ -70,6 +79,7 @@ module.exports = () => {
         isoCountryCode3: "ABW",
         ioCountryCode: "AW",
         countryName: "Aruba",
+        status: "InActive",
       },
     ],
     totalPages: 2,

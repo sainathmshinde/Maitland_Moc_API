@@ -73,6 +73,7 @@ const getFundCodes = require("./data/getFundCodes");
 const getMetadata = require("./data/getMetadata");
 const getMetaDataContext = require("./data/getMetaDataContext");
 const getCountries = require("./data/getCountries");
+const getMetadataCurrencies = require("./data/getMetadataCurrencies");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -959,6 +960,16 @@ app.get("/api/metadatas/deletemetadata", function (req, res) {
 app.get("/api/metadatas/getcountries", function (req, res) {
   console.log("/api/getcountries");
   res.status(200).send(getCountries());
+});
+
+app.get("/api/metadatas/getcurrencies", function (req, res) {
+  console.log("/api/getcurrencies");
+  res.status(200).send(getMetadataCurrencies());
+});
+
+app.get("/api/metadatas/getmetadatacontextauditlog", function (req, res) {
+  console.log("/api/getmetadatacontextauditlog");
+  res.status(200).send(getEntityHistory());
 });
 
 app.listen(5001, () => {

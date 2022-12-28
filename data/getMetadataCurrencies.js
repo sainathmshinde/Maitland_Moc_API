@@ -1,0 +1,80 @@
+module.exports = () => {
+  return {
+    items: [
+      {
+        id: 1,
+        isoCurrencyCode: "AED",
+        ioCurrencyCode: "AED",
+        currencyName: "UNITED ARAB EMIRATES DIRH",
+        status: "Active",
+      },
+      {
+        id: 2,
+        isoCurrencyCode: "ALL",
+        ioCurrencyCode: "ALL",
+        currencyName: "ALBANIAN LEK",
+        status: "Active",
+      },
+      {
+        id: 3,
+        isoCurrencyCode: "AMD",
+        ioCurrencyCode: "AMD",
+        currencyName: "ARMENIAN DRAM",
+        status: "Active",
+      },
+      {
+        id: 4,
+        isoCurrencyCode: "AOA",
+        ioCurrencyCode: "AOA",
+        currencyName: "ANGOLA KWANZA",
+        status: "Active",
+      },
+      {
+        id: 5,
+        isoCurrencyCode: "ARS",
+        ioCurrencyCode: "ARS",
+        currencyName: "ARGENTINIAN PESO",
+        status: "Active",
+      },
+      {
+        id: 6,
+        isoCurrencyCode: "AUD",
+        ioCurrencyCode: "AUD",
+        currencyName: "AUSTRALIAN DOLLAR",
+        status: "Active",
+      },
+      {
+        id: 7,
+        isoCurrencyCode: "AWG",
+        ioCurrencyCode: "AWG",
+        currencyName: "ARUBA GUILDER",
+        status: "InActive",
+      },
+      {
+        id: 8,
+        isoCurrencyCode: "AZN",
+        ioCurrencyCode: "AZN",
+        currencyName: "NEW AZERBAIJAN MANAT",
+        status: "InActive",
+      },
+      {
+        id: 9,
+        isoCurrencyCode: "BAM",
+        ioCurrencyCode: "BAM",
+        currencyName: "BOSNIA AND HERZEGOVINA",
+        status: "InActive",
+      },
+      {
+        id: 10,
+        isoCurrencyCode: "BBD",
+        ioCurrencyCode: "BBD",
+        currencyName: "BARBADOS DOLLARS",
+        status: "InActive",
+      },
+    ],
+    totalPages: 2,
+    currentPage: 0,
+    pageSize: 10,
+    totalCount: 26,
+  };
+};
