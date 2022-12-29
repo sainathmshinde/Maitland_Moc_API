@@ -74,6 +74,7 @@ const getMetadata = require("./data/getMetadata");
 const getMetaDataContext = require("./data/getMetaDataContext");
 const getCountries = require("./data/getCountries");
 const getMetadataCurrencies = require("./data/getMetadataCurrencies");
+const getPortfolios = require("./data/getPortfolios");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -809,6 +810,18 @@ app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
 app.post("/api/contract/deletecontract/:id", function (req, res) {
   console.log("/api/deletecontract");
   res.status(200).send(true);
+});
+
+// portfolio
+
+app.post("/api/portfolio/getportfolios", function (req, res) {
+  console.log("/api/getportfolios");
+  res.status(200).send(getPortfolios());
+});
+
+app.get("/api/portfolio/deleteportfolio/:id", function (req, res) {
+  console.log("/api/deleteportfolio");
+  res.status(200).send({ id: 1 });
 });
 
 //asset allocator
