@@ -78,6 +78,20 @@ const getPortfolios = require("./data/getPortfolios");
 const getPortfolioCategories = require("./data/getPortfolioCategories");
 const getPortfolioTypes = require("./data/getPortfolioTypes");
 const getAllApprovalStatus = require("./data/getAllApprovalStatus");
+const getEntityDetailsByContractId = require("./data/getEntityDetailsByContractId");
+const getSubPortfolioById = require("./data/getSubPortfolioById");
+const getPortfolioById = require("./data/getPortfolioById");
+const getHierarchy = require("./data/getHierarchy");
+const getParentPortfolios = require("./data/getParentPortfolios");
+const getPortfolioCountries = require("./data/getPortfolioCountries");
+const getPortfolioCurrencies = require("./data/getPortfolioCurrencies");
+const getValuationPoint = require("./data/getValuationPoint");
+const getApplicablePricingSlot = require("./data/getApplicablePricingSlot");
+const getYesNoValues = require("./data/getYesNoValues");
+const getReconciliationFrequency = require("./data/getReconciliationFrequency");
+const getCalculationBasis = require("./data/getCalculationBasis");
+const getDistributionMonths = require("./data/getDistributionMonths");
+const getPrimaryTradingPlatforms = require("./data/getPrimaryTradingPlatforms");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -708,6 +722,16 @@ app.post("/api/servicegroup/deleteServicegroup/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/portfolio/addportfolio", function (req, res) {
+  console.log("/api/addportfolio");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/portfolio/updateportfolio/:id", function (req, res) {
+  console.log("/api/updateportfolio");
+  res.status(200).send({ id: 1 });
+});
+
 //contract --------------------------------------------
 
 app.get("/api/contract/getcontracts", function (req, res) {
@@ -789,16 +813,6 @@ app.post("/api/contract/addcontract", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/portfolio/bulkportfolioupload", function (req, res) {
-  console.log("/api/bulkportfolioupload");
-  res.status(200).send({ id: 1 });
-});
-
-app.post("/api/contract/updatecontract/:id", function (req, res) {
-  console.log("/api/addcontract");
-  res.status(200).send({ id: 1 });
-});
-
 //approval
 app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
@@ -840,6 +854,86 @@ app.get("/api/portfolio/getportfoliotypes", function (req, res) {
 app.get("/api/legalentity/getallapprovalstatus", function (req, res) {
   console.log("/api/getallapprovalstatus");
   res.status(200).send(getAllApprovalStatus());
+});
+
+app.get("/api/contract/getentitydetailsbycontractid", function (req, res) {
+  console.log("/api/getentitydetailsbycontractid");
+  res.status(200).send(getEntityDetailsByContractId());
+});
+
+app.get("/api/portfolio/getsubportfoliosbyid", function (req, res) {
+  console.log("/api/getsubportfoliosbyid");
+  res.status(200).send(getSubPortfolioById());
+});
+
+app.get("/api/portfolio/getportfoliobyid", function (req, res) {
+  console.log("/api/getportfoliobyid");
+  res.status(200).send(getPortfolioById());
+});
+
+app.get("/api/portfolio/getmultimanagerhierarchy", function (req, res) {
+  console.log("/api/getmultimanagerhierarchy");
+  res.status(200).send(getHierarchy());
+});
+
+app.get("/api/portfolio/getparentportfolios", function (req, res) {
+  console.log("/api/getparentportfolios");
+  res.status(200).send(getParentPortfolios());
+});
+
+app.get("/api/portfolio/getcountries", function (req, res) {
+  console.log("/api/getcountries");
+  res.status(200).send(getPortfolioCountries());
+});
+
+app.get("/api/portfolio/getcurrencies", function (req, res) {
+  console.log("/api/getcurrencies");
+  res.status(200).send(getPortfolioCurrencies());
+});
+
+app.get("/api/portfolio/getValuationPoint", function (req, res) {
+  console.log("/api/getValuationPoint");
+  res.status(200).send(getValuationPoint());
+});
+
+app.get("/api/portfolio/getapplicablepricingslot", function (req, res) {
+  console.log("/api/getapplicablepricingslot");
+  res.status(200).send(getApplicablePricingSlot());
+});
+
+app.get("/api/portfolio/getyesnovalues", function (req, res) {
+  console.log("/api/getyesnovalues");
+  res.status(200).send(getYesNoValues());
+});
+
+app.get("/api/portfolio/getreconciliationfrequency", function (req, res) {
+  console.log("/api/getreconciliationfrequency");
+  res.status(200).send(getReconciliationFrequency());
+});
+
+app.get("/api/portfolio/getcalculationbasis", function (req, res) {
+  console.log("/api/getcalculationbasis");
+  res.status(200).send(getCalculationBasis());
+});
+
+app.get("/api/portfolio/getdistributionmonths", function (req, res) {
+  console.log("/api/getdistributionmonths");
+  res.status(200).send(getDistributionMonths());
+});
+
+app.get("/api/portfolio/getprimarytradingplatforms", function (req, res) {
+  console.log("/api/getprimarytradingplatforms");
+  res.status(200).send(getPrimaryTradingPlatforms());
+});
+
+app.post("/api/portfolio/bulkportfolioupload", function (req, res) {
+  console.log("/api/bulkportfolioupload");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/contract/updatecontract/:id", function (req, res) {
+  console.log("/api/addcontract");
+  res.status(200).send({ id: 1 });
 });
 
 //asset allocator
