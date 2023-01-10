@@ -92,6 +92,7 @@ const getReconciliationFrequency = require("./data/getReconciliationFrequency");
 const getCalculationBasis = require("./data/getCalculationBasis");
 const getDistributionMonths = require("./data/getDistributionMonths");
 const getPrimaryTradingPlatforms = require("./data/getPrimaryTradingPlatforms");
+const getSecondStepPortfolioDetails = require("./data/getSecondStepPortfolioDetails");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -868,7 +869,11 @@ app.get("/api/portfolio/getsubportfoliosbyid", function (req, res) {
 
 app.get("/api/portfolio/getportfoliobyid", function (req, res) {
   console.log("/api/getportfoliobyid");
-  res.status(200).send(getPortfolioById());
+  if (req.query.currentStep == 1) {
+    res.status(200).send(getPortfolioById());
+  } else {
+    res.status(200).send(getSecondStepPortfolioDetails());
+  }
 });
 
 app.get("/api/portfolio/getmultimanagerhierarchy", function (req, res) {
