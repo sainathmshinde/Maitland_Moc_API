@@ -1,0 +1,43 @@
+module.exports = () => {
+  return {
+    portfolioId: 2,
+    willYouBeTradingEquityDerivatives: true,
+    willYouBeTradingBondDerivatives: true,
+    willYouBeTradingBonds: true,
+    willYouBeTradingMoneyMarkets: true,
+    isForeignTradingApplicable: true,
+    country: { id: 1, name: "India" },
+    custodian: {
+      id: 1,
+      name: "Maitland",
+    },
+    defaultPlaceOfSettlement: { id: 1, name: "India" },
+    clearingHouse: {
+      id: 1,
+      name: "Maitland",
+    },
+    currency: { id: 1, name: "INR" },
+    fxCurrency: { id: 1, name: "INR" },
+    variationMargin: "12",
+    fundingInterest: "23",
+    bookingFees: {
+      id: 1,
+      name: "Yes",
+    },
+    pSet: { id: 1, name: "Pset1" },
+    method: { id: 1, name: "method1" },
+    scripBankName: "BOI",
+    scripBankAccountNumber: "A1234M083J",
+    clientScripCode: "A123",
+    safexCode: "F33443",
+    yieldxCode: "VD2332",
+    unexcorCode: "D233",
+    sorBankAccountNumber: "A233FG",
+    cashAccountNumber: "A2332",
+    additionalBankAccountNumber: "FKJ98KJKJ",
+    bpid: "19898023",
+    custodianCashAccountInterestRateDebit: "12",
+    custodianCashAccountInterestRateCredit: "12",
+    fundLei: "BC988",
+  };
+};

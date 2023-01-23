@@ -73,8 +73,8 @@ module.exports = () => {
       edit: true,
       delete: true,
       create: true,
-      checker: false,
-      approver: false,
+      checker: true,
+      approver: true,
     },
     allocations: {
       view: true,

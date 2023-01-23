@@ -23,8 +23,8 @@ module.exports = () => {
       name: "Live",
     },
     typeOfPortfolio: {
-      id: 1,
-      name: "Seg Fund",
+      id: 4,
+      name: "Multi-managed",
     },
     multiManagerHierarchy: {
       id: 1,
@@ -34,6 +34,7 @@ module.exports = () => {
       id: 1,
       name: "UK 200",
     },
+    portfolioApprovalStatus: "Approved",
     portfolioNameShort: "UK fund",
     portfolioNameLong: "MI UK Test Fund 200",
     portfolioCode: "MI UK",
@@ -62,7 +63,7 @@ module.exports = () => {
         designation: "SSE",
         contactTypeName: "Entity",
         contactType: {
-          contactTypeName: "Entity",
+          contactTypeName: "Sub-portfolio manager",
           contactTypeID: 1,
         },
       },
@@ -83,5 +84,6 @@ module.exports = () => {
     ],
     reportingEntity1: { code: "ABS1", id: 1, name: "ABSA" },
     reportingEntity2: { code: "ABS1", id: 1, name: "ABSA" },
+    maker: "Avdhoot",
   };
 };

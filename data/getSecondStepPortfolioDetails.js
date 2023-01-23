@@ -12,6 +12,7 @@ module.exports = () => {
       id: 6,
       name: "AO",
     },
+    portfolioApprovalStatus: "Approved",
     baseCurrency: {
       id: 1,
       name: "INR",
@@ -24,7 +25,7 @@ module.exports = () => {
       id: 1,
       name: "100-200",
     },
-    numberOfShareClasses: "23",
+    numberOfShareClasses: 23,
     tradeMatchingAndSettlementIntructionsByMaitland: {
       id: 1,
       name: "Yes",
@@ -49,7 +50,7 @@ module.exports = () => {
       id: 1,
       name: "Market Value",
     },
-    auditFee: "123",
+    auditFee: 123,
     assetOwner: {
       id: 3,
       name: "ABSA capital",
@@ -65,7 +66,7 @@ module.exports = () => {
       id: 1,
       name: "Monthly",
     },
-    otherFees: "23wewe",
+    otherFees: 2,
     doesPortfolioDistributeIncome: {
       id: 1,
       name: "Yes",
@@ -75,5 +76,7 @@ module.exports = () => {
       id: 1,
       name: "Maitland NXM",
     },
+    fundLei: "A123",
+    maker: "Avdhoot",
   };
 };

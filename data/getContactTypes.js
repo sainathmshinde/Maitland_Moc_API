@@ -16,5 +16,9 @@ module.exports = () => {
       contactTypeId: 4,
       contactTypeName: "Operational",
     },
+    {
+      contactTypeId: 5,
+      contactTypeName: "Sub-portfolio manager",
+    },
   ];
 };

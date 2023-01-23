@@ -93,6 +93,11 @@ const getCalculationBasis = require("./data/getCalculationBasis");
 const getDistributionMonths = require("./data/getDistributionMonths");
 const getPrimaryTradingPlatforms = require("./data/getPrimaryTradingPlatforms");
 const getSecondStepPortfolioDetails = require("./data/getSecondStepPortfolioDetails");
+const getportoflioUploadErrors = require("./data/getportoflioUploadErrors");
+const getftrs = require("./data/getftrs");
+const getPset = require("./data/getPset");
+const getMethods = require("./data/getMethods");
+const getJurisdictionById = require("./data/getJurisdictionById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -723,14 +728,37 @@ app.post("/api/servicegroup/deleteServicegroup/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/portfolio/addfundtradingjurisidiction", function (req, res) {
+  console.log("/api/addfundtradingjurisidiction");
+  res.status(200).send({ dataSet: { id: 1 } });
+});
+
+app.post("/api/portfolio/updatefundtradingjurisidiction", function (req, res) {
+  console.log("/api/updatefundtradingjurisidiction");
+  res.status(200).send({ dataSet: { id: 1 } });
+});
+
+app.post(
+  "/api/portfolio/deletefundtradingjurisdiction/:id",
+  function (req, res) {
+    console.log("/api/deletefundtradingjurisdiction/:id");
+    res.status(200).send({ dataSet: { id: 1 } });
+  }
+);
+
 app.post("/api/portfolio/addportfolio", function (req, res) {
   console.log("/api/addportfolio");
-  res.status(200).send({ id: 1 });
+  res.status(200).send({ dataSet: { portfolioId: 1 } });
+});
+
+app.post("/api/portfolio/deleteportfolio/:id", function (req, res) {
+  console.log("/api/deleteportfolio");
+  res.status(200).send({ dataSet: { portfolioId: 1 } });
 });
 
 app.post("/api/portfolio/updateportfolio/:id", function (req, res) {
   console.log("/api/updateportfolio");
-  res.status(200).send({ id: 1 });
+  res.status(200).send({ dataSet: { portfolioId: 1 } });
 });
 
 //contract --------------------------------------------
@@ -776,6 +804,11 @@ app.get("/api/servicegroup/getservicesbygroupids", function (req, res) {
 
 app.get("/api/contract/getcontractauditlog", function (req, res) {
   console.log("/api/getlegalentityauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/portfolio/getportfolioauditlog", function (req, res) {
+  console.log("/api/getportfolioaudit");
   res.status(200).send(getEntityHistory());
 });
 
@@ -867,12 +900,32 @@ app.get("/api/portfolio/getsubportfoliosbyid", function (req, res) {
   res.status(200).send(getSubPortfolioById());
 });
 
+app.get("/api/portfolio/getpset", function (req, res) {
+  console.log("/api/getpset");
+  res.status(200).send(getPset());
+});
+
+app.get("/api/portfolio/getjftmethod", function (req, res) {
+  console.log("/api/getjftmethod");
+  res.status(200).send(getMethods());
+});
+
 app.get("/api/portfolio/getportfoliobyid", function (req, res) {
   console.log("/api/getportfoliobyid");
   if (req.query.currentStep == 1) {
     res.status(200).send(getPortfolioById());
-  } else {
+  } else if (req.query.currentStep == 2) {
     res.status(200).send(getSecondStepPortfolioDetails());
+  } else if (req.query.currentStep == 3) {
+    res.status(200).send(getftrs());
+  } else {
+    res.status(200).send({
+      portfolioId: 1,
+      portfolioApprovalStatus: "Approved",
+      checkerIds: "1, 2,3",
+      approverIds: "1,2,3",
+      maker: "Avdhoot",
+    });
   }
 });
 
@@ -934,11 +987,17 @@ app.get("/api/portfolio/getprimarytradingplatforms", function (req, res) {
 app.post("/api/portfolio/bulkportfolioupload", function (req, res) {
   console.log("/api/bulkportfolioupload");
   res.status(200).send({ id: 1 });
+  // res.status(400).send(getportoflioUploadErrors());
 });
 
 app.post("/api/contract/updatecontract/:id", function (req, res) {
   console.log("/api/addcontract");
   res.status(200).send({ id: 1 });
+});
+
+app.get("/api/portfolio/getfundtradingjurisdictionbyid", function (req, res) {
+  console.log("/api/getfundtradingjurisdictionbyid");
+  res.status(200).send(getJurisdictionById());
 });
 
 //asset allocator
@@ -985,7 +1044,7 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 2 });
+  res.status(200).send({ level: 3 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {

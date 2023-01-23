@@ -7,7 +7,7 @@ module.exports = () => {
         portfolioName: "Client Entity",
         contractName: "Service Entity",
         portfolioCategory: "india",
-        portfolioType: "seg Fund",
+        portfolioType: "Multi-managed",
         approvalStatus: "Awaiting Check",
         status: "Active",
         currentStep: 1,

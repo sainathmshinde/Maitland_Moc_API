@@ -97,6 +97,7 @@ module.exports = () => {
       name: "AFG-Afghanistan",
       description: "Afghanistan",
     },
+    maker: "Avdhoot",
     operationalJurisdiction: {
       id: 1,
       name: "AFG-Afghanistan",
