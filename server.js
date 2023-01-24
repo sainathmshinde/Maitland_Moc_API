@@ -733,10 +733,13 @@ app.post("/api/portfolio/addfundtradingjurisidiction", function (req, res) {
   res.status(200).send({ dataSet: { id: 1 } });
 });
 
-app.post("/api/portfolio/updatefundtradingjurisidiction", function (req, res) {
-  console.log("/api/updatefundtradingjurisidiction");
-  res.status(200).send({ dataSet: { id: 1 } });
-});
+app.post(
+  "/api/portfolio/updatefundtradingjurisidiction/:id",
+  function (req, res) {
+    console.log("/api/updatefundtradingjurisidiction");
+    res.status(200).send({ dataSet: { id: 1 } });
+  }
+);
 
 app.post(
   "/api/portfolio/deletefundtradingjurisdiction/:id",

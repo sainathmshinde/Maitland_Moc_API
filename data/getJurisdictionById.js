@@ -1,6 +1,7 @@
 module.exports = () => {
   return {
     portfolioId: 2,
+    id: 1,
     willYouBeTradingEquityDerivatives: true,
     willYouBeTradingBondDerivatives: true,
     willYouBeTradingBonds: true,
