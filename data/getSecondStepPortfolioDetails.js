@@ -8,6 +8,18 @@ module.exports = () => {
       id: 7,
       name: "AR",
     },
+    portfolioCategory: {
+      id: 1,
+      name: "Live",
+    },
+    typeOfPortfolio: {
+      id: 4,
+      name: "Multi-managed",
+    },
+    multiManagerHierarchy: {
+      id: 1,
+      name: "Sub Portfolio",
+    },
     baseCountry: {
       id: 6,
       name: "AO",

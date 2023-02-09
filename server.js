@@ -728,7 +728,7 @@ app.post("/api/servicegroup/deleteServicegroup/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/portfolio/addfundtradingjurisidiction", function (req, res) {
+app.post("/api/portfolio/addfundtradingjurisdiction", function (req, res) {
   console.log("/api/addfundtradingjurisidiction");
   res.status(200).send({ dataSet: { id: 1 } });
 });
@@ -908,7 +908,7 @@ app.get("/api/portfolio/getpset", function (req, res) {
   res.status(200).send(getPset());
 });
 
-app.get("/api/portfolio/getjftmethod", function (req, res) {
+app.get("/api/portfolio/getftjmethod", function (req, res) {
   console.log("/api/getjftmethod");
   res.status(200).send(getMethods());
 });
@@ -982,7 +982,7 @@ app.get("/api/portfolio/getdistributionmonths", function (req, res) {
   res.status(200).send(getDistributionMonths());
 });
 
-app.get("/api/portfolio/getprimarytradingplatforms", function (req, res) {
+app.get("/api/portfolio/getprimarytradingplatform", function (req, res) {
   console.log("/api/getprimarytradingplatforms");
   res.status(200).send(getPrimaryTradingPlatforms());
 });
@@ -1025,11 +1025,6 @@ app.get("/api/allocation/geteventallocationsheader", function (req, res) {
   res.status(200).send(getEventHeader());
 });
 
-app.get("/api/allocation/geteventnotes", function (req, res) {
-  console.log("/api/geteventnotes");
-  // res.status(200).send(getEntityHistory());
-});
-
 app.get("/api/allocation/getpolicy", function (req, res) {
   console.log("/api/getpolicy");
   res.status(200).send(getEventPolicies());
@@ -1047,12 +1042,19 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 3 });
+  res.status(200).send({ level: 2 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
-  console.log("/api/addcontract");
-  // res.status(200).send({ id: 1 });
+  console.log("/api/updatenotes");
+  res.status(200).send({ id: 2 });
+});
+
+app.get("/api/allocation/geteventnotes", function (req, res) {
+  console.log("/api/geteventnotes/---------");
+  res.status(200).send({
+    note: "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.\r\nOn 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
+  });
 });
 
 app.post("/api/allocation/addusercompanies", function (req, res) {

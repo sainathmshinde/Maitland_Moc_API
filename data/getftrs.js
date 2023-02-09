@@ -2,6 +2,18 @@ module.exports = () => {
   return {
     id: 1,
     portfolioApprovalStatus: "Approved",
+    portfolioCategory: {
+      id: 1,
+      name: "Live",
+    },
+    typeOfPortfolio: {
+      id: 4,
+      name: "Multi-managed",
+    },
+    multiManagerHierarchy: {
+      id: 1,
+      name: "Sub Portfolio",
+    },
     items: [
       {
         id: 1,
@@ -20,9 +32,5 @@ module.exports = () => {
         bpid: "123A",
       },
     ],
-    totalPages: 1,
-    currentPage: 1,
-    pageSize: 10,
-    totalCount: 5,
   };
 };
