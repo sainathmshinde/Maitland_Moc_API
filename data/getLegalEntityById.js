@@ -125,7 +125,7 @@ module.exports = () => {
       description:
         "Data must be assumed to be completely unreliable until further investigations have been completed.",
     },
-    isInternalEntity: false,
+    isInternalEntity: true,
     contacts: [
       {
         id: 2,
