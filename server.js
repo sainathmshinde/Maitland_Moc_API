@@ -98,6 +98,11 @@ const getftrs = require("./data/getftrs");
 const getPset = require("./data/getPset");
 const getMethods = require("./data/getMethods");
 const getJurisdictionById = require("./data/getJurisdictionById");
+const getReportOneParameters = require("./data/getReportOneParameters");
+const getReportTwoParameters = require("./data/getReportTwoParameters");
+const getTreeview = require("./data/getTreeview");
+const getApplicationPageList = require("./data/getApplicationPageList");
+const getPagesByApplicationId = require("./data/getPagesByApplicationId");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -164,6 +169,33 @@ app.get("/api/role/getallroles", function (req, res) {
     { id: 10, name: "ui User​", description: "Description for the role" },
   ]);
   // }
+});
+
+app.get("/api/applicationpage/getapplicationpagelist", function (req, res) {
+  console.log("/api/getapplicationpagelist");
+  res.status(200).send(getApplicationPageList());
+});
+
+app.post("/api/applicationpage/addapplicationpage", function (req, res) {
+  console.log("/api/addapplicationpage");
+  res.status(200).send({ id: 1 });
+});
+app.post("/api/applicationpage/addapplicationpage/:id", function (req, res) {
+  console.log("/api/addapplicationpage");
+  res.status(200).send({ id: 1 });
+});
+
+app.get(
+  "/api/applicationpage/getapplicationpagesbyapplicationid",
+  function (req, res) {
+    console.log("/api/getapplicationpagesbyapplicationid");
+    res.status(200).send(getPagesByApplicationId());
+  }
+);
+
+app.post("/api/applicationpage/deleteapplicationpage/:id", function (req, res) {
+  console.log("/api/deleteapplicationpage");
+  res.status(200).send({ message: "Application page deleted successfully" });
 });
 
 app.get("/api/role/getrolesbyapplicationid", function (req, res) {
@@ -1193,6 +1225,26 @@ app.get("/api/metadatas/getcurrencies", function (req, res) {
 app.get("/api/metadatas/getmetadatacontextauditlog", function (req, res) {
   console.log("/api/getmetadatacontextauditlog");
   res.status(200).send(getEntityHistory());
+});
+
+/// Reporting Portal
+app.get("/api/report/getreports", function (req, res) {
+  console.log("/api/getreports");
+  res.status(200).send(getTreeview());
+});
+
+app.get("/api/reports/getparametersbyreportid/:id", function (req, res) {
+  console.log("/api/getparametersbyreportid/:id");
+  console.log(req.params);
+  if (req.params.id == 1) {
+    res.status(200).send(getReportOneParameters());
+  } else {
+    res.status(200).send(getReportTwoParameters());
+  }
+});
+
+app.post("/api/reports/downloadreport", function (req, res) {
+  console.log("api/downloadreport");
 });
 
 app.listen(5001, () => {
