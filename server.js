@@ -1025,6 +1025,18 @@ app.post("/api/portfolio/bulkportfolioupload", function (req, res) {
   // res.status(400).send(getportoflioUploadErrors());
 });
 
+app.post("/api/entity/bulkuploadlegalentity", function (req, res) {
+  console.log("/entity/bulkuploadlegalentity");
+  res.status(404).send({ id: 1 });
+  // res.status(400).send(getportoflioUploadErrors());
+});
+
+app.post("/api/contract/bulkuploadcontract", function (req, res) {
+  console.log("//contract/bulkuploadcontract");
+  res.status(200).send({ id: 1 });
+  // res.status(400).send(getportoflioUploadErrors());
+});
+
 app.post("/api/contract/updatecontract/:id", function (req, res) {
   console.log("/api/addcontract");
   res.status(200).send({ id: 1 });
@@ -1074,7 +1086,7 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 2 });
+  res.status(200).send({ level: 3 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
@@ -1082,8 +1094,20 @@ app.post("/api/allocation/updatenotes", function (req, res) {
   res.status(200).send({ id: 2 });
 });
 
+app.post("/api/allocation/updatefundnotes", function (req, res) {
+  console.log("/api/updatefundnodes");
+  res.status(200).send({ id: 2 });
+});
+
 app.get("/api/allocation/geteventnotes", function (req, res) {
   console.log("/api/geteventnotes/---------");
+  res.status(200).send({
+    note: "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.\r\nOn 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
+  });
+});
+
+app.get("/api/allocation/getfundnotes", function (req, res) {
+  console.log("/api/getfundnotes/---------");
   res.status(200).send({
     note: "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.\r\nOn 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
   });
@@ -1114,6 +1138,11 @@ app.post(
 
 app.post("/api/allocation/updateeventnotes", function (req, res) {
   console.log("/api/allocation/updateeventnotes");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/allocation/deleteevent", function (req, res) {
+  console.log("/api/allocation/deleteevent");
   res.status(200).send({ id: 1 });
 });
 
