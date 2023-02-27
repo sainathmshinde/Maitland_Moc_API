@@ -50,6 +50,13 @@ module.exports = () => {
       redirectUrl: "https://www.google.com",
     },
     {
+      id: 10,
+      name: "Reporting Platform",
+      description: "Application 1 description",
+      imageUrl: "https://via.placeholder.com/150",
+      rredirectUrl: "https://www.google.com",
+    },
+    {
       id: 8,
       name: "Test Application",
       description: "Application 1 description",

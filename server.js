@@ -102,6 +102,7 @@ const getReportOneParameters = require("./data/getReportOneParameters");
 const getReportTwoParameters = require("./data/getReportTwoParameters");
 const getTreeview = require("./data/getTreeview");
 const getApplicationPageList = require("./data/getApplicationPageList");
+const getPagesByApplicationId = require("./data/getPagesByApplicationId");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -179,10 +180,22 @@ app.post("/api/applicationpage/addapplicationpage", function (req, res) {
   console.log("/api/addapplicationpage");
   res.status(200).send({ id: 1 });
 });
+app.post("/api/applicationpage/addapplicationpage/:id", function (req, res) {
+  console.log("/api/addapplicationpage");
+  res.status(200).send({ id: 1 });
+});
 
-app.post("/api/applicationpage/deleteapplicationpage", function (req, res) {
+app.get(
+  "/api/applicationpage/getapplicationpagesbyapplicationid",
+  function (req, res) {
+    console.log("/api/getapplicationpagesbyapplicationid");
+    res.status(200).send(getPagesByApplicationId());
+  }
+);
+
+app.post("/api/applicationpage/deleteapplicationpage/:id", function (req, res) {
   console.log("/api/deleteapplicationpage");
-  res.status(200).send({ message: "User deleted successfully" });
+  res.status(200).send({ message: "Application page deleted successfully" });
 });
 
 app.get("/api/role/getrolesbyapplicationid", function (req, res) {
@@ -1186,7 +1199,7 @@ app.get("/api/metadatas/getmetadatacontextauditlog", function (req, res) {
 });
 
 /// Reporting Portal
-app.get("/api/reports/getreports", function (req, res) {
+app.get("/api/report/getreports", function (req, res) {
   console.log("/api/getreports");
   res.status(200).send(getTreeview());
 });
