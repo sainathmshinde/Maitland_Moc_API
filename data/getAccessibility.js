@@ -50,7 +50,7 @@ module.exports = () => {
       delete: true,
       create: true,
       checker: true,
-      approver: false,
+      approver: true,
     },
     service: {
       view: true,
@@ -94,6 +94,12 @@ module.exports = () => {
       approver: true,
     },
     companymapping: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    applicationpage: {
       view: true,
       edit: true,
       delete: true,
