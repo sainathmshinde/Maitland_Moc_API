@@ -1233,7 +1233,7 @@ app.get("/api/report/getreports", function (req, res) {
   res.status(200).send(getTreeview());
 });
 
-app.get("/api/reports/getparametersbyreportid/:id", function (req, res) {
+app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
   console.log("/api/getparametersbyreportid/:id");
   console.log(req.params);
   if (req.params.id == 1) {
