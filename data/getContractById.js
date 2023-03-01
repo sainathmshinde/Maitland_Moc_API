@@ -5,8 +5,8 @@ module.exports = () => {
     contractName: "test name",
     contractCode: "ABC1",
     contractType: {
-      id: 2,
-      name: "Service",
+      id: 1,
+      name: " Master",
     },
     masterContract: {
       id: 1,
@@ -33,6 +33,10 @@ module.exports = () => {
     clientReportingDelivery: {
       id: 1,
       name: "email",
+    },
+    file: {
+      id: "1",
+      name: "test.pdf",
     },
     kamId: 1,
     serviceTags: [
