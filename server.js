@@ -103,6 +103,8 @@ const getReportTwoParameters = require("./data/getReportTwoParameters");
 const getTreeview = require("./data/getTreeview");
 const getApplicationPageList = require("./data/getApplicationPageList");
 const getPagesByApplicationId = require("./data/getPagesByApplicationId");
+const getItemList = require("./data/getItemList");
+const getItemTypes = require("./data/getItemTypes");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1245,6 +1247,36 @@ app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
 
 app.post("/api/reports/downloadreport", function (req, res) {
   console.log("api/downloadreport");
+});
+
+app.get("/api/catalog/getitemlist", function (req, res) {
+  console.log("api/getitemlist");
+  res.status(200).send(getItemList());
+});
+
+app.get("api/catalog/getitemtypes", function (req, res) {
+  console.log("api/getitemtypes");
+  res.status(200).send(getItemTypes());
+});
+
+app.get("api/catalog/getitemparentbyname", function (req, res) {
+  console.log("api/getitemparentbyname");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("api/catalog/additem", function (req, res) {
+  console.log("api/additem");
+  res.status(200).send({ message: "Added item successfully" });
+});
+
+app.post("api/catalog/updateitem/:id", function (req, res) {
+  console.log("api/updateitem");
+  res.status(200).send({ message: "Updated item successfully" });
+});
+
+app.get("api/catalog/deleteitem/:id", function (req, res) {
+  console.log("api/deleteitem");
+  res.status(200).send({ id: 1 });
 });
 
 app.listen(5001, () => {
