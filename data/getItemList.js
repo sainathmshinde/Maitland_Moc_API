@@ -3,7 +3,7 @@ module.exports = () => {
     {
       itemType: {
         code: "F",
-        name: "Cash",
+        name: "Folder",
       },
       parent: {
         id: 1,
@@ -14,7 +14,7 @@ module.exports = () => {
     {
       itemType: {
         code: "F",
-        name: "CATE",
+        name: "Folder",
       },
       parent: {
         id: 1,

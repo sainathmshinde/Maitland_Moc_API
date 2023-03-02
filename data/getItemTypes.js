@@ -1,6 +1,6 @@
 module.exports = () => {
   return [
-    { code: "F", name: "BETA" },
-    { code: "R", name: "ASISA" },
+    { code: "F", name: "Folder" },
+    { code: "R", name: "Report" },
   ];
 };
