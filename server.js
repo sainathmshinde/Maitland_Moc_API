@@ -1245,7 +1245,7 @@ app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
   }
 });
 
-app.post("/api/reports/downloadreport", function (req, res) {
+app.post("/api/report/downloadreport", function (req, res) {
   console.log("api/downloadreport");
 });
 
