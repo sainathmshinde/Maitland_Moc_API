@@ -1274,8 +1274,13 @@ app.post("api/catalog/updateitem/:id", function (req, res) {
   res.status(200).send({ message: "Updated item successfully" });
 });
 
-app.get("api/catalog/deleteitem/:id", function (req, res) {
+app.post("api/catalog/deleteitem/:id", function (req, res) {
   console.log("api/deleteitem");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("api/catalog/getitembyid/:id", function (req, res) {
+  console.log("api/getitembyid");
   res.status(200).send({ id: 1 });
 });
 

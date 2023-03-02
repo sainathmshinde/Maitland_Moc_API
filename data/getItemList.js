@@ -1,6 +1,7 @@
 module.exports = () => {
   return [
     {
+      id: 1,
       itemType: {
         code: "F",
         name: "Folder",
@@ -12,6 +13,7 @@ module.exports = () => {
       itemName: "Cash Account Details",
     },
     {
+      id: 2,
       itemType: {
         code: "F",
         name: "Folder",
