@@ -23,7 +23,7 @@ module.exports = () => {
     portfolioName: "MI Select Managers UK Equity Fund ",
     masterPortfolioCode: "702",
     policyId: 1,
-    total: 391231.5701,
+    total: 100,
     sumCapital: 416168.4701,
     sumIncome: -24936.9,
     exclusionFlag: false,
