@@ -1,24 +1,27 @@
 module.exports = () => {
   return {
-    ItemId: 1,
-    ItemType: "Folder",
-    Name: "Alexander Forbes",
-    Notes: "Lorem ipsum dor",
-    DefaultFilename: "Abax investments",
-    ReportLocation: "../../Legacy Reports",
-    StoredProcedure: "StoredProcedure",
-    ReportDefinition: "Report Defination",
-    Generator: {
+    itemId: 1,
+    itemType: {
+      code: "F",
+      name: "Folder",
+    },
+    name: "Alexander Forbes",
+    notes: "Lorem ipsum dor",
+    defaultFilename: "Abax investments",
+    reportLocation: "../../Legacy Reports",
+    storedProcedure: "StoredProcedure",
+    reportDefinition: "Report Defination",
+    generator: {
       id: 1,
       name: "SSRS2017",
       code: "SSRS2017",
       descritption: "SQL server reporting services 2017",
     },
-    ParentId: { id: 1, name: "Standard Report" },
-    SortOrder: 0,
-    Code: "F",
-    Enable: bool,
-    ValidFrom: "isostring", //date
-    ValidTo: "isostring", //date
+    parent: { id: 1, name: "Standard Report" },
+    sortOrder: 0,
+    code: "F",
+    enable: false,
+    validFrom: "isostring", //date
+    validTo: "isostring", //date
   };
 };
