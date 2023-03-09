@@ -26,7 +26,7 @@ module.exports = () => {
       name: "Reporting Portal",
       // // description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "/reports",
+      redirectUrl: "http://localhost:665",
     },
     {
       id: "5",
