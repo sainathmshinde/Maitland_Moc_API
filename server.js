@@ -107,7 +107,7 @@ const getItemList = require("./data/getItemList");
 const getItemTypes = require("./data/getItemTypes");
 const getItemById = require("./data/getItemById");
 const getGeneratorList = require("./data/getGeneratorList");
-const getItemParentByName = require("./data/getItemParentByName");
+const getItemParentByName = require("./data/getAllParents");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1262,8 +1262,8 @@ app.get("/api/catalog/getitemtypes", function (req, res) {
   res.status(200).send(getItemTypes());
 });
 
-app.get("/api/catalog/getitemparentbyname", function (req, res) {
-  console.log("api/getitemparentbyname");
+app.get("/api/catalog/getallparents", function (req, res) {
+  console.log("api/getallparents");
   res.status(200).send(getItemParentByName());
 });
 
