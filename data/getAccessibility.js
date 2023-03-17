@@ -105,5 +105,17 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    reports: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    items: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };
