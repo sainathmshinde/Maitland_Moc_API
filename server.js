@@ -750,7 +750,14 @@ app.post("/api/service/updateService/:id", function (req, res) {
   console.log("/api/updateService");
   res.status(200).send({ id: 1 });
 });
-
+app.post("/api/servicegroup/addservicegroup", function (req, res) {
+  console.log("/api/addservicegroup");
+  res.status(400).send({
+    responseCode: 2,
+    message: "Service Group Already Exists.",
+    dataSet: null,
+  });
+});
 app.post("/api/servicegroup/updateServicegroup/:id", function (req, res) {
   console.log("/api/updateService");
   res.status(200).send({ id: 1 });
@@ -772,9 +779,9 @@ app.post("/api/portfolio/addfundtradingjurisdiction", function (req, res) {
 });
 
 app.post(
-  "/api/portfolio/updatefundtradingjurisidiction/:id",
+  "/api/portfolio/updatefundtradingjurisdiction/:id",
   function (req, res) {
-    console.log("/api/updatefundtradingjurisidiction");
+    console.log("/api/updatefundtradingjurisdiction");
     res.status(200).send({ dataSet: { id: 1 } });
   }
 );
