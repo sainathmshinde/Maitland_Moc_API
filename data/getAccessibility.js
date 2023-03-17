@@ -80,7 +80,7 @@ module.exports = () => {
       view: true,
       edit: true,
       delete: true,
-      create: true,
+      create: false,
       checker: true,
       approver: true,
       createnote: true,

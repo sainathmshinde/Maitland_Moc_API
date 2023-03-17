@@ -64,11 +64,7 @@ module.exports = () => {
           description: "Excel 97 (xls)",
           defaultExtension: "xls",
         },
-        {
-          formatCode: "EXCEL",
-          description: "Excel 97 (xls)",
-          defaultExtension: "xls",
-        },
+
         {
           formatCode: "PDF",
           description: "PDF",

@@ -108,6 +108,7 @@ const getItemTypes = require("./data/getItemTypes");
 const getItemById = require("./data/getItemById");
 const getGeneratorList = require("./data/getGeneratorList");
 const getItemParentByName = require("./data/getAllParents");
+const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -928,6 +929,11 @@ app.get("/api/portfolio/getportfoliotypes", function (req, res) {
 app.get("/api/legalentity/getallapprovalstatus", function (req, res) {
   console.log("/api/getallapprovalstatus");
   res.status(200).send(getAllApprovalStatus());
+});
+
+app.get("/api/allocation/getallapprovalstatus", function (req, res) {
+  console.log("/api/getallapprovalstatus");
+  res.status(200).send(getAssetAPprovalStatus());
 });
 
 app.get("/api/contract/getentitydetailsbycontractid", function (req, res) {
