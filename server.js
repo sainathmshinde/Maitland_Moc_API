@@ -1204,6 +1204,11 @@ app.get("/api/metadatas/getmetadata", function (req, res) {
   res.status(200).send(getMetadata(context));
 });
 
+app.post("/api/metadatas/addmetadata", function (req, res) {
+  console.log("/api/addmetadata");
+  res.status(200).send({ id: 1 });
+});
+
 app.get("/api/metadatas/getmetadatacontext", function (req, res) {
   console.log("/api/getmetadatacontext");
   res.status(200).send(getMetaDataContext());

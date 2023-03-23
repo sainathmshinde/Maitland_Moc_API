@@ -39,6 +39,7 @@ module.exports = () => {
       name: "test.pdf",
     },
     kamId: 1,
+    clientLEI: "Test",
     serviceTags: [
       {
         id: 1,
