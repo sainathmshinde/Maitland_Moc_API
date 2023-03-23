@@ -12,7 +12,7 @@ module.exports = () => {
     },
     multiManagerHierarchy: {
       id: 1,
-      name: "Sub Portfolio",
+      name: "parent portfolio",
     },
     items: [
       {

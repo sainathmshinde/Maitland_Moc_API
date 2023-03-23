@@ -19,14 +19,14 @@ module.exports = () => {
       name: "Asset allocation",
       // description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "http://localhost:663",
+      redirectUrl: "http://localhost:665",
     },
     {
       id: "4",
       name: "Reporting Portal",
       // // description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
-      redirectUrl: "/reports",
+      redirectUrl: "http://localhost:666",
     },
     {
       id: "5",

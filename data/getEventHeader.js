@@ -7,6 +7,7 @@ module.exports = () => {
     companyName: null,
     masterPortfolioCode: "700",
     eventStatus: "Created",
+    eventStatusName: "Created",
     eventTypeCode: "AA",
     eventType: null,
     creationsAmountInc: 4606.13,
@@ -23,7 +24,7 @@ module.exports = () => {
     portfolioName: "MI Select Managers UK Equity Fund ",
     masterPortfolioCode: "702",
     policyId: 1,
-    total: -100,
+    total: -6189629.18,
     sumCapital: 416168.4701,
     sumIncome: -24936.9,
     exclusionFlag: false,
@@ -50,7 +51,7 @@ module.exports = () => {
     carriedForwardCapInc: 0,
     checkerIds: "6496",
     approverIds: "6496",
-    approvalStatus: "Awaiting Check",
+    approvalStatus: "Rejected",
   };
 };
 // return {
