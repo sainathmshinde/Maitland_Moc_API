@@ -895,6 +895,10 @@ app.post("/api/contract/addcontract", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/contract/download", function (req, res) {
+  console.log("/api/download");
+  res.status(200).send({ id: 1 });
+});
 //approval
 app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
