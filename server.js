@@ -1104,7 +1104,7 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 3 });
+  res.status(200).send({ level: 2 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
@@ -1263,6 +1263,7 @@ app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
 
 app.post("/api/report/downloadreport", function (req, res) {
   console.log("api/downloadreport");
+  res.status(200).send({ file: null });
 });
 
 app.get("/api/catalog/getitemlist", function (req, res) {
