@@ -109,6 +109,7 @@ const getItemById = require("./data/getItemById");
 const getGeneratorList = require("./data/getGeneratorList");
 const getItemParentByName = require("./data/getAllParents");
 const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
+const getApplicationTree = require("./data/getApplicationTree");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -486,7 +487,11 @@ app.get("/api/user/getPolicyDetailsByRoleId", function (req, res) {
 
 app.get("/api/role/getActionTree", function (req, res) {
   console.log("/api/role/getActionTree");
-  res.status(200).send(getActionTree());
+  if (req.query.appId == 10) {
+    res.status(200).send(getActionTree());
+  } else {
+    res.status(200).send(getApplicationTree());
+  }
 });
 
 app.get("/api/role/getRolePolicies", function (req, res) {
@@ -895,6 +900,10 @@ app.post("/api/contract/addcontract", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/contract/download", function (req, res) {
+  console.log("/api/download");
+  res.status(200).send({ id: 1 });
+});
 //approval
 app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
@@ -1208,6 +1217,11 @@ app.get("/api/metadatas/getmetadata", function (req, res) {
   console.log("/api/getmetadata");
   let context = req.query.context;
   res.status(200).send(getMetadata(context));
+});
+
+app.post("/api/metadatas/addmetadata", function (req, res) {
+  console.log("/api/addmetadata");
+  res.status(200).send({ id: 1 });
 });
 
 app.get("/api/metadatas/getmetadatacontext", function (req, res) {
