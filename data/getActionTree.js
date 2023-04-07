@@ -1,53 +1,85 @@
 module.exports = () => {
   return {
     id: 1,
-    name: "Application Framework",
-    nodeId: "1",
+    name: "Reporting platform",
+    nodeId: "25",
     pages: [
       {
-        id: "1",
-        name: "User Management",
-        nodeId: "2",
-        isSelected: true,
+        id: "2",
+        name: "Fund Administration",
+        nodeId: "2786",
+        isSelected: false,
+        children: [
+          {
+            id: "3",
+            name: "Standard Reports",
+            nodeId: "56",
+            isSelected: false,
+            children: [
+              {
+                id: "4",
+                name: "Cash",
+                nodeId: "98",
+                isSelected: true,
+                policies: [
+                  {
+                    id: "5",
+                    name: "Run And Download",
+                    nodeId: "546",
+                    isSelected: false,
+                  },
+                ],
+                children: [],
+              },
+            ],
+            policies: [
+              {
+                id: "6",
+                name: "Run And Download",
+                nodeId: "56576",
+                isSelected: false,
+              },
+            ],
+          },
+        ],
         policies: [
           {
             id: "1",
-            name: "Create user",
-            nodeId: "3",
-            isSelected: true,
-          },
-          {
-            id: "2",
-            nodeId: "4",
-            name: "Update user",
-            isSelected: false,
-          },
-          {
-            id: "3",
-            nodeId: "5",
-            name: "Delete user",
-            isSelected: false,
-          },
-          {
-            id: "4",
-            nodeId: "6",
-            name: "View user",
+            name: "Run and Download",
+            nodeId: "34653",
             isSelected: false,
           },
         ],
       },
 
       {
-        id: "2",
-        name: "Role Master",
-        nodeId: "7",
-        isSelected: true,
+        id: "7",
+        name: "Transfer Agency",
+        nodeId: "121",
+        isSelected: false,
         policies: [
           {
-            id: "5",
-            name: "Create role",
-            nodeId: "8",
+            id: "8",
+            name: "Run And Download",
+            nodeId: "122",
             isSelected: false,
+          },
+        ],
+        children: [
+          {
+            id: "9",
+            name: "Accounting",
+            nodeId: "123",
+            isSelected: false,
+            policies: [
+              {
+                id: "10",
+                name: "Run And Download",
+                nodeId: "125",
+                isSelected: false,
+              },
+            ],
+            children: [],
           },
         ],
       },

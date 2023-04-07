@@ -109,6 +109,7 @@ const getItemById = require("./data/getItemById");
 const getGeneratorList = require("./data/getGeneratorList");
 const getItemParentByName = require("./data/getAllParents");
 const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
+const getApplicationTree = require("./data/getApplicationTree");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -486,7 +487,11 @@ app.get("/api/user/getPolicyDetailsByRoleId", function (req, res) {
 
 app.get("/api/role/getActionTree", function (req, res) {
   console.log("/api/role/getActionTree");
-  res.status(200).send(getActionTree());
+  if (req.query.appId == 10) {
+    res.status(200).send(getActionTree());
+  } else {
+    res.status(200).send(getApplicationTree());
+  }
 });
 
 app.get("/api/role/getRolePolicies", function (req, res) {
