@@ -84,6 +84,8 @@ module.exports = () => {
       checker: true,
       approver: true,
       createnote: true,
+      resendemail: true,
+      resendoltptemplate: true,
     },
     policy: {
       view: true,
@@ -112,6 +114,12 @@ module.exports = () => {
       create: true,
     },
     items: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    emailconfiguration: {
       view: true,
       edit: true,
       delete: true,

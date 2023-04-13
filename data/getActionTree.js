@@ -9,18 +9,18 @@ module.exports = () => {
         name: "Fund Administration",
         nodeId: "2786",
         isSelected: false,
-        children: [
+        pages: [
           {
             id: "3",
             name: "Standard Reports",
-            nodeId: "56",
+            nodeId: "0",
             isSelected: false,
-            children: [
+            pages: [
               {
                 id: "4",
                 name: "Cash",
                 nodeId: "98",
-                isSelected: true,
+                isSelected: false,
                 policies: [
                   {
                     id: "5",
@@ -29,7 +29,7 @@ module.exports = () => {
                     isSelected: false,
                   },
                 ],
-                children: [],
+                pages: [],
               },
             ],
             policies: [
@@ -65,7 +65,7 @@ module.exports = () => {
             isSelected: false,
           },
         ],
-        children: [
+        pages: [
           {
             id: "9",
             name: "Accounting",
@@ -79,7 +79,7 @@ module.exports = () => {
                 isSelected: false,
               },
             ],
-            children: [],
+            pages: [],
           },
         ],
       },
