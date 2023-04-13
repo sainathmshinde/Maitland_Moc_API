@@ -110,7 +110,7 @@ const getGeneratorList = require("./data/getGeneratorList");
 const getItemParentByName = require("./data/getAllParents");
 const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
 const getApplicationTree = require("./data/getApplicationTree");
-
+const getPortfolioDetails = require("./data/getPortfolioDetails");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -910,6 +910,16 @@ app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/approvalprocess/resendsubioemail/:id", function (req, res) {
+  console.log("/api/resendsubioemail");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
+  console.log("/api/resendoutputtemplateemail");
+  res.status(200).send({ id: 1 });
+});
+
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
   res.status(200).send(true);
@@ -1084,6 +1094,16 @@ app.post("/api/allocation/getevents", function (req, res) {
 app.get("/api/allocation/getpolicies", function (req, res) {
   console.log("/api/getpolicies");
   res.status(200).send(getMasterFunds());
+});
+
+app.get("/api/allocation/getportfoliodetails", function (req, res) {
+  console.log("/api/getportfoliodetails");
+  res.status(200).send(getPortfolioDetails());
+});
+
+app.post("/api/allocation/updateportfoliodetails", function (req, res) {
+  console.log("/api/updateportfoliodetails");
+  res.status(200).send({ id: 1 });
 });
 
 app.get("/api/allocation/getevent", function (req, res) {

@@ -12,30 +12,31 @@ module.exports = () => {
           isSelected: true,
           policies: [
             {
-              id: "1",
+              id: "990",
               name: "Create user",
               nodeId: "3",
               isSelected: true,
             },
             {
-              id: "2",
+              id: "991",
               nodeId: "4",
               name: "Update user",
               isSelected: false,
             },
             {
-              id: "3",
+              id: "992",
               nodeId: "5",
               name: "Delete user",
               isSelected: false,
             },
             {
-              id: "4",
+              id: "993",
               nodeId: "6",
               name: "View user",
               isSelected: false,
             },
           ],
+          children: [],
         },
       ],
     },
@@ -76,6 +77,7 @@ module.exports = () => {
               isSelected: false,
             },
           ],
+          children: [],
         },
       ],
     },
@@ -97,12 +99,13 @@ module.exports = () => {
               isSelected: true,
             },
             {
-              id: "1",
+              id: "89",
               name: "Update Asset",
               nodeId: "16",
               isSelected: true,
             },
           ],
+          children: [],
         },
       ],
     },
@@ -130,6 +133,7 @@ module.exports = () => {
               isSelected: true,
             },
           ],
+          children: [],
         },
       ],
     },
@@ -155,6 +159,93 @@ module.exports = () => {
               name: "Update Asset",
               nodeId: "23",
               isSelected: true,
+            },
+          ],
+          children: [],
+        },
+      ],
+    },
+    {
+      id: "34",
+      name: "Reporting platform",
+      nodeId: "25",
+      pages: [
+        {
+          id: "35",
+          name: "Fund Administration",
+          nodeId: "2786",
+          isSelected: false,
+          children: [
+            {
+              id: "36",
+              name: "Standard Reports",
+              nodeId: "56",
+              isSelected: false,
+              children: [
+                {
+                  id: "37",
+                  name: "Cash",
+                  nodeId: "98",
+                  isSelected: false,
+                  policies: [
+                    {
+                      id: "38",
+                      name: "Run And Download",
+                      nodeId: "546",
+                      isSelected: false,
+                    },
+                  ],
+                  children: [],
+                },
+              ],
+              policies: [
+                {
+                  id: "39",
+                  name: "Run And Download",
+                  nodeId: "56576",
+                  isSelected: false,
+                },
+              ],
+            },
+          ],
+          policies: [
+            {
+              id: "40",
+              name: "Run and Download",
+              nodeId: "34653",
+              isSelected: false,
+            },
+          ],
+        },
+
+        {
+          id: "41",
+          name: "Transfer Agency",
+          nodeId: "121",
+          isSelected: false,
+          policies: [
+            {
+              id: "42",
+              name: "Run And Download",
+              nodeId: "122",
+              isSelected: false,
+            },
+          ],
+          children: [
+            {
+              id: "43",
+              name: "Accounting",
+              nodeId: "123",
+              isSelected: false,
+              policies: [
+                {
+                  id: "44",
+                  name: "Run And Download",
+                  nodeId: "125",
+                  isSelected: false,
+                },
+              ],
+              children: [],
             },
           ],
         },

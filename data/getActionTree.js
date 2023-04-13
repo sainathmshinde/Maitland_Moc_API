@@ -81,19 +81,31 @@ module.exports = () => {
       {
         id: 135,
         name: "Fund Administration",
-        nodeId: 8,
-        parentId: 0,
-        isSelected: true,
-        policies: [
-          { id: 92, name: "Run and Download", isSelected: false, nodeId: 9 },
-        ],
+        nodeId: "2786",
+        isSelected: false,
         pages: [
           {
             id: 137,
             name: "Standard Reports",
-            nodeId: 0,
-            parentId: 135,
+            nodeId: "0",
             isSelected: false,
+            pages: [
+              {
+                id: "4",
+                name: "Cash",
+                nodeId: "98",
+                isSelected: false,
+                policies: [
+                  {
+                    id: "5",
+                    name: "Run And Download",
+                    nodeId: "546",
+                    isSelected: false,
+                  },
+                ],
+                pages: [],
+              },
+            ],
             policies: [
               {
                 id: 94,
