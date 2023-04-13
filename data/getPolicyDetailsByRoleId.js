@@ -36,7 +36,7 @@ module.exports = () => {
               isSelected: false,
             },
           ],
-          children: [],
+          pages: [],
         },
       ],
     },
@@ -77,7 +77,7 @@ module.exports = () => {
               isSelected: false,
             },
           ],
-          children: [],
+          pages: [],
         },
       ],
     },
@@ -105,7 +105,7 @@ module.exports = () => {
               isSelected: true,
             },
           ],
-          children: [],
+          pages: [],
         },
       ],
     },
@@ -133,7 +133,7 @@ module.exports = () => {
               isSelected: true,
             },
           ],
-          children: [],
+          pages: [],
         },
       ],
     },
@@ -161,7 +161,7 @@ module.exports = () => {
               isSelected: true,
             },
           ],
-          children: [],
+          pages: [],
         },
       ],
     },
@@ -175,13 +175,13 @@ module.exports = () => {
           name: "Fund Administration",
           nodeId: "2786",
           isSelected: false,
-          children: [
+          pages: [
             {
               id: "36",
               name: "Standard Reports",
               nodeId: "56",
               isSelected: false,
-              children: [
+              pages: [
                 {
                   id: "37",
                   name: "Cash",
@@ -195,7 +195,7 @@ module.exports = () => {
                       isSelected: false,
                     },
                   ],
-                  children: [],
+                  pages: [],
                 },
               ],
               policies: [
@@ -231,7 +231,7 @@ module.exports = () => {
               isSelected: false,
             },
           ],
-          children: [
+          pages: [
             {
               id: "43",
               name: "Accounting",
@@ -245,7 +245,7 @@ module.exports = () => {
                   isSelected: false,
                 },
               ],
-              children: [],
+              pages: [],
             },
           ],
         },
