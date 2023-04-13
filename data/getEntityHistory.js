@@ -6,7 +6,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T13:29:12.44",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
     {
       id: 30,
@@ -14,7 +14,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T13:28:25.66",
       approvalStatus: null,
-      diff: {
+      changeLog: {
         entityName: { oldValue: "Absa capital", newValue: "maitland" },
         entityGroup: {
           oldValue: {
@@ -42,7 +42,6 @@ module.exports = () => {
               email: "vilas@abc.com",
               contactNumber: "123",
               designation: "SSE",
-              contactTypeName: "Entity",
               contactType: { contactTypeName: "Entity", contactTypeID: 1 },
             },
           ],
@@ -55,7 +54,6 @@ module.exports = () => {
               email: "vilas@abc.com",
               contactNumber: "1231313123123",
               designation: "SSE",
-              contactTypeName: "Entity",
               contactType: { contactTypeName: "Entity", contactTypeID: 1 },
             },
           ],
@@ -68,7 +66,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T13:28:18.8",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
     {
       id: 30,
@@ -76,7 +74,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T13:04:02.77",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
     {
       id: 30,
@@ -84,7 +82,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T12:56:47.73",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
     {
       id: 30,
@@ -92,7 +90,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T12:53:16.28",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
     {
       id: 30,
@@ -100,7 +98,7 @@ module.exports = () => {
       modifiedBy: "Vilas Sagar",
       modifiedOn: "2022-10-06T12:53:09.437",
       approvalStatus: null,
-      diff: "",
+      changeLog: "",
     },
   ];
 };
