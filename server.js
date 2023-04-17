@@ -111,6 +111,8 @@ const getItemParentByName = require("./data/getAllParents");
 const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
 const getApplicationTree = require("./data/getApplicationTree");
 const getPortfolioDetails = require("./data/getPortfolioDetails");
+const getUsersByGroupNames = require("./data/getUsersByGroupIds");
+const getUsersByGroupIds = require("./data/getUsersByGroupIds");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -233,6 +235,11 @@ app.get("/api/group/getgrouplist", function (req, res) {
     { id: 1, name: "visel" },
     { id: 2, name: "maitland" },
   ]);
+});
+
+app.post("/api/group/getusersbygroupids", function (req, res) {
+  console.log("/api/getusersbygroupids");
+  res.status(200).send(getUsersByGroupIds());
 });
 
 app.get("/api/policies", function (req, res) {

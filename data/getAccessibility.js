@@ -113,7 +113,7 @@ module.exports = () => {
       delete: true,
       create: true,
     },
-    items: {
+    catalogitem: {
       view: true,
       edit: true,
       delete: true,
