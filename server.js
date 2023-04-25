@@ -112,6 +112,8 @@ const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
 const getApplicationTree = require("./data/getApplicationTree");
 const getPortfolioDetails = require("./data/getPortfolioDetails");
 const getADUsers = require("./data/getADUsers");
+const getUsersByGroupNames = require("./data/getUsersByGroupNames");
+const getUsersByGroupIds = require("./data/getUsersByGroupNames");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -174,10 +176,26 @@ app.get("/api/role/getallroles", function (req, res) {
     { id: 7, name: "contributor​", description: "Description for the role" },
     { id: 8, name: "​custom Role​", description: "Description for the role" },
     { id: 9, name: "​api User​", description: "Description for the role" },
-    { id: 10, name: "Reporting platform admin​", description: "Description for the role" },
-    { id: 11, name: "Reporting platform super user​", description: "Description for the role" },
-    { id: 12, name: "Application framework super user​", description: "Description for the role" },
-    { id: 13, name: "Entity master normal user​", description: "Description for the role" },
+    {
+      id: 10,
+      name: "Reporting platform admin​",
+      description: "Description for the role",
+    },
+    {
+      id: 11,
+      name: "Reporting platform super user​",
+      description: "Description for the role",
+    },
+    {
+      id: 12,
+      name: "Application framework super user​",
+      description: "Description for the role",
+    },
+    {
+      id: 13,
+      name: "Entity master normal user​",
+      description: "Description for the role",
+    },
   ]);
   // }
 });
@@ -237,6 +255,11 @@ app.get("/api/group/getgrouplist", function (req, res) {
     { id: 1, name: "visel" },
     { id: 2, name: "maitland" },
   ]);
+});
+
+app.get("/api/group/getusersbygroupnames/", function (req, res) {
+  console.log("/api/getusersbygroupnames");
+  res.status(200).send(getUsersByGroupIds());
 });
 
 app.get("/api/policies", function (req, res) {
