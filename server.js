@@ -113,6 +113,7 @@ const getApplicationTree = require("./data/getApplicationTree");
 const getPortfolioDetails = require("./data/getPortfolioDetails");
 const getUsersByGroupNames = require("./data/getUsersByGroupNames");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
+const getPortfolioHistory = require("./data/getPortfolioHistory");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -869,7 +870,7 @@ app.get("/api/contract/getcontractauditlog", function (req, res) {
 
 app.get("/api/portfolio/getportfolioauditlog", function (req, res) {
   console.log("/api/getportfolioaudit");
-  res.status(200).send(getEntityHistory());
+  res.status(200).send(getPortfolioHistory());
 });
 
 app.get("/api/contract/getcontracttypes", function (req, res) {
@@ -1140,7 +1141,7 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 2 });
+  res.status(200).send({ level: 3 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
@@ -1256,7 +1257,7 @@ app.get("/api/metadatas/getmetadatacontext", function (req, res) {
   res.status(200).send(getMetaDataContext());
 });
 
-app.post("/api/metadatas/updatemetadata", function (req, res) {
+app.post("/api/metadatas/updatemetadata/:id", function (req, res) {
   console.log("/api/getmetadata");
   res.status(200).send({ id: 1 });
 });
