@@ -111,6 +111,7 @@ const getItemParentByName = require("./data/getAllParents");
 const getAssetAPprovalStatus = require("./data/getAssetAPprovalStatus");
 const getApplicationTree = require("./data/getApplicationTree");
 const getPortfolioDetails = require("./data/getPortfolioDetails");
+const getADUsers = require("./data/getADUsers");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -173,7 +174,10 @@ app.get("/api/role/getallroles", function (req, res) {
     { id: 7, name: "contributor​", description: "Description for the role" },
     { id: 8, name: "​custom Role​", description: "Description for the role" },
     { id: 9, name: "​api User​", description: "Description for the role" },
-    { id: 10, name: "ui User​", description: "Description for the role" },
+    { id: 10, name: "Reporting platform admin​", description: "Description for the role" },
+    { id: 11, name: "Reporting platform super user​", description: "Description for the role" },
+    { id: 12, name: "Application framework super user​", description: "Description for the role" },
+    { id: 13, name: "Entity master normal user​", description: "Description for the role" },
   ]);
   // }
 });
@@ -302,157 +306,7 @@ app.get("/api/user/getUsers", function (req, res) {
       res.status(200).send(getUserDetailsList());
     }, 0);
   } else {
-    res.status(200).send([
-      {
-        id: 1,
-        title: { id: 1, name: "Mr" },
-        firstName: "John",
-        surName: "Doe",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 2,
-        title: { id: 2, name: "Mrs" },
-        firstName: "John",
-        surName: "Doe",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 3,
-        title: { id: 3, name: "Mr" },
-        firstName: "Wick",
-        surName: "Jow",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 4,
-        title: { id: 4, name: "Mr" },
-        firstName: "Wick",
-        surName: "Jow",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 5,
-        title: { id: 5, name: "Mr" },
-        firstName: "Adam",
-        surName: "Gill",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 6,
-        title: { id: 6, name: "Mr" },
-        firstName: "Adam",
-        surName: "Gill",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 7,
-        title: { id: 7, name: "Mr" },
-        firstName: "Adam",
-        surName: "Gill",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "JD",
-        userName: "jdoe",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 8,
-        title: { id: 8, name: "Mr" },
-        firstName: "Adam",
-        surName: "Gill",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "AG",
-        userName: "Adam",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 9,
-        title: { id: 9, name: "Mr" },
-        firstName: "Adam",
-        surName: "Gill",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "AG",
-        userName: "Adam",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-
-      {
-        id: 10,
-        title: { id: 10, name: "Mr" },
-        firstName: "Chris",
-        surName: "john",
-        dateOfBirth: "2015-03-25T12:00:00-06:30",
-        initials: "CJ",
-        userName: "john",
-        description: "This is a description",
-        roles: [
-          { id: 1, name: "admin" },
-          { id: 2, name: "user" },
-        ],
-      },
-    ]);
+    res.status(200).send(getADUsers());
   }
 });
 
@@ -502,6 +356,7 @@ app.get("/api/role/getRolePolicies", function (req, res) {
 app.get("/api/user/getAccessibility", function (req, res) {
   console.log("/api/getAccessibility");
   res.status(200).send(getAccessibility());
+  // res.status(500).send({ message: "Something Went Wrong!s" });
 });
 
 app.post("/api/user/exporttoexcel", function (req, res) {
@@ -922,7 +777,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(true);
+  res.status(200).send(false);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1182,6 +1037,11 @@ app.post(
     res.status(200).send({ id: 1 });
   }
 );
+
+app.post("/api/allocation/updateeventapproverdetails", function (req, res) {
+  console.log("/api/updateeventapproverdetails");
+  res.status(200).send({ id: 1 });
+});
 
 app.post("/api/allocation/updateeventnotes", function (req, res) {
   console.log("/api/allocation/updateeventnotes");

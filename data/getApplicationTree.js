@@ -9,7 +9,7 @@ module.exports = () => {
         name: "User Management",
         nodeId: "2",
         isSelected: false,
-        children: [],
+        pages: [],
         policies: [
           {
             id: "1",
@@ -69,7 +69,7 @@ module.exports = () => {
             isSelected: false,
           },
         ],
-        children: [],
+        pages: [],
       },
     ],
   };
