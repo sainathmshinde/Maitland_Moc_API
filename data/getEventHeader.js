@@ -6,7 +6,7 @@ module.exports = () => {
     masterCompanyCode: "BREW",
     companyName: null,
     masterPortfolioCode: "700",
-    eventStatus: "Created",
+    eventStatus: "Completed",
     eventStatusName: "Created",
     eventTypeCode: "aa",
     eventType: null,
@@ -50,7 +50,7 @@ module.exports = () => {
     totalPercentage: 0,
     carriedForwardCapInc: 0,
     checkerIds: "6496",
-    approverIds: "6496",
+    approverIds: "6496, 6497",
     approvalStatus: "Rejected",
   };
 };

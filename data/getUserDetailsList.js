@@ -39,6 +39,7 @@ module.exports = () => {
         designation: null,
         contactNumber: null,
         isActive: false,
+        domainName:"fs"
       },
       {
         id: 33,

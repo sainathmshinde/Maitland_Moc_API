@@ -6,7 +6,7 @@ module.exports = () => {
         masterCompanyCode: "BREW",
         companyName: "Brewin Dolphin",
         masterPortfolioCode: "703",
-        eventStatus: "Created",
+        eventStatus: "Completed",
         approvalStatus: "Awaiting Check",
         eventTypeCode: "AA",
         eventType: "Asset Allocator",
