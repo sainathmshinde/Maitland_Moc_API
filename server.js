@@ -113,6 +113,7 @@ const getApplicationTree = require("./data/getApplicationTree");
 const getPortfolioDetails = require("./data/getPortfolioDetails");
 const getADUsers = require("./data/getADUsers");
 const getUsersByGroupNames = require("./data/getUsersByGroupNames");
+const getGroupList = require("./data/getGroupList");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
 const getPortfolioHistory = require("./data/getPortfolioHistory");
 app.get("/api/user/getUserDetails", function (req, res) {
@@ -252,10 +253,7 @@ app.get("/api/group/getgroups", function (req, res) {
 
 app.get("/api/group/getgrouplist", function (req, res) {
   console.log("/api/getgrouplist");
-  res.status(200).send([
-    { id: 1, name: "visel" },
-    { id: 2, name: "maitland" },
-  ]);
+  res.status(200).send(getGroupList());
 });
 
 app.get("/api/group/getusersbygroupnames/", function (req, res) {
@@ -691,6 +689,14 @@ app.post("/api/portfolio/deleteportfolio/:id", function (req, res) {
 app.post("/api/portfolio/updateportfolio/:id", function (req, res) {
   console.log("/api/updateportfolio");
   res.status(200).send({ dataSet: { portfolioId: 1 } });
+});
+
+app.get("/api/portfolio/getfundaccountingteams", function (req, res) {
+  console.log("/api/getservices");
+  res.status(200).send([
+    { id: 1, name: "hello" },
+    { id: 1, name: "hi" },
+  ]);
 });
 
 //contract --------------------------------------------
