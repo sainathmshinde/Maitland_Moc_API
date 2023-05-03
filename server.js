@@ -114,6 +114,7 @@ const getPortfolioDetails = require("./data/getPortfolioDetails");
 const getADUsers = require("./data/getADUsers");
 const getUsersByGroupNames = require("./data/getUsersByGroupNames");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
+const getRLPortfolios = require("./data/getRLPortfolios");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -960,6 +961,11 @@ app.post("/api/contract/updatecontract/:id", function (req, res) {
 app.get("/api/portfolio/getfundtradingjurisdictionbyid", function (req, res) {
   console.log("/api/getfundtradingjurisdictionbyid");
   res.status(200).send(getJurisdictionById());
+});
+
+app.get("/api/multitier/getrlportfolios", function (req, res) {
+  console.log("/api/getrlportfolios");
+  res.status(200).send(getRLPortfolios());
 });
 
 //asset allocator

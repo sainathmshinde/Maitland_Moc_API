@@ -7,7 +7,7 @@ module.exports = () => {
     companyName: null,
     masterPortfolioCode: "700",
     eventStatus: "Completed",
-    eventStatusName: "Created",
+    eventStatusName: "Completed",
     eventTypeCode: "aa",
     eventType: null,
     creationsAmountInc: 4606.13,

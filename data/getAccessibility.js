@@ -125,5 +125,11 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    multitierstructure: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };
