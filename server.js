@@ -125,6 +125,11 @@ const getAllocbbById = require("./data/getAllocbbById");
 const getAllocBBList = require("./data/getAllocBBList");
 const getReplicationTypes = require("./data/getReplicationTypes");
 const getRnlStructureList = require("./data/getRnlStructureList");
+const getRnlStructureById = require("./data/getRnlStructureById");
+const getassetOwners = require("./data/getassetOwners");
+const getProducts = require("./data/getProducts");
+const getAllocBB = require("./data/getAllocBB");
+const getPortfolioBB = require("./data/getPortfolioBB");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1342,10 +1347,39 @@ app.get("/api/rnlstructure/getrnlstructurelist", function (req, res) {
   res.status(200).send(getRnlStructureList());
 });
 
+app.get("/api/rnlstructure/getrnlstructurebyid/:id", function (req, res) {
+  console.log("api/getrnlstructurebyid");
+  res.status(200).send(getRnlStructureById());
+});
+
 app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
   console.log("api/deleternlstructure");
   res.status(200).send({ id: 1 });
 });
+
+//presets
+
+app.get(
+  "/api/captureportfolio/getrnlportfoliosbyclientId",
+  function (req, res) {
+    console.log("api/getassetownersbyclientid");
+    if (req.query.code === "AO") {
+      res.status(200).send(getassetOwners());
+    } else if (req.query.code === "PB") {
+      res.status(200).send(getProducts());
+    } else {
+      res.status(200).send(getPortfolioBB());
+    }
+  }
+);
+
+app.get(
+  "/api/buildingblockportfolio/getbuildingblockportfoliobyclientid",
+  function (req, res) {
+    console.log("api/getbuildingblockportfoliobyclientid");
+    res.status(200).send(getAllocBB());
+  }
+);
 
 //server port
 app.listen(5001, () => {
