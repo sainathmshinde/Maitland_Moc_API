@@ -703,8 +703,8 @@ app.post("/api/portfolio/updateportfolio/:id", function (req, res) {
 app.get("/api/portfolio/getfundaccountingteams", function (req, res) {
   console.log("/api/getservices");
   res.status(200).send([
-    { id: 1, name: "hello" },
-    { id: 1, name: "hi" },
+    { id: 1, name: "UT Hedge Fund Accounting" },
+    { id: 1, name: "SEG Fund Accounting" },
   ]);
 });
 
