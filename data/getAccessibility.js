@@ -125,7 +125,25 @@ module.exports = () => {
       delete: true,
       create: true,
     },
-    multitierstructure: {
+    mlassetowner: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    mlproductbuildingblock: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    mlallocationbuildingblock: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    mlstructure: {
       view: true,
       edit: true,
       delete: true,
