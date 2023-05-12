@@ -117,6 +117,7 @@ const getGroupList = require("./data/getGroupList");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
 const getRLPortfolios = require("./data/getRLPortfolios");
 const getPortfolioHistory = require("./data/getPortfolioHistory");
+const getCustodians = require("./data/getCustodians");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -905,6 +906,10 @@ app.get("/api/portfolio/getcountries", function (req, res) {
 app.get("/api/portfolio/getcurrencies", function (req, res) {
   console.log("/api/getcurrencies");
   res.status(200).send(getPortfolioCurrencies());
+});
+app.get("/api/portfolio/getcustodians", function (req, res) {
+  console.log("/api/getcustodians");
+  res.status(200).send(getCustodians());
 });
 
 app.get("/api/portfolio/getValuationPoint", function (req, res) {
