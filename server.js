@@ -117,7 +117,6 @@ const getGroupList = require("./data/getGroupList");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
 const getRLPortfolios = require("./data/getRLPortfolios");
 const getPortfolioHistory = require("./data/getPortfolioHistory");
-const getCustodians = require("./data/getCustodians");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1241,6 +1240,110 @@ app.get("/api/catalog/getgeneratorlist", function (req, res) {
   res.status(200).send(getGeneratorList());
 });
 
+//multi tier
+
+app.get("/api/captureportfolio/getportfolioslist", function (req, res) {
+  console.log("api/getportfolioslist");
+  res.status(200).send(getPortfoliosList());
+});
+
+app.get("/api/captureportfolio/getrnlportfolios", function (req, res) {
+  console.log("api/getrnlportfolios");
+  res.status(200).send(getRnlPortfolios());
+});
+
+app.get("/api/captureportfolio/getrnlportfoliobyid", function (req, res) {
+  console.log("api/getrnlportfoliobyid");
+  res.status(200).send(getRnlPortfolioById());
+});
+
+app.get("/api/captureportfolio/getrnlportfolioeditbyid", function (req, res) {
+  console.log("api/getrnlportfolioeditbyid");
+  res.status(200).send(getRnlPortfolioById());
+});
+
+app.get(
+  "/api/captureportfolio/getrnlportfoliotypesbycode",
+  function (req, res) {
+    console.log("api/getrnlportfoliotypesbycode");
+    res.status(200).send(getRnlPortfolioTypes());
+  }
+);
+
+app.get("/api/captureportfolio/getreplicationtypelist", function (req, res) {
+  console.log("api/getreplicationtypelist");
+  res.status(200).send(getReplicationTypes());
+});
+
+app.post("/api/captureportfolio/addrnlportfolio", function (req, res) {
+  console.log("api/addrnlportfolio");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/captureportfolio/updaternlportfolio/:id", function (req, res) {
+  console.log("api/updaternlportfolio");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/captureportfolio/deleternlportfolio/:id", function (req, res) {
+  console.log("api/deleternlportfolio");
+  res.status(200).send({ id: 1 });
+});
+
+// allocationbuilding block
+
+app.get(
+  "/api/buildingblockportfolio/getbuildingblockportfoliobyid/:id",
+  function (req, res) {
+    console.log("api/getbuildingblockportfoliobyid");
+    res.status(200).send(getAllocbbById());
+  }
+);
+
+app.get(
+  "/api/buildingblockportfolio/getbuildingblockportfoliosList",
+  function (req, res) {
+    console.log("api/getbuildingblockportfoliosList");
+    res.status(200).send(getAllocBBList());
+  }
+);
+
+app.post(
+  "/api/buildingblockportfolio/deletebuildingblockportfolio/:id",
+  function (req, res) {
+    console.log("api/deletebuildingblockportfolio");
+    res.status(200).send({ id: 1 });
+  }
+);
+
+app.post(
+  "/api/buildingblockportfolio/addbuildingblockportfolio",
+  function (req, res) {
+    console.log("api/addbuildingblockportfolio");
+    res.status(200).send({ id: 1 });
+  }
+);
+
+app.post(
+  "/api/buildingblockportfolio/updatebuildingblockportfoliobyid/:id",
+  function (req, res) {
+    console.log("api/updatebuildingblockportfolio");
+    res.status(200).send({ id: 1 });
+  }
+);
+
+//structure
+app.get("/api/rnlstructure/getrnlstructurelist", function (req, res) {
+  console.log("api/getrnlstructurelist");
+  res.status(200).send(getRnlStructureList());
+});
+
+app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
+  console.log("api/deleternlstructure");
+  res.status(200).send({ id: 1 });
+});
+
+//server port
 app.listen(5001, () => {
   console.log("Server started at 5001");
 });
