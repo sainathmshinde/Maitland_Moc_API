@@ -130,6 +130,7 @@ const getassetOwners = require("./data/getassetOwners");
 const getProducts = require("./data/getProducts");
 const getAllocBB = require("./data/getAllocBB");
 const getPortfolioBB = require("./data/getPortfolioBB");
+
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -918,6 +919,10 @@ app.get("/api/portfolio/getcountries", function (req, res) {
 app.get("/api/portfolio/getcurrencies", function (req, res) {
   console.log("/api/getcurrencies");
   res.status(200).send(getPortfolioCurrencies());
+});
+app.get("/api/portfolio/getcustodians", function (req, res) {
+  console.log("/api/getcustodians");
+  res.status(200).send(getCustodians());
 });
 
 app.get("/api/portfolio/getValuationPoint", function (req, res) {
