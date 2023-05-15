@@ -1357,6 +1357,16 @@ app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
+  console.log("api/savestructure");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnlstructure/updaternlstructure/:id", function (req, res) {
+  console.log("api/updatestructure");
+  res.status(200).send({ id: 1 });
+});
+
 //presets
 
 app.get(
