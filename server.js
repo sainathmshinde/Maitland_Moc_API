@@ -822,7 +822,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(false);
+  res.status(200).send(true);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1211,7 +1211,8 @@ app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
 
 app.post("/api/report/downloadreport", function (req, res) {
   console.log("api/downloadreport");
-  res.status(200).send({ file: null });
+  // res.status(200).send({ file: null });
+  res.status(400).send({ message: "error" });
 });
 
 app.get("/api/catalog/getitemlist", function (req, res) {
@@ -1364,11 +1365,42 @@ app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
 
 app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
   console.log("api/savestructure");
-  res.status(200).send({ id: 1 });
+  res
+    .status(200)
+    .send({
+      responseCode: 1,
+      message: "Muilti-tier RnL Structure has been added successfull.",
+      dataSet: {
+        structureId: 6,
+        clientId: 133,
+        assetOwnerId: 0,
+        clientProductStructureCode: "ABC1",
+        approvalids: null,
+        userName: "avp",
+        displayName: "Avdhoot Patil",
+        buildingBlockStructure: [
+          {
+            productId: 6827,
+            allocationBuildingBlock: null,
+            portfolioBlock: { id: 6831, percentage: 100, name: null },
+          },
+        ],
+      },
+    });
 });
 
 app.post("/api/rnlstructure/updaternlstructure/:id", function (req, res) {
   console.log("api/updatestructure");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnlstructure/deleteproduct", function (req, res) {
+  console.log("api/deletestructure");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnlstructure/updateassetowner/:id", function (req, res) {
+  console.log("api/updateassetowner");
   res.status(200).send({ id: 1 });
 });
 

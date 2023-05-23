@@ -1,6 +1,6 @@
 module.exports = () => {
   return {
-    portfolioId: 1,
+    rnlPortfolioId: 1,
     fundNumber: "200700",
     fundName: "MI EQUITY SELECT MANAGERS",
     fundNameShort: "MI EQUITY SL MAN",
@@ -21,5 +21,8 @@ module.exports = () => {
     updateInvestOne: true,
     generateTrades: true,
     cashAllocation: true,
+    portfolioApprovalStatus: "Approved",
+    approverIds: "1, 23,3",
+    maker: "Avdhoot",
   };
 };

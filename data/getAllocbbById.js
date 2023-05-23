@@ -8,5 +8,8 @@ module.exports = () => {
     updateInvestOne: false,
     generateTrades: false,
     cashAllocation: true,
+    portfolioApprovalStatus: "Approved",
+    approverIds: "1, 23,3",
+    maker: "Avdhoot",
   };
 };

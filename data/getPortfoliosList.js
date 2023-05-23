@@ -2,18 +2,24 @@ module.exports = () => {
   return {
     items: [
       {
-        portfolioId: 1,
+        client: "Maitland",
+        rnlPortfolioId: 1,
         fundNumber: "200700",
         fundName: "MI SELECT EQUITY",
         fundType: "Test Type",
+        rnlPortfolioType: "Product",
         portfolioNameShort: "MI SEL MAN EQ",
+        approvalStatus: "Aaaiting Approval",
       },
       {
         portfolioId: 2,
+        client: "Maitland",
         fundNumber: "200701",
         fundName: "MI SELECT CASH",
         fundType: "Test Type",
         portfolioNameShort: "MI SEL MAN C",
+        rnlPortfolioType: "Building Block",
+        approvalStatus: "Rejected",
       },
     ],
     totalPages: 2,

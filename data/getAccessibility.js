@@ -130,24 +130,32 @@ module.exports = () => {
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
     mlproductbuildingblock: {
       view: true,
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
     mlallocationbuildingblock: {
       view: true,
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
     mlstructure: {
       view: true,
       edit: true,
       delete: true,
       create: true,
+      checker: true,
+      approver: true,
     },
   };
 };
