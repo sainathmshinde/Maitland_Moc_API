@@ -117,6 +117,20 @@ const getGroupList = require("./data/getGroupList");
 const getUsersByGroupIds = require("./data/getUsersByGroupNames");
 const getRLPortfolios = require("./data/getRLPortfolios");
 const getPortfolioHistory = require("./data/getPortfolioHistory");
+const getPortfoliosList = require("./data/getPortfoliosList");
+const getRnlPortfolios = require("./data/getRnlPortfolios");
+const getRnlPortfolioById = require("./data/getRnlPortfolioById");
+const getRnlPortfolioTypes = require("./data/getRnlPortfolioTypes");
+const getAllocbbById = require("./data/getAllocbbById");
+const getAllocBBList = require("./data/getAllocBBList");
+const getReplicationTypes = require("./data/getReplicationTypes");
+const getRnlStructureList = require("./data/getRnlStructureList");
+const getRnlStructureById = require("./data/getRnlStructureById");
+const getassetOwners = require("./data/getassetOwners");
+const getProducts = require("./data/getProducts");
+const getAllocBB = require("./data/getAllocBB");
+const getPortfolioBB = require("./data/getPortfolioBB");
+
 const getCustodians = require("./data/getCustodians");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -809,7 +823,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(false);
+  res.status(200).send(true);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1201,7 +1215,8 @@ app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
 
 app.post("/api/report/downloadreport", function (req, res) {
   console.log("api/downloadreport");
-  res.status(200).send({ file: null });
+  // res.status(200).send({ file: null });
+  res.status(400).send({ message: "error" });
 });
 
 app.get("/api/catalog/getitemlist", function (req, res) {
@@ -1342,10 +1357,78 @@ app.get("/api/rnlstructure/getrnlstructurelist", function (req, res) {
   res.status(200).send(getRnlStructureList());
 });
 
+app.get("/api/rnlstructure/getrnlstructurebyid/:id", function (req, res) {
+  console.log("api/getrnlstructurebyid");
+  res.status(200).send(getRnlStructureById());
+});
+
 app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
   console.log("api/deleternlstructure");
   res.status(200).send({ id: 1 });
 });
+
+app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
+  console.log("api/savestructure");
+  res.status(200).send({
+    responseCode: 1,
+    message: "Muilti-tier RnL Structure has been added successfull.",
+    dataSet: {
+      structureId: 6,
+      clientId: 133,
+      assetOwnerId: 0,
+      clientProductStructureCode: "ABC1",
+      approvalids: null,
+      userName: "avp",
+      displayName: "Avdhoot Patil",
+      buildingBlockStructure: [
+        {
+          productId: 6827,
+          allocationBuildingBlock: null,
+          portfolioBlock: { id: 6831, percentage: 100, name: null },
+        },
+      ],
+    },
+  });
+});
+
+app.post("/api/rnlstructure/updaternlstructure/:id", function (req, res) {
+  console.log("api/updatestructure");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnlstructure/deleteproduct", function (req, res) {
+  console.log("api/deletestructure");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnlstructure/updateassetowner/:id", function (req, res) {
+  console.log("api/updateassetowner");
+  res.status(200).send({ id: 1 });
+});
+
+//presets
+
+app.get(
+  "/api/captureportfolio/getrnlportfoliosbyclientId",
+  function (req, res) {
+    console.log("api/getassetownersbyclientid");
+    if (req.query.code === "AO") {
+      res.status(200).send(getassetOwners());
+    } else if (req.query.code === "PB") {
+      res.status(200).send(getProducts());
+    } else {
+      res.status(200).send(getPortfolioBB());
+    }
+  }
+);
+
+app.get(
+  "/api/buildingblockportfolio/getbuildingblockportfoliobyclientid",
+  function (req, res) {
+    console.log("api/getbuildingblockportfoliobyclientid");
+    res.status(200).send(getAllocBB());
+  }
+);
 
 //server port
 app.listen(5001, () => {

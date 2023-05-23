@@ -3,15 +3,15 @@ module.exports = () => {
     items: [
       {
         structureId: 1,
-        clientStructureCode: "200700",
+        clientProductStructureCode: "200700",
         client: "MI SELECT EQUITY",
-        products: ["Product 1, Product2, Product3"],
+        products: "Product 1, Product2, Product3",
       },
       {
         structureId: 2,
-        clientStructureCode: "200701",
+        clientProductStructureCode: "200701",
         client: "MI SELECT CASH",
-        products: ["Product 1, Product2, Product3"],
+        products: "Product 1, Product2, Product3",
       },
     ],
     totalPages: 1,
