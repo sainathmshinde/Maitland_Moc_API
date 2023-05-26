@@ -132,6 +132,7 @@ const getAllocBB = require("./data/getAllocBB");
 const getPortfolioBB = require("./data/getPortfolioBB");
 
 const getCustodians = require("./data/getCustodians");
+const getClearingHouses = require("./data/getClearingHouses");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -924,6 +925,11 @@ app.get("/api/portfolio/getcurrencies", function (req, res) {
 app.get("/api/portfolio/getcustodians", function (req, res) {
   console.log("/api/getcustodians");
   res.status(200).send(getCustodians());
+});
+
+app.get("/api/portfolio/getclearinghouses", function (req, res) {
+  console.log("/api/getclearinghouses");
+  res.status(200).send(getClearingHouses());
 });
 
 app.get("/api/portfolio/getValuationPoint", function (req, res) {
