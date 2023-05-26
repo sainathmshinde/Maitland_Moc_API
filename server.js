@@ -1407,8 +1407,18 @@ app.post("/api/rnlstructure/deleteproduct", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/rnlstructure/updateassetowner/:id", function (req, res) {
+app.post("/api/rnlstructure/updateassetowner", function (req, res) {
   console.log("api/updateassetowner");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/rnlstructure/checkclientcode", function (req, res) {
+  console.log("api/checkclientcode");
+  res.status(200).send({ isDuplicate: false });
+});
+
+app.post("/api/rnlstructure/addstructureapprover", function (req, res) {
+  console.log("api/addstructureapprover");
   res.status(200).send({ id: 1 });
 });
 

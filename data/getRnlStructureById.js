@@ -4,6 +4,9 @@ module.exports = () => {
     clientProductStructureCode: "ABC12",
     client: { id: 1, name: "Maitland" },
     assetOwner: { id: 1, name: "Asset Owner 1" },
+    structureApprovalStatus: "Approved",
+    approverIds: "1, 23,3",
+    maker: "Avdhoot",
     products: [
       {
         productId: 1,
