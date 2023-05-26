@@ -1365,28 +1365,26 @@ app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
 
 app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
   console.log("api/savestructure");
-  res
-    .status(200)
-    .send({
-      responseCode: 1,
-      message: "Muilti-tier RnL Structure has been added successfull.",
-      dataSet: {
-        structureId: 6,
-        clientId: 133,
-        assetOwnerId: 0,
-        clientProductStructureCode: "ABC1",
-        approvalids: null,
-        userName: "avp",
-        displayName: "Avdhoot Patil",
-        buildingBlockStructure: [
-          {
-            productId: 6827,
-            allocationBuildingBlock: null,
-            portfolioBlock: { id: 6831, percentage: 100, name: null },
-          },
-        ],
-      },
-    });
+  res.status(200).send({
+    responseCode: 1,
+    message: "Muilti-tier RnL Structure has been added successfull.",
+    dataSet: {
+      structureId: 6,
+      clientId: 133,
+      assetOwnerId: 0,
+      clientProductStructureCode: "ABC1",
+      approvalids: null,
+      userName: "avp",
+      displayName: "Avdhoot Patil",
+      buildingBlockStructure: [
+        {
+          productId: 6827,
+          allocationBuildingBlock: null,
+          portfolioBlock: { id: 6831, percentage: 100, name: null },
+        },
+      ],
+    },
+  });
 });
 
 app.post("/api/rnlstructure/updaternlstructure/:id", function (req, res) {
@@ -1399,8 +1397,18 @@ app.post("/api/rnlstructure/deleteproduct", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/rnlstructure/updateassetowner/:id", function (req, res) {
+app.post("/api/rnlstructure/updateassetowner", function (req, res) {
   console.log("api/updateassetowner");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/rnlstructure/checkclientcode", function (req, res) {
+  console.log("api/checkclientcode");
+  res.status(200).send({ isDuplicate: false });
+});
+
+app.post("/api/rnlstructure/addstructureapprover", function (req, res) {
+  console.log("api/addstructureapprover");
   res.status(200).send({ id: 1 });
 });
 
