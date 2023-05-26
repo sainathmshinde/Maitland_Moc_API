@@ -12,7 +12,7 @@ module.exports = () => {
       id: 1,
       name: "Maitland",
     },
-    defaultPlaceOfSettlement: { id: 1, name: "India" },
+    defaultPlaceOfSettlement: { id: 1, name: "SA" },
     clearingHouse: {
       id: 1,
       name: "Maitland",

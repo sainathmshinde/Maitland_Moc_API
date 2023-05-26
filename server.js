@@ -131,6 +131,7 @@ const getProducts = require("./data/getProducts");
 const getAllocBB = require("./data/getAllocBB");
 const getPortfolioBB = require("./data/getPortfolioBB");
 
+const getCustodians = require("./data/getCustodians");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -670,13 +671,13 @@ app.post("/api/servicegroup/deleteServicegroup/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.post("/api/portfolio/addfundtradingjurisdiction", function (req, res) {
+app.post("/api/portfolio/addadditionalmarketidentifier", function (req, res) {
   console.log("/api/addfundtradingjurisidiction");
   res.status(200).send({ dataSet: { id: 1 } });
 });
 
 app.post(
-  "/api/portfolio/updatefundtradingjurisdiction/:id",
+  "/api/portfolio/updateadditionalmarketidentifier/:id",
   function (req, res) {
     console.log("/api/updatefundtradingjurisdiction");
     res.status(200).send({ dataSet: { id: 1 } });
@@ -983,10 +984,13 @@ app.post("/api/contract/updatecontract/:id", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.get("/api/portfolio/getfundtradingjurisdictionbyid", function (req, res) {
-  console.log("/api/getfundtradingjurisdictionbyid");
-  res.status(200).send(getJurisdictionById());
-});
+app.get(
+  "/api/portfolio/getadditionalmarketidentifierbyid",
+  function (req, res) {
+    console.log("/api/getadditionalmarketidentifierbyid");
+    res.status(200).send(getJurisdictionById());
+  }
+);
 
 app.get("/api/multitier/getrlportfolios", function (req, res) {
   console.log("/api/getrlportfolios");

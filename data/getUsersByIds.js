@@ -17,7 +17,7 @@ module.exports = () => {
     {
       id: 6497,
       givenName: "",
-      name: "Ganga Ram Mohite",
+      name: "Gangaprasad Mohite",
       description: "",
       roleIDs: "",
       emailAddress: "",
