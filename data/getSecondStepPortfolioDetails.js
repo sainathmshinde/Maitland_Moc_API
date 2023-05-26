@@ -195,7 +195,7 @@ module.exports = () => {
     portfolioCategory: null,
     typeOfPortfolio: {
       id: 2,
-      name: "Multi-managed",
+      name: "Seg Fund",
       contextName: null,
       description: null,
       code: null,
@@ -204,7 +204,7 @@ module.exports = () => {
     },
     multiManagerHierarchy: {
       id: 1,
-      name: "parent Portfolio",
+      name: "",
     },
     parentPortfolio: null,
     reportingEntity1: null,
