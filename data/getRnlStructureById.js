@@ -16,7 +16,7 @@ module.exports = () => {
         },
         allocationBuildingBlocks: [
           {
-            allocationBuildingBlockId: 2,
+            allocationBuildingBlockId: 90,
             allocationBuildingBlock: null,
             allocationBuildingBlockPercentage: 0,
             portfolioBuildingBlocks: [
