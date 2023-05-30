@@ -35,6 +35,13 @@ module.exports = () => {
       imageUrl: "https://via.placeholder.com/150",
       redirectUrl: "/test",
     },
+    {
+      id: "6",
+      name: "R&L Asset Allocator",
+      // description: "Application 1 description",
+      imageUrl: "https://via.placeholder.com/150",
+      redirectUrl: "http://localhost:666",
+    },
     // {
     //   id: "6",
     //   name: "Test Application",
