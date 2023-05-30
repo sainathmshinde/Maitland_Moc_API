@@ -9,7 +9,7 @@ module.exports = () => {
         fundType: "Test Type",
         rnlPortfolioType: "Product",
         portfolioNameShort: "MI SEL MAN EQ",
-        approvalStatus: "Aaaiting Approval",
+        approvalStatus: "Awaiting Approval",
       },
       {
         portfolioId: 2,
@@ -19,7 +19,7 @@ module.exports = () => {
         fundType: "Test Type",
         portfolioNameShort: "MI SEL MAN C",
         rnlPortfolioType: "Building Block",
-        approvalStatus: "Rejected",
+        approvalStatus: "Approved",
       },
     ],
     totalPages: 2,
