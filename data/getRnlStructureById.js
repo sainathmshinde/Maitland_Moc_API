@@ -16,7 +16,7 @@ module.exports = () => {
         },
         allocationBuildingBlocks: [
           {
-            allocationBuildingBlockId: 2,
+            allocationBuildingBlockId: 90,
             allocationBuildingBlock: null,
             allocationBuildingBlockPercentage: 0,
             portfolioBuildingBlocks: [
@@ -47,7 +47,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 6,
                 portfolioBuildingBlock: {
-                  id: 9,
+                  id: 34,
                   name: "Portfolio Building Block 7",
                 },
                 portfolioBuildingBlockPercentage: 70,
@@ -67,7 +67,7 @@ module.exports = () => {
           {
             allocationBuildingBlockId: 2,
             allocationBuildingBlock: {
-              id: 1,
+              id: 11,
               name: "Allocation Building Block 1",
             },
             allocationBuildingBlockPercentage: 100,
@@ -75,7 +75,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 89,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 35,
                   name: "Portfolio Building Block 1",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -83,7 +83,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 90,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 36,
                   name: "Portfolio Building Block 2",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -91,7 +91,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 101,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 37,
                   name: "Portfolio Building Block 3",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -99,7 +99,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 67,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 38,
                   name: "Portfolio Building Block 4",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -107,7 +107,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 68,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 39,
                   name: "Portfolio Building Block 4",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -115,7 +115,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 69,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 50,
                   name: "Portfolio Building Block 4",
                 },
                 portfolioBuildingBlockPercentage: 59,
@@ -125,7 +125,7 @@ module.exports = () => {
           {
             allocationBuildingBlockId: 2,
             allocationBuildingBlock: {
-              id: 1,
+              id: 12,
               name: "Allocation Building Block 1",
             },
             allocationBuildingBlockPercentage: 100,
@@ -133,7 +133,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 1,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 51,
                   name: "Portfolio Building Block 1",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -141,7 +141,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 78,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 52,
                   name: "Portfolio Building Block 1",
                 },
                 portfolioBuildingBlockPercentage: 10,
@@ -149,7 +149,7 @@ module.exports = () => {
               {
                 portfolioBuildingBlockId: 90,
                 portfolioBuildingBlock: {
-                  id: 1,
+                  id: 53,
                   name: "Portfolio Building Block 1",
                 },
                 portfolioBuildingBlockPercentage: 80,
