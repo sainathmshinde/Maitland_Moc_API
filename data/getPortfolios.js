@@ -13,7 +13,7 @@ module.exports = () => {
         currentStep: 1,
       },
       {
-        id: 2,
+        id: 23,
         portfolioCode: "category 2",
         portfolioName: "Client Entity 1",
         contractName: "Service ENtity 1",
@@ -21,7 +21,7 @@ module.exports = () => {
         portfolioType: "seg Fund",
         approvalStatus: "Approved",
         status: "Active",
-        currentStep: 3,
+        currentStep: 2,
       },
     ],
     totalPages: 1,
