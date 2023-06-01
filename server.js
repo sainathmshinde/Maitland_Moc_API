@@ -1211,18 +1211,17 @@ app.get("/api/report/getreports", function (req, res) {
 
 app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
   console.log("/api/getparametersbyreportid/:id");
-  console.log(req.params);
-  if (req.params.id == 1) {
-    res.status(200).send(getReportOneParameters());
-  } else {
+  if (req.params.id == "91") {
     res.status(200).send(getReportTwoParameters());
+  } else {
+    res.status(200).send(getReportOneParameters());
   }
 });
 
 app.post("/api/report/downloadreport", function (req, res) {
   console.log("api/downloadreport");
-  // res.status(200).send({ file: null });
-  res.status(400).send({ message: "error" });
+  res.status(200).send({ file: null });
+  // res.status(400).send({ message: "error" });
 });
 
 app.get("/api/catalog/getitemlist", function (req, res) {
