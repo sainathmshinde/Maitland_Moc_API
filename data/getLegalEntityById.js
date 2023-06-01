@@ -297,8 +297,8 @@ module.exports = () => {
       },
     ],
     parentLegalEntity: {
-      id: 3,
-      name: "ABSA",
+      id: 0,
+      name: "Parent Entity",
       description: "",
     },
     checkerIds: "6496",

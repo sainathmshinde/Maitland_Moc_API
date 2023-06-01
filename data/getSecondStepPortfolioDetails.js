@@ -195,7 +195,7 @@ module.exports = () => {
     portfolioCategory: null,
     typeOfPortfolio: {
       id: 2,
-      name: "Seg Fund",
+      name: "unit trust",
       contextName: null,
       description: null,
       code: null,
