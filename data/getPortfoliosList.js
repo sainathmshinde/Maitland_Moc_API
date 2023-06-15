@@ -10,6 +10,7 @@ module.exports = () => {
         rnlPortfolioType: "Product",
         portfolioNameShort: "MI SEL MAN EQ",
         approvalStatus: "Awaiting Approval",
+        clientProductStructureCode: "",
       },
       {
         portfolioId: 2,
@@ -20,6 +21,7 @@ module.exports = () => {
         portfolioNameShort: "MI SEL MAN C",
         rnlPortfolioType: "Building Block",
         approvalStatus: "Approved",
+        clientProductStructureCode: "ABC123",
       },
     ],
     totalPages: 2,

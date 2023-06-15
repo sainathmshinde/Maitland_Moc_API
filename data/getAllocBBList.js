@@ -8,6 +8,7 @@ module.exports = () => {
         client: "Maitland",
         portfolioNameShort: "MI SEL MAN EQ",
         approvalStatus: "Approved",
+        clientProductStructureCode: "ABC1",
       },
       {
         portfolioId: 2,
@@ -16,6 +17,7 @@ module.exports = () => {
         client: "Maitland",
         portfolioNameShort: "MI SEL MAN C",
         approvalStatus: "AWaiting Approval",
+        clientProductStructureCode: "",
       },
     ],
     totalPages: 2,

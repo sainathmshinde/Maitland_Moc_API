@@ -133,6 +133,9 @@ const getPortfolioBB = require("./data/getPortfolioBB");
 
 const getCustodians = require("./data/getCustodians");
 const getClearingHouses = require("./data/getClearingHouses");
+const getRnlClients = require("./data/getRnlClients");
+const getRnlEventLIst = require("./data/getRnlEventLIst");
+const getProductByEventId = require("./data/getProductByEventId");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -824,7 +827,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(true);
+  res.status(200).send(false);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1265,7 +1268,6 @@ app.get("/api/catalog/getgeneratorlist", function (req, res) {
 });
 
 //multi tier
-
 app.get("/api/captureportfolio/getportfolioslist", function (req, res) {
   console.log("api/getportfolioslist");
   res.status(200).send(getPortfoliosList());
@@ -1374,6 +1376,7 @@ app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
 
 app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
   console.log("api/savestructure");
+  // res.status(400).send({});
   res.status(200).send({
     responseCode: 1,
     message: "Muilti-tier RnL Structure has been added successfull.",
@@ -1444,6 +1447,28 @@ app.get(
     res.status(200).send(getAllocBB());
   }
 );
+
+// Strategic asset allocator
+
+app.post("/api/rnl/geteventlist", function (req, res) {
+  console.log("/rnl/geteventlist");
+  res.status(200).send(getRnlEventLIst());
+});
+
+app.post("/api/rnl/deleteevent", function (req, res) {
+  console.log("/rnl/deleteevent");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/rnl/getclients", function (req, res) {
+  console.log("/rnl/getclients");
+  res.status(200).send(getRnlClients());
+});
+
+app.get("/api/rnl/getproductsbyeventid", function (req, res) {
+  console.log("/rnl/getproductsbyeventid");
+  res.status(200).send(getProductByEventId());
+});
 
 //server port
 app.listen(5001, () => {

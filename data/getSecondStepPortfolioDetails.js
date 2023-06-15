@@ -7,7 +7,7 @@ module.exports = () => {
     portfolioNameLong: null,
     inceptionDate: "2023-05-25T18:30:00",
     portfolioCashFlowAllocation: 0,
-    fiscalYearEnd: "23-23 ",
+    fiscalYearEnd: "23/12 ",
     numberOfShareClasses: 0,
     auditFee: 0.0,
     assetOwnerAUM: "",

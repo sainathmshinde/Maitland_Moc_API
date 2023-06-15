@@ -21,7 +21,7 @@ module.exports = () => {
         portfolioType: "seg Fund",
         approvalStatus: "Approved",
         status: "Active",
-        currentStep: 2,
+        currentStep: 3,
       },
     ],
     totalPages: 1,
