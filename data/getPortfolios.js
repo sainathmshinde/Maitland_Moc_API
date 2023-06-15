@@ -13,7 +13,7 @@ module.exports = () => {
         currentStep: 4,
       },
       {
-        id: 2,
+        id: 23,
         portfolioCode: "category 2",
         portfolioName: "Client Entity 1",
         contractName: "Service ENtity 1",
