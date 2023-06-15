@@ -10,9 +10,9 @@ module.exports = () => {
     fiscalYearEnd: "23-23 ",
     numberOfShareClasses: 0,
     auditFee: 0.0,
-    assetOwnerAUM: "",
+    assetOwnerAUM: null,
     otherFees: 0.0,
-    fundLei: "",
+    fundLei: null,
     calculateCapitalGains: {
       id: 0,
       name: "No",

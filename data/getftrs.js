@@ -15,22 +15,14 @@ module.exports = () => {
       name: "parent portfolio",
     },
     items: [
-      // {
-      //   id: 1,
-      //   country: "India",
-      //   custodian: "xyz",
-      //   clearingHouse: "abc",
-      //   currency: "INR",
-      //   bpid: "123A",
-      // },
-      // {
-      //   id: 2,
-      //   country: "Africa",
-      //   custodian: "xyz",
-      //   clearingHouse: "abc",
-      //   currency: "rand",
-      //   bpid: "123A",
-      // },
+      {
+        id: 160,
+        country: "Afghanistan",
+        custodian: "ABN AMRO USD",
+        clearingHouse: "ABSA Clearing",
+        currency: "ALBANIAN LEK",
+        bpid: null,
+      },
     ],
   };
 };
