@@ -136,6 +136,7 @@ const getClearingHouses = require("./data/getClearingHouses");
 const getRnlClients = require("./data/getRnlClients");
 const getRnlEventLIst = require("./data/getRnlEventLIst");
 const getProductByEventId = require("./data/getProductByEventId");
+const getSingleProduct = require("./data/getSingleProduct");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1268,7 +1269,7 @@ app.get("/api/catalog/getgeneratorlist", function (req, res) {
 });
 
 //multi tier
-app.get("/api/captureportfolio/getportfolioslist", function (req, res) {
+app.post("/api/captureportfolio/getportfolioslist", function (req, res) {
   console.log("api/getportfolioslist");
   res.status(200).send(getPortfoliosList());
 });
@@ -1326,7 +1327,7 @@ app.get(
   }
 );
 
-app.get(
+app.post(
   "/api/buildingblockportfolio/getbuildingblockportfoliosList",
   function (req, res) {
     console.log("api/getbuildingblockportfoliosList");
@@ -1359,7 +1360,7 @@ app.post(
 );
 
 //structure
-app.get("/api/rnlstructure/getrnlstructurelist", function (req, res) {
+app.post("/api/rnlstructure/getrnlstructurelist", function (req, res) {
   console.log("api/getrnlstructurelist");
   res.status(200).send(getRnlStructureList());
 });
@@ -1468,6 +1469,21 @@ app.get("/api/rnl/getclients", function (req, res) {
 app.get("/api/rnl/getproductsbyeventid", function (req, res) {
   console.log("/rnl/getproductsbyeventid");
   res.status(200).send(getProductByEventId());
+});
+
+app.get("/api/rnl/getproductbyeventid", function (req, res) {
+  console.log("/api/rnl/getproductbyeventid");
+  res.status(200).send(getSingleProduct());
+});
+
+app.get("/api/rnl/geteventstatuslist", function (req, res) {
+  console.log("/api/rnl/geteventstatuslist");
+  res.status(200).send(getEventStatus());
+});
+
+app.post("/api/rnl/updateproductallocationdetails", function (req, res) {
+  console.log("/rnl/saveproduct");
+  res.status(200).send({ id: 1 });
 });
 
 //server port

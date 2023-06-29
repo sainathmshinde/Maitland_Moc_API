@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     eventId: 1,
-    approvalStatus: "Approved",
+    approvalStatus: "Created",
     clientProductStructureCode: "ABC1",
     client: "ABSA",
     assetOwner: "MI EQUITY FUND",
