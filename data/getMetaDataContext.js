@@ -130,5 +130,25 @@ module.exports = () => {
       isSelected: false,
       displayName: null,
     },
+    {
+      id: 1,
+      name: "Custodian",
+      contextName: null,
+      description: null,
+      code: null,
+      alias: "Custodian",
+      isSelected: false,
+      displayName: null,
+    },
+    {
+      id: 1,
+      name: "DefaultPlaceOfSettlement",
+      contextName: null,
+      description: null,
+      code: null,
+      alias: "Custodian",
+      isSelected: false,
+      displayName: null,
+    },
   ];
 };

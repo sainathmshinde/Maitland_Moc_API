@@ -1198,6 +1198,11 @@ app.get("/api/metadatas/getcurrencies", function (req, res) {
   res.status(200).send(getMetadataCurrencies());
 });
 
+app.get("/api/metadatas/deletecustodian", function (req, res) {
+  console.log("/api/deletecustodian");
+  res.status(200).send({ id: 1 });
+});
+
 app.get("/api/metadatas/getmetadatacontextauditlog", function (req, res) {
   console.log("/api/getmetadatacontextauditlog");
   res.status(200).send(getEntityHistory());
@@ -1266,7 +1271,7 @@ app.get("/api/catalog/getgeneratorlist", function (req, res) {
 
 //multi tier
 
-app.get("/api/captureportfolio/getportfolioslist", function (req, res) {
+app.post("/api/captureportfolio/getportfolioslist", function (req, res) {
   console.log("api/getportfolioslist");
   res.status(200).send(getPortfoliosList());
 });
@@ -1324,7 +1329,7 @@ app.get(
   }
 );
 
-app.get(
+app.post(
   "/api/buildingblockportfolio/getbuildingblockportfoliosList",
   function (req, res) {
     console.log("api/getbuildingblockportfoliosList");
@@ -1357,7 +1362,7 @@ app.post(
 );
 
 //structure
-app.get("/api/rnlstructure/getrnlstructurelist", function (req, res) {
+app.post("/api/rnlstructure/getrnlstructurelist", function (req, res) {
   console.log("api/getrnlstructurelist");
   res.status(200).send(getRnlStructureList());
 });
