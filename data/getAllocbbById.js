@@ -9,6 +9,7 @@ module.exports = () => {
     generateTrades: false,
     cashAllocation: true,
     portfolioApprovalStatus: "Approved",
+    clientProductStructureCode: "ABC1",
     approverIds: "1, 23,3",
     maker: "Avdhoot",
   };

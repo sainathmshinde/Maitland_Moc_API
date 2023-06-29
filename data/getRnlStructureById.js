@@ -1,159 +1,142 @@
 module.exports = () => {
   return {
-    structureId: 1,
-    clientProductStructureCode: "ABC12",
-    client: { id: 1, name: "Maitland" },
-    assetOwner: { id: 1, name: "Asset Owner 1" },
-    structureApprovalStatus: "Approved",
-    approverIds: "1, 23,3",
-    maker: "Avdhoot",
+    client: {
+      id: 138,
+      percentage: 0,
+      name: "Global Independent Administrators (Pty) Ltd",
+    },
+    assetOwner: null,
+    clientProductStructureCode: "GIAGS1",
+    structureId: 7,
+    checkerIds: "",
+    approverIds: "",
+    maker: "Gayaat Solomons",
+    structureApprovalStatus: "Awaiting Approval",
     products: [
       {
-        productId: 1,
+        productId: 64,
         productBlock: {
-          id: 1,
-          name: "Moment capital fund",
+          id: 64,
+          percentage: 0,
+          name: "13425-RCL FOODS PENSION EX DB PORTFOLIO",
         },
         allocationBuildingBlocks: [
           {
-            allocationBuildingBlockId: 90,
-            allocationBuildingBlock: null,
-            allocationBuildingBlockPercentage: 0,
+            allocationBuildingBlockId: 0,
+            allocationBuildingBlock: {
+              id: 52,
+              percentage: 0,
+              name: "13413-RCL PENSION LAURUIM AFRICA USD BOND BB",
+            },
+            allocationBuildingBlockPercentage: 100,
             portfolioBuildingBlocks: [
+              // {
+              //   portfolioBuildingBlockId: 52,
+              //   portfolioBuildingBlock: {
+              //     id: 52,
+              //     percentage: 0,
+              //     name: "13413-RCL PENSION LAURUIM AFRICA USD BOND BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 100,
+              // },
+              // {
+              //   portfolioBuildingBlockId: 49,
+              //   portfolioBuildingBlock: {
+              //     id: 49,
+              //     percentage: 0,
+              //     name: "13410-RCL PENSION CATALYST SA PROPERTY EQUITY BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 10.0,
+              // },
               {
-                portfolioBuildingBlockId: 1,
+                portfolioBuildingBlockId: 50,
                 portfolioBuildingBlock: {
-                  id: 1,
-                  name: "Portfolio Building Block 1",
+                  id: 50,
+                  percentage: 0,
+                  name: "13411-RCL PENSION FAIRTREE EQUITY PRESCIENT BB",
                 },
-                portfolioBuildingBlockPercentage: 10,
+                portfolioBuildingBlockPercentage: 100.0,
               },
-              {
-                portfolioBuildingBlockId: 4,
-                portfolioBuildingBlock: {
-                  id: 4,
-                  name: "Portfolio Building Block 5",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 5,
-                portfolioBuildingBlock: {
-                  id: 10,
-                  name: "Portfolio Building Block 6",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 6,
-                portfolioBuildingBlock: {
-                  id: 34,
-                  name: "Portfolio Building Block 7",
-                },
-                portfolioBuildingBlockPercentage: 70,
-              },
+              // {
+              //   portfolioBuildingBlockId: 51,
+              //   portfolioBuildingBlock: {
+              //     id: 51,
+              //     percentage: 0,
+              //     name: "13412-RCL PENSION FUTUREGROWTH INFRA BOND BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 24.0,
+              // },
+              // {
+              //   portfolioBuildingBlockId: 54,
+              //   portfolioBuildingBlock: {
+              //     id: 54,
+              //     percentage: 0,
+              //     name: "13415-RCLPEN PIM CAP SPECIALIST PCC DIV TRADING CL B BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 25.0,
+              // },
+              // {
+              //   portfolioBuildingBlockId: 55,
+              //   portfolioBuildingBlock: {
+              //     id: 55,
+              //     percentage: 0,
+              //     name: "13416-RCLPEN PIM CAP SPECIALIST PCC DIV TRADING CL B1 BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 20.0,
+              // },
             ],
           },
         ],
       },
-
       {
-        productId: 2,
+        productId: 65,
         productBlock: {
-          id: 2,
-          name: "Moment Financial Fund",
+          id: 65,
+          percentage: 0,
+          name: "13426-RCL FOODS PENSION SURPLUS PORTFOLIO",
         },
         allocationBuildingBlocks: [
           {
-            allocationBuildingBlockId: 2,
-            allocationBuildingBlock: {
-              id: 11,
-              name: "Allocation Building Block 1",
-            },
-            allocationBuildingBlockPercentage: 100,
+            allocationBuildingBlockId: 0,
+            allocationBuildingBlock: null,
+            allocationBuildingBlockPercentage: 0,
             portfolioBuildingBlocks: [
               {
-                portfolioBuildingBlockId: 89,
-                portfolioBuildingBlock: {
-                  id: 35,
-                  name: "Portfolio Building Block 1",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 90,
-                portfolioBuildingBlock: {
-                  id: 36,
-                  name: "Portfolio Building Block 2",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 101,
-                portfolioBuildingBlock: {
-                  id: 37,
-                  name: "Portfolio Building Block 3",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 67,
-                portfolioBuildingBlock: {
-                  id: 38,
-                  name: "Portfolio Building Block 4",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 68,
-                portfolioBuildingBlock: {
-                  id: 39,
-                  name: "Portfolio Building Block 4",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 69,
-                portfolioBuildingBlock: {
-                  id: 50,
-                  name: "Portfolio Building Block 4",
-                },
-                portfolioBuildingBlockPercentage: 59,
-              },
-            ],
-          },
-          {
-            allocationBuildingBlockId: 2,
-            allocationBuildingBlock: {
-              id: 12,
-              name: "Allocation Building Block 1",
-            },
-            allocationBuildingBlockPercentage: 100,
-            portfolioBuildingBlocks: [
-              {
-                portfolioBuildingBlockId: 1,
-                portfolioBuildingBlock: {
-                  id: 51,
-                  name: "Portfolio Building Block 1",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 78,
-                portfolioBuildingBlock: {
-                  id: 52,
-                  name: "Portfolio Building Block 1",
-                },
-                portfolioBuildingBlockPercentage: 10,
-              },
-              {
-                portfolioBuildingBlockId: 90,
+                portfolioBuildingBlockId: 53,
                 portfolioBuildingBlock: {
                   id: 53,
-                  name: "Portfolio Building Block 1",
+                  percentage: 0,
+                  name: "13414-RCL PENSION OASIS VALUE EQUITY BB",
                 },
-                portfolioBuildingBlockPercentage: 80,
+                portfolioBuildingBlockPercentage: 100.0,
               },
+              // {
+              //   portfolioBuildingBlockId: 54,
+              //   portfolioBuildingBlock: {
+              //     id: 54,
+              //     percentage: 0,
+              //     name: "13414-RCL PENSION OASIS VALUE EQUITY BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 10.0,
+              // },
+              // {
+              //   portfolioBuildingBlockId: 55,
+              //   portfolioBuildingBlock: {
+              //     id: 55,
+              //     percentage: 0,
+              //     name: "13414-RCL PENSION OASIS VALUE EQUITY BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 10.0,
+              // },
+              // {
+              //   portfolioBuildingBlockId: 56,
+              //   portfolioBuildingBlock: {
+              //     id: 56,
+              //     percentage: 0,
+              //     name: "13414-RCL PENSION OASIS VALUE EQUITY BB",
+              //   },
+              //   portfolioBuildingBlockPercentage: 10.0,
+              // },
             ],
           },
         ],
