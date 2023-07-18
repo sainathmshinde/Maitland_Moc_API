@@ -37,7 +37,7 @@ module.exports = () => {
     },
     {
       id: "6",
-      name: "R&L Asset Allocator",
+      name: "Strategic Asset Allocator",
       // description: "Application 1 description",
       imageUrl: "https://via.placeholder.com/150",
       redirectUrl: "http://localhost:666",

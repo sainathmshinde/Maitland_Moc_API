@@ -157,5 +157,16 @@ module.exports = () => {
       checker: true,
       approver: true,
     },
+    rnleventproductallocation: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+      checker: true,
+      approver: true,
+      createnote: true,
+      resendemail: false,
+      resenddnstemplate: false,
+    },
   };
 };

@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     eventId: 1,
-    approvalStatus: "Created",
+    approvalStatus: "Approved",
     clientProductStructureCode: "ABC1",
     client: "ABSA",
     assetOwner: "MI EQUITY FUND",
@@ -13,6 +13,7 @@ module.exports = () => {
         residualCash: 232,
         notes: "",
         isStaticData: false,
+        isChecked: true,
       },
       {
         productId: 2,
@@ -21,6 +22,7 @@ module.exports = () => {
         residualCash: 232,
         notes: "",
         isStaticData: true,
+        isChecked: false,
       },
       {
         productId: 3,
@@ -29,6 +31,7 @@ module.exports = () => {
         residualCash: 232,
         notes: "",
         isStaticData: true,
+        isChecked: true,
       },
     ],
   };

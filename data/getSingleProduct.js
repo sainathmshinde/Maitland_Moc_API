@@ -4,6 +4,11 @@ module.exports = () => {
     productId: 1,
     productName: "MI SELECT EQUITY",
     approvalStatus: "Created",
+    isUpdated: true, //new
+    isRebalanced: false, //new
+    isChecked: false, //new
+    approverIds: "", //new
+    checkerIds: "", //new
     notes: "",
     summary: {
       netFlowBalance: 1,
@@ -15,15 +20,18 @@ module.exports = () => {
         // { id: 4, currencyName: "TRY", spotRate: 5, foreignCash: 9999 },
         // { id: 5, currencyName: "DKK", spotRate: 9, foreignCash: 9999 },
       ],
-      totalBalance: 1820,
+      totalBalance: 1840,
     },
     allocationBuildingBlocks: [
       {
         allocationBuildingBlock: {
           fundNumber: "ALLOCBB002",
           percentage: 50,
+          oldPercentage: 30,
           name: "13413-RCL PENSION LAURUIM AFRICA USD BOND BB",
+          allocationBuildingBlockId: 1,
         },
+        isRebalanced: false, //new
         portfolioBuildingBlocks: [
           {
             masterPortfolioFlag: true,
@@ -78,13 +86,15 @@ module.exports = () => {
           },
         ],
       },
-
       {
         allocationBuildingBlock: {
           fundNumber: "ALLOCBB001",
           percentage: 50,
+          oldPercentage: 70,
           name: "13413-RCL PENSION LAURUIM AFRICA USD BOND BB",
+          allocationBuildingBlockId: 2,
         },
+        isRebalanced: false, //new
         portfolioBuildingBlocks: [
           {
             masterPortfolioFlag: true,
@@ -115,8 +125,8 @@ module.exports = () => {
             navPercentage: 20,
             fundCurrency: "USD",
             currencySpotRate: 19,
-            fundPolicy: 30,
-            allocationPercentage: 30,
+            fundPolicy: 10,
+            allocationPercentage: 10,
             productCurrencyAllocation: 0,
             fundCurrencyAllocation: 0,
           },
@@ -132,8 +142,8 @@ module.exports = () => {
             navPercentage: 20,
             fundCurrency: "EUR",
             currencySpotRate: 21,
-            fundPolicy: 50,
-            allocationPercentage: 50,
+            fundPolicy: 70,
+            allocationPercentage: 70,
             productCurrencyAllocation: 0,
             fundCurrencyAllocation: 0,
           },
@@ -158,4 +168,84 @@ module.exports = () => {
       },
     ],
   };
+  // return {
+  //   eventId: 22,
+  //   productId: 66,
+  //   productName: "RCL FOODS PENSION GUARANTEE RESERVE PORTFOLIO",
+  //   approvalStatus: "Created",
+  //   notes: "",
+  //   isUpdated: true,
+  //   isRebalanced: false,
+  //   summary: {
+  //     netFlowBalance: -908.19,
+  //     availableLocalCash: 12171.8,
+  //     availableForeignCash: [
+  //       {
+  //         id: 18,
+  //         currencyName: "USD",
+  //         spotRate: 0.05497224,
+  //         foreignCash: 1510.0,
+  //       },
+  //     ],
+  //     totalBalance: 11346.618082,
+  //   },
+  //   allocationBuildingBlocks: [
+  //     {
+  //       allocationBuildingBlock: null,
+  //       portfolioBuildingBlocks: [
+  //         {
+  //           masterPortfolioFlag: true,
+  //           exclusionFlag: false,
+  //           portfolioCode: 23,
+  //           fundName: "MI SELECT UK",
+  //           navMarketValue: 100,
+  //           navUnit: 2,
+  //           navPrice: 100,
+  //           navTotal: 300,
+  //           navPercentage: 20,
+  //           fundCurrency: "ZAR",
+  //           currencySpotRate: 1,
+  //           fundPolicy: 0,
+  //           allocationPercentage: 0,
+  //           productCurrencyAllocation: 0,
+  //           fundCurrencyAllocation: 0,
+  //         },
+  //         {
+  //           masterPortfolioFlag: false,
+  //           exclusionFlag: false,
+  //           portfolioCode: 24,
+  //           fundName: "MI SELECT UQ",
+  //           navMarketValue: 100,
+  //           navUnit: 2,
+  //           navPrice: 100,
+  //           navTotal: 300,
+  //           navPercentage: 20,
+  //           fundCurrency: "ZAR",
+  //           currencySpotRate: 1,
+  //           fundPolicy: 40,
+  //           allocationPercentage: 40,
+  //           productCurrencyAllocation: 0,
+  //           fundCurrencyAllocation: 0,
+  //         },
+  //         {
+  //           masterPortfolioFlag: false,
+  //           exclusionFlag: false,
+  //           portfolioCode: 25,
+  //           fundName: "MI SELECT UQ",
+  //           navMarketValue: 100,
+  //           navUnit: 2,
+  //           navPrice: 100,
+  //           navTotal: 300,
+  //           navPercentage: 20,
+  //           fundCurrency: "ZAR",
+  //           currencySpotRate: 1,
+  //           fundPolicy: 60,
+  //           allocationPercentage: 60,
+  //           productCurrencyAllocation: 0,
+  //           fundCurrencyAllocation: 0,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // };
 };
