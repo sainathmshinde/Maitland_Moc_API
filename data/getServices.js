@@ -16,6 +16,7 @@ module.exports = () => {
           },
         ],
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 2,
@@ -32,6 +33,7 @@ module.exports = () => {
           },
         ],
         approvalStatus: "Rejected",
+        status: "inactive",
       },
     ],
     totalPages: 1,

@@ -157,16 +157,17 @@ module.exports = () => {
       checker: true,
       approver: true,
     },
-    rnleventproductallocation: {
+    calculationGroups: {
       view: true,
       edit: true,
       delete: true,
       create: true,
-      checker: true,
-      approver: true,
-      createnote: true,
-      resendemail: false,
-      resenddnstemplate: false,
+    },
+    calculations: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
     },
   };
 };

@@ -2,7 +2,7 @@ module.exports = () => {
   return {
     items: [
       {
-        id: 1,
+        id: 22,
         portfolioCode: "category 1",
         portfolioName: "Client Entity",
         contractName: "Service Entity",
@@ -21,7 +21,7 @@ module.exports = () => {
         portfolioType: "seg Fund",
         approvalStatus: "Awaiting Approval",
         status: "Active",
-        currentStep: 1,
+        currentStep: 3,
       },
     ],
     totalPages: 1,

@@ -8,7 +8,8 @@ module.exports = () => {
         clientName: "ABSA",
         serviceEntity: "Maitland",
         clientStatus: "Active",
-        approvalStatus: "Approved",
+        approvalStatus: "!Approved",
+        status: "active",
       },
 
       {
@@ -19,6 +20,7 @@ module.exports = () => {
         serviceEntity: "Maitland",
         clientStatus: "Active",
         approvalStatus: "Approved",
+        status: "inactive",
       },
     ],
     totalPages: 1,

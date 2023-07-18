@@ -6,7 +6,7 @@ module.exports = () => {
       modifiedBy: "Avdhoot",
       modifiedOn: "2022-10-06T13:29:12.44",
       approvalStatus: null,
-      changeLog: "",
+      changeLog: "{}",
     },
     {
       id: 30,

@@ -11,6 +11,7 @@ module.exports = () => {
         companyRegistrationNumber: "249394734",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "Active",
       },
       {
         id: 5,
@@ -21,6 +22,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "inactive",
       },
       {
         id: 4,
@@ -31,6 +33,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 3,
@@ -41,6 +44,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Rejected",
+        status: "active",
       },
       {
         id: 2,
@@ -51,6 +55,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 16,
@@ -62,6 +67,7 @@ module.exports = () => {
         companyRegistrationNumber: "249394734",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 15,
@@ -72,6 +78,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 14,
@@ -82,6 +89,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 13,
@@ -92,6 +100,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Rejected",
+        status: "active",
       },
       {
         id: 12,
@@ -102,6 +111,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 26,
@@ -113,6 +123,7 @@ module.exports = () => {
         companyRegistrationNumber: "249394734",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 25,
@@ -123,6 +134,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 24,
@@ -133,6 +145,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 23,
@@ -143,6 +156,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Rejected",
+        status: "active",
       },
       {
         id: 22,
@@ -153,6 +167,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 216,
@@ -164,6 +179,7 @@ module.exports = () => {
         companyRegistrationNumber: "249394734",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 215,
@@ -174,6 +190,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 214,
@@ -184,6 +201,7 @@ module.exports = () => {
         baseCurrency: "AED",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 213,
@@ -194,6 +212,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Rejected",
+        status: "active",
       },
       {
         id: 212,
@@ -204,6 +223,7 @@ module.exports = () => {
         baseCurrency: "INR",
         entityStatus: "Mooted",
         approvalStatus: "Approved",
+        status: "active",
       },
     ],
     totalPages: 2,

@@ -532,6 +532,20 @@ app.get("/api/legalentity/getalllegalentitystatus", function (req, res) {
   res.status(200).send(lagalEntityStatus());
 });
 
+app.get("/api/legalentity/getclientstatustypes", function (req, res) {
+  console.log("/api/getclientstatuses");
+  res.status(200).send([
+    {
+      id: 1,
+      name: "Country",
+    },
+    {
+      id: 2,
+      name: "Natural person",
+    },
+  ]);
+});
+
 app.get("/api/legalentity/getalljurisdiction", function (req, res) {
   console.log("/api/getCurrencies");
   res.status(200).send(getJurisdictions());
@@ -624,12 +638,12 @@ app.get("/api/servicegroup/getservicegroups", function (req, res) {
   res.status(200).send(getServiceGroups());
 });
 
-app.get("/api/servicegroup/getservicegrouplist", function (req, res) {
+app.post("/api/servicegroup/getservicegrouplist", function (req, res) {
   console.log("/api/getservicegrouplist");
   res.status(200).send(getServiceGroupList());
 });
 
-app.get("/api/service/getservices", function (req, res) {
+app.post("/api/service/getservices", function (req, res) {
   console.log("/api/getservices");
   res.status(200).send(getServices());
 });
@@ -722,7 +736,7 @@ app.get("/api/portfolio/getfundaccountingteams", function (req, res) {
 
 //contract --------------------------------------------
 
-app.get("/api/contract/getcontracts", function (req, res) {
+app.post("/api/contract/getcontracts", function (req, res) {
   console.log("/api/getontracts");
   res.status(200).send(getContracts());
 });
