@@ -9,6 +9,7 @@ module.exports = () => {
           { id: 2, name: "test service" },
         ],
         approvalStatus: "Approved",
+        status: "active",
       },
       {
         id: 2,
@@ -30,6 +31,7 @@ module.exports = () => {
           { id: 2, name: "test service" },
         ],
         approvalStatus: "Awaiting Check",
+        status: "inactive",
       },
       {
         id: 3,
@@ -39,6 +41,7 @@ module.exports = () => {
           { id: 2, name: "test service" },
         ],
         approvalStatus: "Awaiting Approval",
+        status: "active",
       },
       {
         id: 4,
@@ -48,6 +51,7 @@ module.exports = () => {
           { id: 2, name: "test service" },
         ],
         approvalStatus: "Rejected",
+        status: "active",
       },
     ],
     totalPages: 1,

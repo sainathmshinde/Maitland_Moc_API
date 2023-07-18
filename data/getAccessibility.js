@@ -157,5 +157,17 @@ module.exports = () => {
       checker: true,
       approver: true,
     },
+    calculationGroups: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    calculations: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };
