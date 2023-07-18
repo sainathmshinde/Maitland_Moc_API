@@ -1070,7 +1070,7 @@ app.get("/api/allocation/getsubfundlistbyid", function (req, res) {
 
 app.get("/api/user/getapprovalaccesslevel", function (req, res) {
   console.log("/api/getapprovalaccesslevel");
-  res.status(200).send({ level: 3 });
+  res.status(200).send({ level: 2 });
 });
 
 app.post("/api/allocation/updatenotes", function (req, res) {
@@ -1171,7 +1171,7 @@ app.get("/api/allocation/getallocationauditlog", function (req, res) {
 });
 
 app.get("/api/allocation/getpolicyauditlog", function (req, res) {
-  console.log("/api/getallocationauditlog");
+  console.log("/api/getpolicyauditlog");
   res.status(200).send(getEntityHistory());
 });
 
@@ -1503,6 +1503,33 @@ app.get("/api/rnl/geteventstatuslist", function (req, res) {
 app.post("/api/rnl/updateproductallocationdetails", function (req, res) {
   console.log("/rnl/saveproduct");
   res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnl/checkproduct", function (req, res) {
+  console.log("/rnl/checkproduct");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/rnl/updatenotes", function (req, res) {
+  console.log("/api/updatenotes");
+  res.status(200).send({ id: 2 });
+});
+
+// app.post("/api/allocation/updatefundnotes", function (req, res) {
+//   console.log("/api/updatefundnodes");
+//   res.status(200).send({ id: 2 });
+// });
+
+app.get("/api/rnl/geteventnotes", function (req, res) {
+  console.log("/api/geteventnotes/---------");
+  res.status(200).send({
+    note: "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.\r\nOn 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
+  });
+});
+
+app.get("/api/rnl/getallocationauditlog", function (req, res) {
+  console.log("/api/getallocationauditlog");
+  res.status(200).send(getEntityHistory());
 });
 
 //server port

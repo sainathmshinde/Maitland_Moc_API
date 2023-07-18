@@ -233,7 +233,7 @@ module.exports = () => {
     portfolioCategory: null,
     typeOfPortfolio: {
       id: 1,
-      name: "money market ut",
+      name: "multi-managed",
       contextName: null,
       description: null,
       code: null,
