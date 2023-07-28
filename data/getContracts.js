@@ -8,7 +8,7 @@ module.exports = () => {
         clientName: "ABSA",
         serviceEntity: "Maitland",
         clientStatus: "Active",
-        approvalStatus: "!Approved",
+        approvalStatus: null,
         status: "active",
       },
 

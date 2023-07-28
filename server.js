@@ -137,6 +137,7 @@ const getRnlClients = require("./data/getRnlClients");
 const getRnlEventLIst = require("./data/getRnlEventLIst");
 const getProductByEventId = require("./data/getProductByEventId");
 const getSingleProduct = require("./data/getSingleProduct");
+const getCalculationGroups = require("./data/getCalculationGroups");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1530,6 +1531,12 @@ app.get("/api/rnl/geteventnotes", function (req, res) {
 app.get("/api/rnl/getallocationauditlog", function (req, res) {
   console.log("/api/getallocationauditlog");
   res.status(200).send(getEntityHistory());
+});
+
+//Interest Accrual
+app.get("/api/calculationgroups/getcalculationgroups", function (req, res) {
+  console.log("/api/calculationgroups/getcalculationgroups");
+  res.status(200).send(getCalculationGroups());
 });
 
 //server port

@@ -445,10 +445,11 @@ module.exports = () => {
       isSelected: false,
     },
     maker: "Darshan Gaikwad",
-    file: {
-      id: "f45f37f4-7161-4119-80bb-424608feff6c",
-      name: "tasble.txt",
-    },
+    // file: {
+    //   id: "f45f37f4-7161-4119-80bb-424608feff6c",
+    //   name: "tasble.txt",
+    // },
+    file: null,
     clientLEI: "123",
   };
 };
