@@ -137,6 +137,8 @@ const getRnlClients = require("./data/getRnlClients");
 const getRnlEventLIst = require("./data/getRnlEventLIst");
 const getProductByEventId = require("./data/getProductByEventId");
 const getSingleProduct = require("./data/getSingleProduct");
+const getCaptureProduct = require("./data/getCaptureProduct");
+const getClients = require("./data/getClients");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1300,7 +1302,11 @@ app.get("/api/captureportfolio/getrnlportfolios", function (req, res) {
 
 app.get("/api/captureportfolio/getrnlportfoliobyid", function (req, res) {
   console.log("api/getrnlportfoliobyid");
-  res.status(200).send(getRnlPortfolioById());
+  if (req.query.code === "AO") {
+    res.status(200).send(getRnlPortfolioById());
+  } else {
+    res.status(200).send(getCaptureProduct());
+  }
 });
 
 app.get("/api/captureportfolio/getrnlportfolioeditbyid", function (req, res) {
@@ -1333,7 +1339,12 @@ app.post("/api/captureportfolio/updaternlportfolio/:id", function (req, res) {
 
 app.post("/api/captureportfolio/deleternlportfolio/:id", function (req, res) {
   console.log("api/deleternlportfolio");
-  res.status(200).send({ id: 1 });
+  // res.status(200).send({ id: 1 });
+  res.status(400).send({
+    responseCode: 2,
+    message: "Cannot delete already approved portfolio",
+    dataSet: null,
+  });
 });
 
 // allocationbuilding block
@@ -1358,7 +1369,12 @@ app.post(
   "/api/buildingblockportfolio/deletebuildingblockportfolio/:id",
   function (req, res) {
     console.log("api/deletebuildingblockportfolio");
-    res.status(200).send({ id: 1 });
+    // res.status(200).send({ id: 1 });
+    res.status(400).send({
+      responseCode: 2,
+      message: "Cannot delete already approved portfolio",
+      dataSet: null,
+    });
   }
 );
 
@@ -1391,7 +1407,12 @@ app.get("/api/rnlstructure/getrnlstructurebyid/:id", function (req, res) {
 
 app.post("/api/rnlstructure/deleternlstructure/:id", function (req, res) {
   console.log("api/deleternlstructure");
-  res.status(200).send({ id: 1 });
+  // res.status(200).send({ id: 1 });
+  res.status(400).send({
+    responseCode: 2,
+    message: "Cannot delete already approved portfolio",
+    dataSet: null,
+  });
 });
 
 app.post("/api/rnlstructure/addrnlstructure", function (req, res) {
@@ -1530,6 +1551,48 @@ app.get("/api/rnl/geteventnotes", function (req, res) {
 app.get("/api/rnl/getallocationauditlog", function (req, res) {
   console.log("/api/getallocationauditlog");
   res.status(200).send(getEntityHistory());
+});
+
+//rnl strcuture audit logs
+app.get(
+  "/api/buildingblockportfolio/getallocationbuildingblockportfolioauditlog",
+  function (req, res) {
+    console.log("/api/getallocationbuildingblockportfolioauditlog");
+    res.status(200).send(getEntityHistory());
+  }
+);
+
+app.get("/api/captureportfolio/getrnlportfolioauditlog", function (req, res) {
+  console.log("/api/getrnlportfolioauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/rnlstructure/getrnlstructureauditlog", function (req, res) {
+  console.log("/api/getrnlstructureauditlog");
+  res.status(200).send(getEntityHistory());
+});
+
+app.get("/api/rnl/getproductnotes", function (req, res) {
+  console.log("/api/getproductnotes/---------");
+  res.status(200).send({
+    note: "On 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.\r\nOn 20/08/2020 at 08:41, pas\\kevin wrote:\r\nAsset Allocation event has been created.",
+  });
+});
+
+app.post("/api/rnl/updateproductnotes", function (req, res) {
+  console.log("/api/rnl/updateproductnotes");
+  res.status(200).send({ id: 1 });
+});
+
+// rnl client mapping
+app.get("/api/rnl/getcompanyclients", function (req, res) {
+  console.log("/api/getclients");
+  res.status(200).send(getClients());
+});
+
+app.post("/api/rnl/updatecompanyclient", function (req, res) {
+  console.log("/api/updateclient");
+  res.status(200).send({ id: 2 });
 });
 
 //server port

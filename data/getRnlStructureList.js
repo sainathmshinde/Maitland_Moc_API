@@ -6,7 +6,7 @@ module.exports = () => {
         clientProductStructureCode: "200700",
         client: "MI SELECT EQUITY",
         products: "Product 1, Product2, Product3",
-        approvalStatus: "Approved",
+        approvalStatus: "Created",
       },
       {
         structureId: 2,

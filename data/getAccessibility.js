@@ -169,5 +169,21 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    rnleventproductallocation: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+      checker: true,
+      approver: true,
+      createnote: true,
+      resendemail: true,
+    },
+    clientmapping: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };
