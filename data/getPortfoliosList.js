@@ -10,10 +10,10 @@ module.exports = () => {
         name: null,
         portfolioNameShort: "RPECAT",
         fundType: "Seg Fund",
-        approvalStatus: "Approved",
+        approvalStatus: "Created",
         rnlPortfolioType: "Building Block",
         client: "Global Independent Administrators (Pty) Ltd",
-        clientProductStructureCode: "RCL 13427,RC1234,Demo 0507",
+        clientProductStructureCode: "",
       },
       {
         id: 0,
