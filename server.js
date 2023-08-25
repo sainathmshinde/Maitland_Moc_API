@@ -138,6 +138,11 @@ const getRnlEventLIst = require("./data/getRnlEventLIst");
 const getProductByEventId = require("./data/getProductByEventId");
 const getSingleProduct = require("./data/getSingleProduct");
 const getCalculationGroups = require("./data/getCalculationGroups");
+const getCalculationErrors = require("./data/getCalculationErrors");
+const getInterestsCalculated = require("./data/getInterestsCalculated");
+const getCalculationRequests = require("./data/getCalculationRequests");
+const getConfigureDailyCalculations = require("./data/getConfigureDailyCalculations");
+const getPresetRates = require("./data/getPresetRates");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1187,6 +1192,16 @@ app.post("/api/metadatas/addmetadata", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.get("/api/metadatas/getcustodians", function (req, res) {
+  console.log("/api/getcustodians");
+  res.status(200).send(getCustodiansForMetadata());
+});
+
+app.get("/api/metadatas/getdefaultplaceofsettlement", function (req, res) {
+  console.log("/api/getcustodians");
+  res.status(200).send(getDefaultPlaceOfSettlement());
+});
+
 app.get("/api/metadatas/getmetadatacontext", function (req, res) {
   console.log("/api/getmetadatacontext");
   res.status(200).send(getMetaDataContext());
@@ -1202,7 +1217,7 @@ app.post("/api/metadatas/savemetadata", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.get("/api/metadatas/deletemetadata", function (req, res) {
+app.post("/api/metadatas/deletemetadata/:id", function (req, res) {
   console.log("/api/deletemetadata");
   res.status(200).send({ id: 1 });
 });
@@ -1539,6 +1554,30 @@ app.get("/api/calculationgroups/getcalculationgroups", function (req, res) {
   res.status(200).send(getCalculationGroups());
 });
 
+app.get("/api/reports/getcalculationerrors", function (req, res) {
+  console.log("/api/reports/getcalculationerrors");
+  res.status(200).send(getCalculationErrors());
+});
+
+app.get("/api/reports/getinterestscalculated", function (req, res) {
+  console.log("/api/reports/getinterestscalculated");
+  res.status(200).send(getInterestsCalculated());
+});
+
+app.get("/api/calculations/getcalculationrequests", function (req, res) {
+  console.log("/api/calculations/getcalculationrequests");
+  res.status(200).send(getCalculationRequests());
+});
+
+app.get("/api/calculations/getconfiguredailycalculations", function (req, res) {
+  console.log("/api/calculations/getconfiguredailycalculations");
+  res.status(200).send(getConfigureDailyCalculations());
+});
+
+app.get("/api/calculations/getpresetrates", function (req, res) {
+  console.log("/api/calculations/getpresetrates");
+  res.status(200).send(getPresetRates());
+});
 //server port
 app.listen(5001, () => {
   console.log("Server started at 5001");

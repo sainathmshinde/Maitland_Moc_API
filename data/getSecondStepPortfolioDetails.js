@@ -105,7 +105,7 @@ module.exports = () => {
     typeOfPortfolio: {
       id: 4,
       rnlId: 0,
-      name: "mutli-manged",
+      name: "unit trust",
       contextName: null,
       description: null,
       code: null,
