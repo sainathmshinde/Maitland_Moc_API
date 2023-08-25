@@ -139,6 +139,8 @@ const getProductByEventId = require("./data/getProductByEventId");
 const getSingleProduct = require("./data/getSingleProduct");
 const getCaptureProduct = require("./data/getCaptureProduct");
 const getClients = require("./data/getClients");
+const getMetadataCustodians = require("./data/getMetadataCustodians");
+const getMetadataDps = require("./data/getMetadataDps");
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
   res.status(200).send(getUserDetails());
@@ -1181,6 +1183,18 @@ app.get("/api/metadatas/getmetadata", function (req, res) {
   console.log("/api/getmetadata");
   let context = req.query.context;
   res.status(200).send(getMetadata(context));
+});
+
+app.get("/api/metadatas/getcustodians", function (req, res) {
+  console.log("/api/getcustodians");
+  let context = req.query.context;
+  res.status(200).send(getMetadataCustodians());
+});
+
+app.get("/api/metadatas/getdefaultplacesofsettlement", function (req, res) {
+  console.log("/api/getdefaultplacesofsettlement");
+  let context = req.query.context;
+  res.status(200).send(getMetadataDps());
 });
 
 app.post("/api/metadatas/addmetadata", function (req, res) {

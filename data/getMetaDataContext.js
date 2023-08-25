@@ -146,7 +146,7 @@ module.exports = () => {
       contextName: null,
       description: null,
       code: null,
-      alias: "Custodian",
+      alias: "DefaultPlaceOfSettlement",
       isSelected: false,
       displayName: null,
     },
