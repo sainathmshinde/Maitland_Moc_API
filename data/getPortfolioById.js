@@ -24,7 +24,7 @@ module.exports = () => {
     },
     typeOfPortfolio: {
       id: 4,
-      name: "Multi-managed",
+      name: "Unit Trust",
     },
     multiManagerHierarchy: {
       id: 1,

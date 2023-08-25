@@ -76,7 +76,7 @@ module.exports = () => {
     registrationNumber: "abc123456",
     financialYearEnd: "01/01",
     kycNextReviewdate: "2022-09-30T06:55:00",
-    entityApprovalStatus: "Approved",
+    entityApprovalStatus: "Awaiting Check",
     approvalStatus: {
       id: 1,
       name: "Awaiting Check In",
