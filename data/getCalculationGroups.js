@@ -40,7 +40,7 @@ module.exports = () => {
         id: 6,
         calculationGroup: "ABSA6",
         calculationType: "Static",
-        approvalStatus: "Approved",
+        approvalStatus: "Rejected ",
         status: "active",
       },
     ],
