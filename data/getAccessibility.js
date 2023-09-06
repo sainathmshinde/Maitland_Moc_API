@@ -185,5 +185,47 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    dailycalculations: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    presetrates: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    calculationgroups: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    calculationrequests: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    interestcalculated: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    calculationerrors: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    interestaccrualextract: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };

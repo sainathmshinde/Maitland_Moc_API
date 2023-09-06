@@ -16,7 +16,7 @@ module.exports = () => {
         portfolioBalance: "432143",
         bdtsTotal: "483443",
         totalBalance: "432154",
-        interestCalculated: "REAFU9",
+        interestCalculated: "12.85",
         rateUsed: "6.4",
       },
     ],

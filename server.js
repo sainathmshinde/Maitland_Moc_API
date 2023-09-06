@@ -1605,15 +1605,31 @@ app.get("/api/calculations/getcalculationrequests", function (req, res) {
   res.status(200).send(getCalculationRequests());
 });
 
-app.get("/api/calculations/getconfiguredailycalculations", function (req, res) {
+app.get("/api/config/getdailycalculations", function (req, res) {
   console.log("/api/calculations/getconfiguredailycalculations");
   res.status(200).send(getConfigureDailyCalculations());
 });
 
-app.get("/api/calculations/getpresetrates", function (req, res) {
+app.post("/api/config/adddailycalculation", function (req, res) {
+  console.log("/api/calculations/getconfiguredailycalculations");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/config/getpresetrates", function (req, res) {
   console.log("/api/calculations/getpresetrates");
   res.status(200).send(getPresetRates());
 });
+
+app.get("/api/config/getdailycalculationbyid/:id", function (req, res) {
+  console.log("/api/calculations/getpresetrates");
+  res.status(200).send(getDailyCalculationById());
+});
+
+app.post("/api/config/deletedailycalculation/:id", function (req, res) {
+  console.log("/api/deleteapplicationpage");
+  res.status(200).send({ message: "daily calculation deleted successfully" });
+});
+
 //rnl strcuture audit logs
 app.get(
   "/api/buildingblockportfolio/getallocationbuildingblockportfolioauditlog",
