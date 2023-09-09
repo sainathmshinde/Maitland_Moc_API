@@ -147,6 +147,7 @@ const getCaptureProduct = require("./data/getCaptureProduct");
 const getClients = require("./data/getClients");
 const getMetadataCustodians = require("./data/getMetadataCustodians");
 const getMetadataDps = require("./data/getMetadataDps");
+const getPresetRateById = require("./data/getPresetRateById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -853,7 +854,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(false);
+  res.status(200).send(true);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1585,7 +1586,7 @@ app.get("/api/rnl/getallocationauditlog", function (req, res) {
 });
 
 //Interest Accrual
-app.get("/api/calculationgroups/getcalculationgroups", function (req, res) {
+app.post("/api/calculationgroup/getcalculationgroups", function (req, res) {
   console.log("/api/calculationgroups/getcalculationgroups");
   res.status(200).send(getCalculationGroups());
 });
@@ -1610,18 +1611,38 @@ app.get("/api/config/getdailycalculations", function (req, res) {
   res.status(200).send(getConfigureDailyCalculations());
 });
 
-app.post("/api/config/adddailycalculation", function (req, res) {
-  console.log("/api/calculations/getconfiguredailycalculations");
+app.post("/api/presetrate/addpresetrate", function (req, res) {
+  console.log("/api/presetrate/addpresetrate");
   res.status(200).send({ id: 1 });
 });
 
-app.get("/api/config/getpresetrates", function (req, res) {
+app.post("/api/config/adddailycalculation", function (req, res) {
+  console.log("/api/calculations/");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/presetrate/getpresetrates", function (req, res) {
   console.log("/api/calculations/getpresetrates");
   res.status(200).send(getPresetRates());
 });
 
+app.get("/api/presetrate/getpresetratebyid/22", function (req, res) {
+  console.log("/api/calculations/getdailycalculationbyid");
+  res.status(200).send({
+    presetRateID: 93,
+    presetRateName: "Shangai Bank",
+    currentRate: 15.12,
+    userName: null,
+    checkerIds: "8223",
+    approverIds: "8129",
+    displayName: "Mayur Ambegaonkar",
+    presetRateApprovalStatus: "Awaiting Check",
+    maker: "myr",
+  });
+});
+
 app.get("/api/config/getdailycalculationbyid/:id", function (req, res) {
-  console.log("/api/calculations/getpresetrates");
+  console.log("/api/calculations/getdailycalculationbyid");
   res.status(200).send(getDailyCalculationById());
 });
 

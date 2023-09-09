@@ -2,18 +2,20 @@ module.exports = () => {
   return {
     items: [
       {
-        id: 22,
+        configID: 22,
         reportingGroupCode: "4592376",
         portfolioCode: "",
         processTime: "12:20",
         status: "Enabled",
+        dailyCalculationApprovalStatus: "Awaiting Apporval",
       },
       {
-        id: 23,
+        configID: 23,
         reportingGroupCode: "",
         portfolioCode: "54657",
         processTime: "09:21",
         status: "Enabled",
+        dailyCalculationApprovalStatus: "Awaiting Apporval",
       },
     ],
     total: 24,

@@ -2,14 +2,16 @@ module.exports = () => {
   return {
     items: [
       {
-        id: 22,
+        presetRateID: 22,
         presetRateName: "Preset Rate 1",
         currentRate: "6.7",
+        presetRateApprovalStatus: "Checking",
       },
       {
-        id: 23,
+        presetRateID: 23,
         presetRateName: "Preset Rate 3",
         currentRate: "6.4",
+        presetRateApprovalStatus: "Checking",
       },
     ],
   };
