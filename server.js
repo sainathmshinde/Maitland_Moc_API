@@ -1544,7 +1544,7 @@ app.get("/api/rnl/getproductsbyeventid", function (req, res) {
 
 app.get("/api/rnl/getproductbyeventid", function (req, res) {
   console.log("/api/rnl/getproductbyeventid");
-  res.status(200).send(getSingleProduct());
+  res.status(200).send(getSingleProduct(2));
 });
 
 app.get("/api/rnl/geteventstatuslist", function (req, res) {
