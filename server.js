@@ -854,7 +854,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(true);
+  res.status(200).send(false);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1691,6 +1691,16 @@ app.get("/api/rnl/getcompanyclients", function (req, res) {
 app.post("/api/rnl/updatecompanyclient", function (req, res) {
   console.log("/api/updateclient");
   res.status(200).send({ id: 2 });
+});
+
+app.post("/api/calculationrequests/addcalculationrequest", function (req, res) {
+  console.log("/api/addcalculationrequest");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/calculationrequests/getcalculationrequests", function (req, res) {
+  console.log("/api/getcalculationrequests");
+  res.status(200).send(getCalculationRequests());
 });
 
 //server port
