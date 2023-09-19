@@ -148,6 +148,8 @@ const getClients = require("./data/getClients");
 const getMetadataCustodians = require("./data/getMetadataCustodians");
 const getMetadataDps = require("./data/getMetadataDps");
 const getPresetRateById = require("./data/getPresetRateById");
+const getPresetRateList = require("./data/getPresetRateList");
+const getDirections = require("./data/getDirections");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1601,12 +1603,67 @@ app.get("/api/reports/getinterestscalculated", function (req, res) {
   res.status(200).send(getInterestsCalculated());
 });
 
+app.post(
+  "/api/calculationgroup/deletecalculationgroup/:id",
+  function (req, res) {
+    console.log("/api/calculationgroups/delete");
+    res.status(200).send({ id: 1 });
+  }
+);
+app.get("/api/calculationgroup/getpresetrates", function (req, res) {
+  console.log("/api/calculations/getpresetrates");
+  res.status(200).send(getPresetRateList());
+});
+
+app.get("/api/calculationgroup/getdirections", function (req, res) {
+  console.log("/api/calculations/getdirections");
+  res.status(200).send(getDirections());
+});
+
+app.get(
+  "/api/calculationgroup/getstaticcalculationgroupbyid/22",
+  function (req, res) {
+    console.log("/api/calculations/getdailycalculationbyid");
+    res.status(200).send({
+      calculationGroupId: 30,
+      calculationGroupName: "ABSA_N_ZAR_02",
+      calculationGroupType: "STATIC",
+      insertedBy: "FINSOURCEGROUP\\siljab",
+      explicitRate: 0,
+      explicitRateDebit: 0,
+      presetRateName: "Prime Rate",
+      presetRateDifference: -5,
+      presetRateNameDebit: "Prime Rate",
+      presetRateDifferenceDebit: 0,
+    });
+  }
+);
+
+app.get(
+  "/api/calculationgroup/gettieredcalculationgroupbyid/37",
+  function (req, res) {
+    console.log("/api/calculations/getdailycalculationbyid");
+    res.status(200).send({
+      calculationGroupId: 30,
+      calculationGroupName: "ABSA_N_ZAR_02",
+      calculationGroupType: "STATIC",
+      insertedBy: "FINSOURCEGROUP\\siljab",
+      explicitRate: 0,
+      direction: {
+        id: 1,
+        name: "Greater than",
+      },
+      tierValue: "9",
+      dateApplicable: "10/12/2023",
+    });
+  }
+);
 app.get("/api/calculations/getcalculationrequests", function (req, res) {
   console.log("/api/calculations/getcalculationrequests");
   res.status(200).send(getCalculationRequests());
 });
 
-app.get("/api/config/getdailycalculations", function (req, res) {
+app.post("/api/config/getdailycalculations", function (req, res) {
   console.log("/api/calculations/getconfiguredailycalculations");
   res.status(200).send(getConfigureDailyCalculations());
 });
@@ -1621,7 +1678,7 @@ app.post("/api/config/adddailycalculation", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.get("/api/presetrate/getpresetrates", function (req, res) {
+app.post("/api/presetrate/getpresetrates", function (req, res) {
   console.log("/api/calculations/getpresetrates");
   res.status(200).send(getPresetRates());
 });
