@@ -14,5 +14,6 @@ module.exports = () => {
         presetRateApprovalStatus: "Checking",
       },
     ],
+    totalPages: 39,
   };
 };

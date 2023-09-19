@@ -18,6 +18,6 @@ module.exports = () => {
         dailyCalculationApprovalStatus: "Awaiting Apporval",
       },
     ],
-    total: 24,
+    totalPages: 24,
   };
 };
