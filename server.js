@@ -150,6 +150,8 @@ const getMetadataDps = require("./data/getMetadataDps");
 const getPresetRateById = require("./data/getPresetRateById");
 const getPresetRateList = require("./data/getPresetRateList");
 const getDirections = require("./data/getDirections");
+const getCompanyClients = require("./data/getCompanyClients");
+const getTierById = require("./data/getTierById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -856,7 +858,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
-  res.status(200).send(false);
+  res.status(200).send({ isApprover: false, action: "Add" });
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1620,48 +1622,13 @@ app.get("/api/calculationgroup/getdirections", function (req, res) {
   res.status(200).send(getDirections());
 });
 
-app.get(
-  "/api/calculationgroup/getstaticcalculationgroupbyid/22",
+app.post(
+  "/api/calculationrequests/getcalculationrequests",
   function (req, res) {
-    console.log("/api/calculations/getdailycalculationbyid");
-    res.status(200).send({
-      calculationGroupId: 30,
-      calculationGroupName: "ABSA_N_ZAR_02",
-      calculationGroupType: "STATIC",
-      insertedBy: "FINSOURCEGROUP\\siljab",
-      explicitRate: 0,
-      explicitRateDebit: 0,
-      presetRateName: "Prime Rate",
-      presetRateDifference: -5,
-      presetRateNameDebit: "Prime Rate",
-      presetRateDifferenceDebit: 0,
-    });
+    console.log("/api/calculations/getcalculationrequests");
+    res.status(200).send(getCalculationRequests());
   }
 );
-
-app.get(
-  "/api/calculationgroup/gettieredcalculationgroupbyid/37",
-  function (req, res) {
-    console.log("/api/calculations/getdailycalculationbyid");
-    res.status(200).send({
-      calculationGroupId: 30,
-      calculationGroupName: "ABSA_N_ZAR_02",
-      calculationGroupType: "STATIC",
-      insertedBy: "FINSOURCEGROUP\\siljab",
-      explicitRate: 0,
-      direction: {
-        id: 1,
-        name: "Greater than",
-      },
-      tierValue: "9",
-      dateApplicable: "10/12/2023",
-    });
-  }
-);
-app.get("/api/calculations/getcalculationrequests", function (req, res) {
-  console.log("/api/calculations/getcalculationrequests");
-  res.status(200).send(getCalculationRequests());
-});
 
 app.post("/api/config/getdailycalculations", function (req, res) {
   console.log("/api/calculations/getconfiguredailycalculations");
@@ -1670,7 +1637,7 @@ app.post("/api/config/getdailycalculations", function (req, res) {
 
 app.post("/api/presetrate/addpresetrate", function (req, res) {
   console.log("/api/presetrate/addpresetrate");
-  res.status(200).send({ id: 1 });
+  res.status(400).send({ message: "not saved" });
 });
 
 app.post("/api/config/adddailycalculation", function (req, res) {
@@ -1683,8 +1650,8 @@ app.post("/api/presetrate/getpresetrates", function (req, res) {
   res.status(200).send(getPresetRates());
 });
 
-app.get("/api/presetrate/getpresetratebyid/22", function (req, res) {
-  console.log("/api/calculations/getdailycalculationbyid");
+app.get("/api/presetrate/getpresetratebyid/:id", function (req, res) {
+  console.log("/api/calculations/getpresetratebyid");
   res.status(200).send({
     presetRateID: 93,
     presetRateName: "Shangai Bank",
@@ -1700,12 +1667,30 @@ app.get("/api/presetrate/getpresetratebyid/22", function (req, res) {
 
 app.get("/api/config/getdailycalculationbyid/:id", function (req, res) {
   console.log("/api/calculations/getdailycalculationbyid");
-  res.status(200).send(getDailyCalculationById());
+  res.status(200).send({
+    configID: 407,
+    reportingGroupCode: null,
+    portfolioCode: 1234,
+    processTime: "02:34",
+    status: "DISABLED",
+    userName: null,
+    checkerIds: "",
+    approverIds: "6496",
+    displayName: null,
+    dailyCalculationApprovalStatus: "Approved",
+    maker: "Avdhoot Patil",
+    approvalStatus: null,
+  });
 });
 
-app.post("/api/config/deletedailycalculation/:id", function (req, res) {
+app.post("/api/config/deletedailycalculation", function (req, res) {
   console.log("/api/deleteapplicationpage");
   res.status(200).send({ message: "daily calculation deleted successfully" });
+});
+
+app.post("/api/presetrate/deletepresetrate", function (req, res) {
+  console.log("/api/deletepresetrate");
+  res.status(200).send({ message: "Preset rate deleted successfully" });
 });
 
 //rnl strcuture audit logs
@@ -1759,6 +1744,75 @@ app.get("/api/calculationrequests/getcalculationrequests", function (req, res) {
   console.log("/api/getcalculationrequests");
   res.status(200).send(getCalculationRequests());
 });
+
+app.get("/api/client/getcompanyclients", function (req, res) {
+  console.log("/api/getcompanyclients");
+  res.status(200).send(getCompanyClients());
+});
+
+//tiered endpoints
+app.post(
+  "/api/calculationgroup/addtieredcalculationgroup",
+  function (req, res) {
+    console.log("/api/addtieredcalculationgroup");
+    res.status(200).send({
+      responseCode: 1,
+      message: "Calculation Group has been saved successfully.",
+      dataSet: 3310,
+    });
+  }
+);
+
+app.post(
+  "/api/calculationgroup/updatetieredcalculationgroup",
+  function (req, res) {
+    console.log("/api/addtieredcalculationgroup");
+    res.status(200).send({ tierID: 1 });
+  }
+);
+
+app.post("/api/calculationgroup/deletetier", function (req, res) {
+  console.log("/api/deletetier");
+  res.status(200).send({ approvalStatus: "Awaiting Approval" });
+});
+
+app.post("/api/calculationgroup/deletecalculationgroup", function (req, res) {
+  console.log("/api/deletecalculationgroup");
+  res.status(200).send({ approvalStatus: "Awaiting Approval" });
+});
+
+app.get(
+  "/api/calculationgroup/gettieredcalculationgroupbyid/:id",
+  function (req, res) {
+    console.log("/api/calculations/gettieredcalculationgroupbyid");
+    res.status(200).send(getTierById());
+  }
+);
+
+app.get(
+  "/api/calculationgroup/getstaticcalculationgroupbyid/:id",
+  function (req, res) {
+    console.log("/api/calculations/getstaticcalculationgroupbyid");
+    res.status(200).send({
+      calculationGroupId: 191,
+      calculationGroupName: "20125_SEP2010",
+      calculationGroupType: "STATIC",
+      insertedBy: "FINSOURCEGROUP\\NuraanF",
+      explicitRate: 0,
+      explicitRateDebit: 0,
+      presetRateName: "Botswana Commercial Bank Rate",
+      presetRateDifference: 0,
+      presetRateNameDebit: "Botswana Commercial Bank Rate",
+      presetRateDifferenceDebit: 0,
+      checkerIds: "",
+      approverIds: "",
+      displayName: null,
+      approvalStatus: "Awaiting Check",
+      maker: null,
+      approvedBy: null,
+    });
+  }
+);
 
 //server port
 app.listen(5001, () => {
