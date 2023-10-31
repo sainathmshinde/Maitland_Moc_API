@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     id: "1",
-    userName: "John Doe",
+    userName: "Shantaram",
     isAutheticated: true,
     name: "John Doe",
     firstName: "John",

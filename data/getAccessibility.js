@@ -157,12 +157,7 @@ module.exports = () => {
       checker: true,
       approver: true,
     },
-    calculationGroups: {
-      view: true,
-      edit: true,
-      delete: true,
-      create: true,
-    },
+
     calculations: {
       view: true,
       edit: true,
@@ -241,6 +236,36 @@ module.exports = () => {
       edit: true,
       approver: true,
       checker: true,
+    },
+    dashboard: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    trades: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    brokernotes: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    matchedtrades: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
+    unmatchedtrades: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
     },
   };
 };

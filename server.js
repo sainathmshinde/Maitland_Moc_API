@@ -147,11 +147,13 @@ const getCaptureProduct = require("./data/getCaptureProduct");
 const getClients = require("./data/getClients");
 const getMetadataCustodians = require("./data/getMetadataCustodians");
 const getMetadataDps = require("./data/getMetadataDps");
+const getDailyCalculationById = require("./data/getDailyCalculationById");
 const getPresetRateById = require("./data/getPresetRateById");
 const getPresetRateList = require("./data/getPresetRateList");
 const getDirections = require("./data/getDirections");
 const getCompanyClients = require("./data/getCompanyClients");
 const getTierById = require("./data/getTierById");
+const calcGroupAuditHistory = require("./data/calcGroupAuditHistory");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -843,7 +845,7 @@ app.post("/api/contract/download", function (req, res) {
 //approval
 app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
-  res.status(200).send({ id: 1 });
+  res.status(200).send({ id: 1, dataSet: 6 });
 });
 
 app.post("/api/approvalprocess/resendsubioemail/:id", function (req, res) {
@@ -1549,7 +1551,7 @@ app.get("/api/rnl/getproductsbyeventid", function (req, res) {
 
 app.get("/api/rnl/getproductbyeventid", function (req, res) {
   console.log("/api/rnl/getproductbyeventid");
-  res.status(200).send(getSingleProduct(2));
+  res.status(200).send(getSingleProduct(1));
 });
 
 app.get("/api/rnl/geteventstatuslist", function (req, res) {
@@ -1594,6 +1596,14 @@ app.post("/api/calculationgroup/getcalculationgroups", function (req, res) {
   console.log("/api/calculationgroups/getcalculationgroups");
   res.status(200).send(getCalculationGroups());
 });
+
+app.post(
+  "/api/calculationgroup/getcalculationgroupaudithistory",
+  function (req, res) {
+    console.log("/api/calculationgroups/getcalculationgroupaudithistory");
+    res.status(200).send(calcGroupAuditHistory());
+  }
+);
 
 app.get("/api/reports/getcalculationerrors", function (req, res) {
   console.log("/api/reports/getcalculationerrors");
@@ -1767,7 +1777,7 @@ app.post(
   "/api/calculationgroup/updatetieredcalculationgroup",
   function (req, res) {
     console.log("/api/addtieredcalculationgroup");
-    res.status(200).send({ tierID: 1 });
+    res.status(200).send({ dataSet: 1020 });
   }
 );
 
@@ -1782,7 +1792,7 @@ app.post("/api/calculationgroup/deletecalculationgroup", function (req, res) {
 });
 
 app.get(
-  "/api/calculationgroup/gettieredcalculationgroupbyid/:id",
+  "/api/calculationgroup/gettieredcalculationgroupbyid",
   function (req, res) {
     console.log("/api/calculations/gettieredcalculationgroupbyid");
     res.status(200).send(getTierById());
@@ -1790,29 +1800,53 @@ app.get(
 );
 
 app.get(
-  "/api/calculationgroup/getstaticcalculationgroupbyid/:id",
+  "/api/calculationgroup/getstaticcalculationgroupbyid",
   function (req, res) {
     console.log("/api/calculations/getstaticcalculationgroupbyid");
     res.status(200).send({
-      calculationGroupId: 191,
-      calculationGroupName: "20125_SEP2010",
+      calculationGroupId: 3394,
+      tempId: 0,
+      calculationGroupName: "Yolandi_Static",
       calculationGroupType: "STATIC",
-      insertedBy: "FINSOURCEGROUP\\NuraanF",
+      insertedBy: "yem",
       explicitRate: 0,
-      explicitRateDebit: 0,
-      presetRateName: "Botswana Commercial Bank Rate",
-      presetRateDifference: 0,
-      presetRateNameDebit: "Botswana Commercial Bank Rate",
+      explicitRateDebit: 6,
+      presetRateName: "UK Bank Rate",
+      presetRateDifference: 4,
+      presetRateNameDebit: "",
       presetRateDifferenceDebit: 0,
-      checkerIds: "",
-      approverIds: "",
+      checkerIds: null,
+      approverIds: null,
       displayName: null,
-      approvalStatus: "Awaiting Check",
+      approvalStatus: "Approved",
       maker: null,
       approvedBy: null,
     });
   }
 );
+
+app.post(
+  "/api/calculationgroup/addstaticcalculationgroup",
+  function (req, res) {
+    console.log("/api/addstaticcalculationgroup");
+    res.status(400).send("already exists");
+  }
+);
+
+app.post("/api/config/updatedailycalculation/:id", function (req, res) {
+  console.log("/api/updatedailycalculation");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/calculationrequests/addcalculationrequest", function (req, res) {
+  console.log("/api/addcalculationrequest");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/presetrate/getpresetratebyid/:id", function (req, res) {
+  console.log("/api/getpresetratebyid");
+  res.status(200).send(getPresetRateById());
+});
 
 //server port
 app.listen(5001, () => {
