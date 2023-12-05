@@ -154,6 +154,15 @@ const getDirections = require("./data/getDirections");
 const getCompanyClients = require("./data/getCompanyClients");
 const getTierById = require("./data/getTierById");
 const calcGroupAuditHistory = require("./data/calcGroupAuditHistory");
+const getMetadataTypes = require("./data/getMetadataTypes");
+const getMetadataList = require("./data/getMetadataList");
+const getStpClients = require("./data/getStpClients");
+const getStpFunds = require("./data/getStpFunds");
+const getAssetGroupTypes = require("./data/getAssetGroupTypes");
+const validationProfiles = require("./data/validationProfiles");
+const getCanonicalFields = require("./data/getCanonicalFields");
+const getValidationRules = require("./data/getValidationRules");
+const getValidationProfileById = require("./data/getValidationProfileById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -842,10 +851,16 @@ app.post("/api/contract/download", function (req, res) {
   console.log("/api/download");
   res.status(200).send({ id: 1 });
 });
+
 //approval
 app.post("/api/approvalprocess/addapproverdetails", function (req, res) {
   console.log("/api/addaproverdetails");
   res.status(200).send({ id: 1, dataSet: 6 });
+});
+
+app.post("/api/approvalprocess/updateapproverdetails", function (req, res) {
+  console.log("/api/updateapproverdetails");
+  res.status(204).send({ message: "no content" });
 });
 
 app.post("/api/approvalprocess/resendsubioemail/:id", function (req, res) {
@@ -861,6 +876,7 @@ app.post("/api/approvalprocess/resendoutputtemplateemail", function (req, res) {
 app.post("/api/approvalprocess/getcheckerapproverdetails", function (req, res) {
   console.log("/api/getcheckerapproverdetails");
   res.status(200).send({ isApprover: false, action: "Add" });
+  // res.status(200).send(false);
 });
 
 app.post("/api/contract/deletecontract/:id", function (req, res) {
@@ -1272,6 +1288,11 @@ app.get("/api/report/getreports", function (req, res) {
   res.status(200).send(getTreeview());
 });
 
+app.get("/api/report/getreportcalculationerrorsexcel", function (req, res) {
+  console.log("/api/getreportcalculationerrorsexcel");
+  res.status(204).send();
+});
+
 app.get("/api/report/getparametersbyreportid/:id", function (req, res) {
   console.log("/api/getparametersbyreportid/:id");
   if (req.params.id == "91") {
@@ -1605,6 +1626,16 @@ app.post(
   }
 );
 
+app.post("/api/config/getdailycalculationsaudithistory", function (req, res) {
+  console.log("/api/getdailycalculationsaudithistory");
+  res.status(200).send(calcGroupAuditHistory());
+});
+
+app.post("/api/presetrate/getpresetratesaudithistory", function (req, res) {
+  console.log("/api/getpresetratesaudithistory");
+  res.status(200).send(calcGroupAuditHistory());
+});
+
 app.get("/api/reports/getcalculationerrors", function (req, res) {
   console.log("/api/reports/getcalculationerrors");
   res.status(200).send(getCalculationErrors());
@@ -1627,6 +1658,23 @@ app.get("/api/calculationgroup/getpresetrates", function (req, res) {
   res.status(200).send(getPresetRateList());
 });
 
+app.get("/api/presetrate/getpresetratebyid", function (req, res) {
+  console.log("/api/calculations/getpresetratebyid");
+  res.status(200).send({
+    index: 0,
+    presetRateID: 95,
+    tempId: 0,
+    presetRateName: "Namibia Prime Rate",
+    currentRate: 11.5,
+    userName: null,
+    checkerIds: null,
+    approverIds: "1234, 3456",
+    displayName: null,
+    maker: null,
+    approvalStatus: "Awaiting Approval",
+  });
+});
+
 app.get("/api/calculationgroup/getdirections", function (req, res) {
   console.log("/api/calculations/getdirections");
   res.status(200).send(getDirections());
@@ -1645,6 +1693,24 @@ app.post("/api/config/getdailycalculations", function (req, res) {
   res.status(200).send(getConfigureDailyCalculations());
 });
 
+app.get("/api/config/getdailycalculationbyid", function (req, res) {
+  console.log("/api/getdailycalculationbyid");
+  res.status(200).send({
+    index: 0,
+    configID: 354,
+    tempId: 1027,
+    reportingGroupCode: 2345,
+    portfolioCode: null,
+    processTime: "12:45",
+    status: "ENABLED",
+    userName: null,
+    approverIds: "5529",
+    displayName: null,
+    maker: "Sharad Patil",
+    approvalStatus: "Awaiting Approval",
+  });
+});
+
 app.post("/api/presetrate/addpresetrate", function (req, res) {
   console.log("/api/presetrate/addpresetrate");
   res.status(400).send({ message: "not saved" });
@@ -1658,21 +1724,6 @@ app.post("/api/config/adddailycalculation", function (req, res) {
 app.post("/api/presetrate/getpresetrates", function (req, res) {
   console.log("/api/calculations/getpresetrates");
   res.status(200).send(getPresetRates());
-});
-
-app.get("/api/presetrate/getpresetratebyid/:id", function (req, res) {
-  console.log("/api/calculations/getpresetratebyid");
-  res.status(200).send({
-    presetRateID: 93,
-    presetRateName: "Shangai Bank",
-    currentRate: 15.12,
-    userName: null,
-    checkerIds: "8223",
-    approverIds: "8129",
-    displayName: "Mayur Ambegaonkar",
-    presetRateApprovalStatus: "Awaiting Check",
-    maker: "myr",
-  });
 });
 
 app.get("/api/config/getdailycalculationbyid/:id", function (req, res) {
@@ -1804,22 +1855,22 @@ app.get(
   function (req, res) {
     console.log("/api/calculations/getstaticcalculationgroupbyid");
     res.status(200).send({
-      calculationGroupId: 3394,
-      tempId: 0,
-      calculationGroupName: "Yolandi_Static",
+      calculationGroupId: 0,
+      tempId: 142,
+      calculationGroupName: "Testting",
       calculationGroupType: "STATIC",
-      insertedBy: "yem",
+      insertedBy: "shp",
       explicitRate: 0,
-      explicitRateDebit: 6,
-      presetRateName: "UK Bank Rate",
-      presetRateDifference: 4,
-      presetRateNameDebit: "",
-      presetRateDifferenceDebit: 0,
+      explicitRateDebit: null,
+      presetRateName: null,
+      presetRateDifference: null,
+      presetRateNameDebit: "Preset Rate 1",
+      presetRateDifferenceDebit: 34,
       checkerIds: null,
-      approverIds: null,
+      approverIds: "5529, 23",
       displayName: null,
-      approvalStatus: "Approved",
-      maker: null,
+      approvalStatus: "Awaiting Approval",
+      maker: "Sharad Patil",
       approvedBy: null,
     });
   }
@@ -1843,9 +1894,77 @@ app.post("/api/calculationrequests/addcalculationrequest", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
-app.get("/api/presetrate/getpresetratebyid/:id", function (req, res) {
-  console.log("/api/getpresetratebyid");
-  res.status(200).send(getPresetRateById());
+//STP
+app.get("/api/metadata/getmetadatacontext", function (req, res) {
+  console.log("/api/getmetadatacontext");
+  res.status(200).send(getMetadataTypes());
+});
+
+app.post("/api/metadata/getmetadatalist", function (req, res) {
+  console.log("/api/getmetadatalist");
+  res.status(200).send(getMetadataList());
+  // res.send(400).send({ message: "failed" });
+});
+
+app.post("/api/metadata/updatemetadata", function (req, res) {
+  console.log("/api/updatemetadata");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/metadata/addmetadata", function (req, res) {
+  console.log("/api/addmetadata");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/metadata/deletemetadata", function (req, res) {
+  console.log("/api/deletemetadata");
+  res.status(200).send({ id: 1 });
+});
+
+//set rules validation
+app.get("/api/userdefaults/getclients", function (req, res) {
+  console.log("/api/getAssetgroups");
+  res.status(200).send(getStpClients());
+});
+
+app.get("/api/userdefaults/getfundsbyagci", function (req, res) {
+  console.log("/api/getclients");
+  res.status(200).send(getStpFunds());
+});
+
+app.get("/api/userdefaults/getassetgroups ", function (req, res) {
+  console.log("/api/getfunds");
+  res.status(200).send(getAssetGroupTypes());
+});
+
+app.post("/api/validationrule/getvalidationprofiles", function (req, res) {
+  console.log("/api/getvalidationprofiles");
+  res.status(200).send(validationProfiles());
+});
+
+app.get("/api/validationrule/getvalidationprofilebyid", function (req, res) {
+  console.log("/api/getvalidationprofilebyid");
+  res.status(200).send(getValidationProfileById());
+});
+
+app.get("/api/validationrule/getvalidationrules", function (req, res) {
+  console.log("/api/getvalidationrules");
+  res.status(200).send(getValidationRules());
+});
+
+app.post("/api/validationrule/addvalidationprofile", function (req, res) {
+  console.log("/api/addvalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/validationrule/updatevalidationprofile", function (req, res) {
+  console.log("/api/updatevalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/validationrule/getcanonicalfields", function (req, res) {
+  console.log("/api/getcanonicalfields");
+  res.status(200).send(getCanonicalFields());
 });
 
 //server port

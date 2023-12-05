@@ -7,7 +7,7 @@ module.exports = () => {
     checkerIds: "",
     approverIds: "6497",
     displayName: "Mayur Ambegaonkar",
-    presetRateApprovalStatus: "Awaiting Check",
+    approvalStatus: "Approved",
     maker: "myr",
   };
 };
