@@ -2,7 +2,7 @@ module.exports = () => {
   return [
     {
       id: 1,
-      name: "Gretater Than",
+      name: "Greater Than",
       numberOfParameters: 1,
       parameterType: "number",
     },

@@ -163,6 +163,7 @@ const validationProfiles = require("./data/validationProfiles");
 const getCanonicalFields = require("./data/getCanonicalFields");
 const getValidationRules = require("./data/getValidationRules");
 const getValidationProfileById = require("./data/getValidationProfileById");
+const getCanonicalTypes = require("./data/getCanonicalTypes");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1923,7 +1924,7 @@ app.post("/api/metadata/deletemetadata", function (req, res) {
 
 //set rules validation
 app.get("/api/userdefaults/getclients", function (req, res) {
-  console.log("/api/getAssetgroups");
+  console.log("/api/getclients");
   res.status(200).send(getStpClients());
 });
 
@@ -1932,7 +1933,7 @@ app.get("/api/userdefaults/getfundsbyagci", function (req, res) {
   res.status(200).send(getStpFunds());
 });
 
-app.get("/api/userdefaults/getassetgroups ", function (req, res) {
+app.get("/api/userdefaults/getassetgroups", function (req, res) {
   console.log("/api/getfunds");
   res.status(200).send(getAssetGroupTypes());
 });
@@ -1966,6 +1967,19 @@ app.get("/api/validationrule/getcanonicalfields", function (req, res) {
   console.log("/api/getcanonicalfields");
   res.status(200).send(getCanonicalFields());
 });
+
+app.get("/api/validationrule/getcanonicaltypes", function (req, res) {
+  console.log("/api/getcanonicaltypes");
+  res.status(200).send(getCanonicalTypes());
+});
+
+app.post(
+  "/api/validationrule/deletevalidationprofile/:id",
+  function (req, res) {
+    console.log("/api/deletevalidationprofile");
+    res.status(200).send({ id: 1 });
+  }
+);
 
 //server port
 app.listen(5001, () => {
