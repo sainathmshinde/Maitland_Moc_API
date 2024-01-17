@@ -2,7 +2,7 @@ module.exports = () => {
   return {
     items: [
       {
-        profileId: 1,
+        validationProfileId: 1,
         validationProfileName: "Equity Profile 1",
         assetGroup: "Equity",
         type: "Trade",
@@ -13,7 +13,7 @@ module.exports = () => {
         status: "Active",
       },
       {
-        profileId: 2,
+        validationProfileId: 2,
         validationProfileName: "Debt Profile 1",
         assetGroup: "Equity",
         type: "Trade",

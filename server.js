@@ -164,6 +164,8 @@ const getCanonicalFields = require("./data/getCanonicalFields");
 const getValidationRules = require("./data/getValidationRules");
 const getValidationProfileById = require("./data/getValidationProfileById");
 const getCanonicalTypes = require("./data/getCanonicalTypes");
+const getTransactionSubCOdes = require("./data/getTransactionSubCOdes");
+const getCfiCOdes = require("./data/getCfiCOdes");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1981,7 +1983,17 @@ app.post(
   }
 );
 
+app.get("/api/metadata/getalltransactionsubcodes", function (req, res) {
+  console.log("/api/getalltransactionsubcode");
+  res.status(200).send(getTransactionSubCOdes());
+});
+
+app.get("/api/metadata/getallcficodes", function (req, res) {
+  console.log("/api/getallcficodes");
+  res.status(200).send(getCfiCOdes());
+});
+
 //server port
-app.listen(5001, () => {
-  console.log("Server started at 5001");
+app.listen(5002, () => {
+  console.log("Server started at 5002");
 });
