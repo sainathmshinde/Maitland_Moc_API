@@ -164,6 +164,9 @@ const getCanonicalFields = require("./data/getCanonicalFields");
 const getValidationRules = require("./data/getValidationRules");
 const getValidationProfileById = require("./data/getValidationProfileById");
 const getCanonicalTypes = require("./data/getCanonicalTypes");
+const getMatchingRules = require("./data/getMatchingRules");
+const getMatchingProfileById = require("./data/getMatchingProfileById");
+const matchingProfiles = require("./data/matchingProfiles");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1953,6 +1956,11 @@ app.get("/api/validationrule/getvalidationrules", function (req, res) {
   res.status(200).send(getValidationRules());
 });
 
+app.get("/api/matchingprofile/getmatchingrules", function (req, res) {
+  console.log("/api/getmatchingrules");
+  res.status(200).send(getMatchingRules());
+});
+
 app.post("/api/validationrule/addvalidationprofile", function (req, res) {
   console.log("/api/addvalidationprofile");
   res.status(200).send({ id: 1 });
@@ -1973,6 +1981,16 @@ app.get("/api/validationrule/getcanonicaltypes", function (req, res) {
   res.status(200).send(getCanonicalTypes());
 });
 
+app.post("/api/matchingprofile/getmatchingprofiles", function (req, res) {
+  console.log("/api/getmatchingprofiles");
+  res.status(200).send(matchingProfiles());
+});
+
+app.get("/api/matchingprofile/getmatchingprofilebyid", function (req, res) {
+  console.log("/api/getvalidationprofilebyid");
+  res.status(200).send(getMatchingProfileById());
+});
+
 app.post(
   "/api/validationrule/deletevalidationprofile/:id",
   function (req, res) {
@@ -1980,6 +1998,21 @@ app.post(
     res.status(200).send({ id: 1 });
   }
 );
+
+app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
+  console.log("/api/addvalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/matchingprofile/updatematchingprofile", function (req, res) {
+  console.log("/api/updatevalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
+  console.log("/api/deletematcingprofile");
+  res.status(200).send({ id: 1 });
+});
 
 //server port
 app.listen(5001, () => {
