@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
-    validationRuleId: 1,
-    validationRuleName: "profile_1",
+    matchingRuleId: 1,
+    matchingRuleName: "profile_1",
     assetGroup: {
       id: 1,
       name: "Equity",
