@@ -2023,9 +2023,6 @@ app.get("/api/canonical/getcanonicalbyid", function (req, res) {
   res.status(200).send(getCanonicalById());
 });
 
-//server port
-app.listen(5002, () => {
-  console.log("Server started at 5002");
 app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
   console.log("/api/addvalidationprofile");
   res.status(200).send({ id: 1 });
@@ -2042,6 +2039,6 @@ app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
 });
 
 //server port
-app.listen(5001, () => {
-  console.log("Server started at 5001");
+app.listen(5002, () => {
+  console.log("Server started at 5002");
 });
