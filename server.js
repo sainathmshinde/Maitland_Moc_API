@@ -164,6 +164,10 @@ const getCanonicalFields = require("./data/getCanonicalFields");
 const getValidationRules = require("./data/getValidationRules");
 const getValidationProfileById = require("./data/getValidationProfileById");
 const getCanonicalTypes = require("./data/getCanonicalTypes");
+const getTransactionSubCOdes = require("./data/getTransactionSubCOdes");
+const getCfiCOdes = require("./data/getCfiCOdes");
+const getCanonicalList = require("./data/getCanonicalList");
+const getCanonicalById = require("./data/getCanonicalById");
 const getMatchingRules = require("./data/getMatchingRules");
 const getMatchingProfileById = require("./data/getMatchingProfileById");
 const matchingProfiles = require("./data/matchingProfiles");
@@ -1999,6 +2003,26 @@ app.post(
   }
 );
 
+app.get("/api/metadata/getalltransactionsubcodes", function (req, res) {
+  console.log("/api/getalltransactionsubcode");
+  res.status(200).send(getTransactionSubCOdes());
+});
+
+app.get("/api/metadata/getallcficodes", function (req, res) {
+  console.log("/api/getallcficodes");
+  res.status(200).send(getCfiCOdes());
+});
+
+app.post("/api/canonical/getcanonicallist", function (req, res) {
+  console.log("/api/getcanonicallist");
+  res.status(200).send(getCanonicalList());
+});
+
+app.get("/api/canonical/getcanonicalbyid", function (req, res) {
+  console.log("/api/getcanonicalbyid");
+  res.status(200).send(getCanonicalById());
+});
+
 app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
   console.log("/api/addvalidationprofile");
   res.status(200).send({ id: 1 });
@@ -2015,6 +2039,6 @@ app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
 });
 
 //server port
-app.listen(5001, () => {
-  console.log("Server started at 5001");
+app.listen(5002, () => {
+  console.log("Server started at 5002");
 });
