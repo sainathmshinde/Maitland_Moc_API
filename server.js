@@ -168,6 +168,9 @@ const getTransactionSubCOdes = require("./data/getTransactionSubCOdes");
 const getCfiCOdes = require("./data/getCfiCOdes");
 const getCanonicalList = require("./data/getCanonicalList");
 const getCanonicalById = require("./data/getCanonicalById");
+const getMatchingRules = require("./data/getMatchingRules");
+const getMatchingProfileById = require("./data/getMatchingProfileById");
+const matchingProfiles = require("./data/matchingProfiles");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1957,6 +1960,11 @@ app.get("/api/validationrule/getvalidationrules", function (req, res) {
   res.status(200).send(getValidationRules());
 });
 
+app.get("/api/matchingprofile/getmatchingrules", function (req, res) {
+  console.log("/api/getmatchingrules");
+  res.status(200).send(getMatchingRules());
+});
+
 app.post("/api/validationrule/addvalidationprofile", function (req, res) {
   console.log("/api/addvalidationprofile");
   res.status(200).send({ id: 1 });
@@ -1975,6 +1983,16 @@ app.get("/api/validationrule/getcanonicalfields", function (req, res) {
 app.get("/api/validationrule/getcanonicaltypes", function (req, res) {
   console.log("/api/getcanonicaltypes");
   res.status(200).send(getCanonicalTypes());
+});
+
+app.post("/api/matchingprofile/getmatchingprofiles", function (req, res) {
+  console.log("/api/getmatchingprofiles");
+  res.status(200).send(matchingProfiles());
+});
+
+app.get("/api/matchingprofile/getmatchingprofilebyid", function (req, res) {
+  console.log("/api/getvalidationprofilebyid");
+  res.status(200).send(getMatchingProfileById());
 });
 
 app.post(
@@ -2008,4 +2026,22 @@ app.get("/api/canonical/getcanonicalbyid", function (req, res) {
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
+app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
+  console.log("/api/addvalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/matchingprofile/updatematchingprofile", function (req, res) {
+  console.log("/api/updatevalidationprofile");
+  res.status(200).send({ id: 1 });
+});
+
+app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
+  console.log("/api/deletematcingprofile");
+  res.status(200).send({ id: 1 });
+});
+
+//server port
+app.listen(5001, () => {
+  console.log("Server started at 5001");
 });
