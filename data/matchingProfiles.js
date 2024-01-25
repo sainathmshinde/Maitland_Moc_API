@@ -2,8 +2,8 @@ module.exports = () => {
   return {
     items: [
       {
-        validationProfileId: 1,
-        validationProfileName: "Equity Profile 1",
+        matchingProfileId: 1,
+        matchingProfileName: "Equity Profile 1",
         assetGroup: "Equity",
         type: "Trade",
         client: "APEX",
@@ -13,8 +13,8 @@ module.exports = () => {
         status: "Active",
       },
       {
-        validationProfileId: 2,
-        validationProfileName: "Debt Profile 1",
+        matchingProfileId: 2,
+        matchingProfileName: "Debt Profile 1",
         assetGroup: "Equity",
         type: "Trade",
         client: "APEX",
