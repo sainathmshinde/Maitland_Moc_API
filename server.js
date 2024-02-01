@@ -171,6 +171,7 @@ const getCanonicalById = require("./data/getCanonicalById");
 const getMatchingRules = require("./data/getMatchingRules");
 const getMatchingProfileById = require("./data/getMatchingProfileById");
 const matchingProfiles = require("./data/matchingProfiles");
+const getFilters = require("./data/getFilters");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2036,6 +2037,11 @@ app.post("/api/matchingprofile/updatematchingprofile", function (req, res) {
 app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
   console.log("/api/deletematcingprofile");
   res.status(200).send({ id: 1 });
+});
+
+app.get("/api/canonical/getfilters", function (req, res) {
+  console.log("/api/getfilters");
+  res.status(200).send(getFilters());
 });
 
 //server port
