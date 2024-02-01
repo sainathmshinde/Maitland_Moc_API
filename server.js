@@ -2020,7 +2020,7 @@ app.post("/api/canonical/getcanonicallist", function (req, res) {
 });
 
 app.get("/api/canonical/getcanonicalbyid", function (req, res) {
-  console.log("/api/getcanonicalbyid");
+  console.log("/api/canonical/getcanonicalbyid");
   res.status(200).send(getCanonicalById());
 });
 
@@ -2045,6 +2045,6 @@ app.get("/api/canonical/getfilters", function (req, res) {
 });
 
 //server port
-app.listen(5002, () => {
-  console.log("Server started at 5002");
+app.listen(5001, () => {
+  console.log("Server started at 5001");
 });
