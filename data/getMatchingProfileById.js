@@ -1,49 +1,84 @@
 module.exports = () => {
   return {
-    matchingRuleId: 1,
-    matchingRuleName: "profile_1",
+    matchingProfileId: 1026,
+    matchingProfileName: "EqitiesMatchingProfile",
     assetGroup: {
-      id: 1,
-      name: "Equity",
+      id: 8,
+      name: "Equities",
+      numberOfParameters: null,
     },
     client: {
-      id: 1,
-      name: "APEX",
+      id: 0,
+      name: null,
+      numberOfParameters: null,
     },
-    fund: {
-      fundId: 1,
-      fundName: "fund_!",
-      fundCode: "14020",
-    },
-    activeDate: "2000-10-31T01:30:00.000-05:00",
-    inActiveDate: "2000-10-31T01:30:00.000-05:00",
-    status: "active",
+    fund: null,
+    activeDate: "0001-01-01T00:00:00",
+    inActiveDate: "0001-01-01T00:00:00",
+    status: null,
     canonicalType: {
       id: 1,
       name: "Trade",
+      numberOfParameters: null,
     },
     matchingRules: [
       {
-        fieldName: "SDIN",
+        fieldName: "ISIN",
         rules: [
           {
-            id: 1,
+            matchingRuleId: 1026,
             rule: {
-              id: 1,
-              name: "Greater Than",
+              id: 8,
+              name: "Exact Match First 8 Characters",
+              numberOfParameters: 0,
             },
-            param1: 2,
-            param2: 5,
+            param1: "",
+            param2: "",
           },
-
+        ],
+      },
+      {
+        fieldName: "TradeDate",
+        rules: [
           {
-            id: 2,
+            matchingRuleId: 1026,
             rule: {
-              id: 2,
-              name: "Between",
+              id: 7,
+              name: "Exact Match",
+              numberOfParameters: 0,
             },
-            param1: 2,
-            param2: 7,
+            param1: "",
+            param2: "",
+          },
+        ],
+      },
+      {
+        fieldName: "SettlementDate",
+        rules: [
+          {
+            matchingRuleId: 1026,
+            rule: {
+              id: 7,
+              name: "Exact Match",
+              numberOfParameters: 0,
+            },
+            param1: "",
+            param2: "",
+          },
+        ],
+      },
+      {
+        fieldName: "TransactionCode",
+        rules: [
+          {
+            matchingRuleId: 1026,
+            rule: {
+              id: 11,
+              name: "Exact Match Translate TransactionSubCode",
+              numberOfParameters: 0,
+            },
+            param1: "",
+            param2: "",
           },
         ],
       },
@@ -51,13 +86,59 @@ module.exports = () => {
         fieldName: "Quantity",
         rules: [
           {
-            id: 1,
+            matchingRuleId: 1026,
             rule: {
-              id: 1,
-              name: "Greater Than",
+              id: 7,
+              name: "Exact Match",
+              numberOfParameters: 0,
             },
-            param1: 2,
-            param2: 5,
+            param1: "",
+            param2: "",
+          },
+        ],
+      },
+      {
+        fieldName: "SettlementCurrency",
+        rules: [
+          {
+            matchingRuleId: 1026,
+            rule: {
+              id: 12,
+              name: "Exact Match Translate Apex to ISO Currency Code",
+              numberOfParameters: 0,
+            },
+            param1: "",
+            param2: "",
+          },
+        ],
+      },
+      {
+        fieldName: "NetConsideration",
+        rules: [
+          {
+            matchingRuleId: 1026,
+            rule: {
+              id: 7,
+              name: "Exact Match",
+              numberOfParameters: 0,
+            },
+            param1: "",
+            param2: "",
+          },
+        ],
+      },
+      {
+        fieldName: "BrokerBIC",
+        rules: [
+          {
+            matchingRuleId: 1026,
+            rule: {
+              id: 7,
+              name: "Exact Match",
+              numberOfParameters: 0,
+            },
+            param1: "",
+            param2: "",
           },
         ],
       },
