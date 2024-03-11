@@ -172,6 +172,9 @@ const getMatchingRules = require("./data/getMatchingRules");
 const getMatchingProfileById = require("./data/getMatchingProfileById");
 const matchingProfiles = require("./data/matchingProfiles");
 const getFilters = require("./data/getFilters");
+const matched = require("./data/matched");
+const unmatched = require("./data/unmatched");
+const warning = require("./data/warning");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2021,7 +2024,15 @@ app.post("/api/canonical/getcanonicallist", function (req, res) {
 
 app.get("/api/canonical/getcanonicalbyid", function (req, res) {
   console.log("/api/canonical/getcanonicalbyid");
-  res.status(200).send(getCanonicalById());
+  let { filterId } = req.query;
+
+  if (filterId == 2) {
+    res.status(200).send(matched());
+  } else if (filterId == 3) {
+    res.status(200).send(unmatched());
+  } else {
+    res.status(200).send(warning());
+  }
 });
 
 app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
@@ -2045,6 +2056,6 @@ app.get("/api/canonical/getfilters", function (req, res) {
 });
 
 //server port
-app.listen(5001, () => {
-  console.log("Server started at 5001");
+app.listen(5002, () => {
+  console.log("Server started at 5002");
 });
