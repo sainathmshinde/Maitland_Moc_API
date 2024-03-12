@@ -176,6 +176,7 @@ const matched = require("./data/matched");
 const unmatched = require("./data/unmatched");
 const warning = require("./data/warning");
 const getAssetGroups = require("./data/getAssetGroups");
+const getMatchingFields = require("./data/getMatchingFields");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2059,6 +2060,11 @@ app.post("/api/matchingprofile/deletematchingprofile/:id", function (req, res) {
 app.get("/api/canonical/getfilters", function (req, res) {
   console.log("/api/getfilters");
   res.status(200).send(getFilters());
+});
+
+app.get("/api/canonical/getmatchingfields", function (req, res) {
+  console.log("/api/getmatchingfields");
+  res.status(200).send(getMatchingFields());
 });
 
 //server port
