@@ -175,6 +175,7 @@ const getFilters = require("./data/getFilters");
 const matched = require("./data/matched");
 const unmatched = require("./data/unmatched");
 const warning = require("./data/warning");
+const getAssetGroups = require("./data/getAssetGroups");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2033,6 +2034,11 @@ app.get("/api/canonical/getcanonicalbyid", function (req, res) {
   } else {
     res.status(200).send(warning());
   }
+});
+
+app.get("/api/canonical/getassetgroups", function (req, res) {
+  console.log("/api/getassetgroups");
+  res.status(200).send(getAssetGroups());
 });
 
 app.post("/api/matchingprofile/addmatchingprofile", function (req, res) {
