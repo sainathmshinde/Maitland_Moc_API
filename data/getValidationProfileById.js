@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     validationProfileId: 9,
-    validationProfileName: null,
+    validationProfileName: "validation profile",
     assetGroup: {
       id: 2,
       name: "Seg Fund",

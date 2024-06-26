@@ -5,7 +5,7 @@ module.exports = () => {
         id: 322,
         transactionID: 1295458153,
         type: "Trade",
-        filterName: "Warning",
+        filterName: "Matched",
         filterId: 2,
         settlementDate: "2024-02-14T00:00:00",
         isin: "ZAG000107012",
@@ -19,13 +19,14 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: true,
       },
       {
         id: 321,
         transactionID: 1295458153,
         type: "Trade",
-        filterName: "Warning",
-        filterId: 3,
+        filterName: "Matched",
+        filterId: 2,
         settlementDate: "2024-02-14T00:00:00",
         isin: "ZAG000107012",
         tradeDate: "2024-02-07T00:00:00",
@@ -38,6 +39,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: true,
       },
       {
         id: 320,
@@ -57,6 +59,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 232,
@@ -76,11 +79,12 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 231,
         transactionID: 159011731019,
-        type: "Trade",
+        type: "Broker Note",
         filterName: "Unmatched",
         filterId: 2,
         settlementDate: "2024-02-28T00:00:00",
@@ -95,6 +99,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 230,
@@ -114,6 +119,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 229,
@@ -133,6 +139,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 228,
@@ -152,6 +159,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 227,
@@ -171,6 +179,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
       {
         id: 226,
@@ -190,6 +199,7 @@ module.exports = () => {
         tradeCurrency: "ZAR",
         strategryCode: null,
         safeKeepingAccount: null,
+        isManuallyMatched: false,
       },
     ],
 

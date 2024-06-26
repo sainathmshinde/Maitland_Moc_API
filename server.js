@@ -177,6 +177,9 @@ const unmatched = require("./data/unmatched");
 const warning = require("./data/warning");
 const getAssetGroups = require("./data/getAssetGroups");
 const getMatchingFields = require("./data/getMatchingFields");
+const getManuallyMatchedCanonical = require("./data/getManuallyMatchedCanonical");
+const getOrganisations = require("./data/getOrganisations");
+const getAssociations = require("./data/getAssociations");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2065,6 +2068,52 @@ app.get("/api/canonical/getfilters", function (req, res) {
 app.get("/api/canonical/getmatchingfields", function (req, res) {
   console.log("/api/getmatchingfields");
   res.status(200).send(getMatchingFields());
+});
+
+app.post("/api/canonical/manuallymatchtrade", function (req, res) {
+  console.log("/api/manuallymatchtrade");
+  res.status(201).send({ message: "0" });
+});
+
+app.get("/api/canonical/getmanuallymatchedcanonicalbyid", function (req, res) {
+  console.log("/api/getmanuallymatchedcanonicalbyid");
+  res.status(200).send(getManuallyMatchedCanonical());
+});
+
+app.get("/api/authenticate/login", function (req, res) {
+  console.log("/api/login");
+  res.status(200).send({ message: "logged in successfully" });
+});
+
+app.post("/api/authenticate/verifyotp", function (req, res) {
+  console.log("/api/verifyotp");
+  res.status(200).send({ token: "aksd kashd sjdh sldh " });
+});
+
+// reconciliation
+app.get("/api/user/getorganisations", function (req, res) {
+  console.log("/api/getorganisations");
+  res.status(200).send(getOrganisations());
+});
+
+app.get("/api/user/getassociations/:id", function (req, res) {
+  console.log("/api/getassociations");
+  res.status(200).send(getAssociations());
+});
+
+app.post("/api/user/register", function (req, res) {
+  console.log("/api/register");
+  res.status(201).send({ message: "User created successfully" });
+});
+
+app.post("/api/authenticate/login", function (req, res) {
+  console.log("/api/login");
+  res.status(201).send({ message: "Proceed" });
+});
+
+app.post("/api/autheticate/verifyotp", function (req, res) {
+  console.log("/api/verifyotp");
+  res.status(201).send({ message: "login" });
 });
 
 //server port
