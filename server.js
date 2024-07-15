@@ -186,6 +186,8 @@ const getProductList = require("./data/getProductList");
 const getTopUpProductById = require("./data/getTopUpProductById");
 const getUser = require("./data/getUser");
 const getUserList = require("./data/getUserList");
+const getCountriesKMD = require("./data/getCountriesKMD");
+const getStates = require("./data/getStates");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2236,6 +2238,15 @@ app.get("/api/roles/getroles/:id", function (req, res) {
   ]);
 });
 
+app.post("/api/user/getcountries", function (req, res) {
+  console.log("/api/getCountries");
+  res.status(201).send(getCountriesKMD);
+});
+
+app.post("/api/user/getstates", function (req, res) {
+  console.log("/api/getstates");
+  res.status(201).send(getStates());
+});
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
