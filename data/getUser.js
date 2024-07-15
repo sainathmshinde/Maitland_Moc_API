@@ -1,0 +1,67 @@
+module.exports = () => {
+  // return {
+  //   userId: 1,
+  //   userType: { id: 1, name: "Retiree" },
+  //   roles: [{ id: 1, name: "Admin" }],
+  //   firstName: "Jon",
+  //   lastName: "Doe",
+  //   empId: "2812387",
+  //   organisation: { id: 1, name: "Org 1" },
+  //   association: { id: 1, name: "Association 1" },
+  //   dateOfBirth: "2024-07-09T06:34:27.375Z",
+  //   gender: { id: 1, name: "Male" },
+  //   email: "jon@gmail.com",
+  //   address: "address line 1",
+  //   mobileNumber: "234872387",
+  //   countryCode: "+91",
+  //   state: { id: 1, name: "Maharashtra" },
+  //   pincode: "123122",
+  //   roles: [
+  //     { id: 1, name: "Admin" },
+  //     { id: 2, name: "Internam user" },
+  //   ],
+  // };
+  return {
+    firstName: "vilas",
+    lastName: "sagar",
+    email: "vilassagar89@gmail.com",
+    countryCode: "+91",
+    mobileNumber: "9168410206",
+    empId: null,
+    address: null,
+    city: null,
+    stateId: null,
+    countryId: null,
+    pincode: null,
+    dateOfBirth: null,
+    gender: null,
+    organisationId: 1,
+    associationId: 1,
+    userTypeId: 1,
+    genderId: null,
+    otp: null,
+    otpExpiration: "0001-01-01T00:00:00",
+    userId: 1,
+    organisation: {
+      id: 1,
+      name: "test",
+    },
+    association: {
+      id: 1,
+      name: "test",
+    },
+    userType: {
+      id: 1,
+      name: "Retiree",
+    },
+    state: null,
+    country: null,
+    rolesIds: null,
+    roles: [
+      {
+        id: 1,
+        name: "Retiree",
+      },
+    ],
+  };
+};

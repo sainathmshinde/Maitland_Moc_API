@@ -180,6 +180,12 @@ const getMatchingFields = require("./data/getMatchingFields");
 const getManuallyMatchedCanonical = require("./data/getManuallyMatchedCanonical");
 const getOrganisations = require("./data/getOrganisations");
 const getAssociations = require("./data/getAssociations");
+const getProductById = require("./data/getProductById");
+const getBasePolicyList = require("./data/getBasePolicyList");
+const getProductList = require("./data/getProductList");
+const getTopUpProductById = require("./data/getTopUpProductById");
+const getUser = require("./data/getUser");
+const getUserList = require("./data/getUserList");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2114,6 +2120,120 @@ app.post("/api/authenticate/login", function (req, res) {
 app.post("/api/autheticate/verifyotp", function (req, res) {
   console.log("/api/verifyotp");
   res.status(201).send({ message: "login" });
+});
+
+app.post("/api/user/verifycaptcha", function (req, res) {
+  console.log("/api/verifycaptcha");
+  res.status(201).send({ isVerified: true });
+});
+
+app.get("/api/product/getbasepolicylist", function (req, res) {
+  console.log("/api/product/getbasepolicylist");
+  res.status(201).send(getBasePolicyList());
+});
+
+app.get("/api/product/getpolicytypes", function (req, res) {
+  console.log("/api/product/getPolicyTypes");
+  res.status(201).send([
+    { id: 1, name: "Base Policy" },
+    { id: 2, name: "Top up policy" },
+  ]);
+});
+
+app.get("/api/product/getproductlist", function (req, res) {
+  console.log("/api/product/getproductlist");
+  res.status(201).send(getProductList());
+});
+
+app.get("/api/product/:id", function (req, res) {
+  console.log("/api/product/:id");
+
+  if (req.params.id == "1") {
+    res.status(200).send(getProductById());
+  } else {
+    res.status(200).send(getTopUpProductById());
+  }
+});
+
+app.delete("/api/product/:id", function (req, res) {
+  console.log("/api/product/:id");
+  res.status(201).send({ message: "Product deleted" });
+});
+
+app.post("/api/product", function (req, res) {
+  console.log("/api/product");
+  res.status(201).send({ id: 3 });
+});
+
+app.patch("/api/product/:id", function (req, res) {
+  console.log("/api/product");
+  res.status(201).send({ message: "Product updated" });
+});
+
+app.get("/api/customerprofile/getuser", function (req, res) {
+  console.log("/api/customerprofile/getuser");
+  res.status(200).send(getUser());
+});
+
+app.post("/api/customerprofile/saveuser", function (req, res) {
+  console.log("/api/customerprofile");
+  res.status(201).send({ id: 3 });
+});
+
+app.patch("/api/customerprofile/updateuser/:id", function (req, res) {
+  console.log("/api/customerprofile/updateuser/:id");
+  res.status(201).send({ message: "user updated" });
+});
+
+app.get("/api/customerprofile/getorganisations", function (req, res) {
+  console.log("/api/customerprofile/getorganisations");
+  res.status(200).send([
+    { id: 1, name: "Org 1" },
+    { id: 2, name: "Org 2" },
+  ]);
+});
+
+app.get("/api/customerprofile/getassociations", function (req, res) {
+  console.log("/api/customerprofile/getassociations");
+  res.status(200).send(getAssociations());
+});
+
+app.get("/api/customerprofile/getgenders", function (req, res) {
+  console.log("/api/customerprofile/getgenders");
+  res.status(200).send([
+    { id: 1, name: "Male" },
+    { id: 2, name: "Female" },
+  ]);
+});
+
+app.get("/api/customerprofile/getstates", function (req, res) {
+  console.log("/api/customerprofile/getstates");
+  res.status(200).send([
+    { id: 1, name: "Maharashtra" },
+    { id: 2, name: "Karnataka" },
+  ]);
+});
+
+app.get("/api/customerprofile/getusertypes", function (req, res) {
+  console.log("/api/customerprofile/getusertypes");
+  res.status(200).send([
+    { id: 1, name: "Retiree" },
+    { id: 2, name: "Internal user" },
+  ]);
+});
+
+app.get("/api/customerprofile/getuserlist", function (req, res) {
+  console.log("/api/customerprofile/getuserlist");
+  res.status(200).send(getUserList());
+});
+
+app.get("/api/roles/getroles/:id", function (req, res) {
+  console.log("/api/roles/getroles");
+  res.status(200).send([
+    { id: 1, name: "Admin" },
+    { id: 2, name: "Internam user" },
+    { id: 3, name: "Agent" },
+  ]);
 });
 
 //server port

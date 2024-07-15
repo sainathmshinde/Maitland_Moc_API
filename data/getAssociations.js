@@ -20,5 +20,25 @@ module.exports = () => {
       id: 5,
       name: "AXIS Association",
     },
+    {
+      id: 6,
+      name: "1 Association",
+    },
+    {
+      id: 7,
+      name: "2 Association",
+    },
+    {
+      id: 8,
+      name: "3 Association",
+    },
+    {
+      id: 9,
+      name: "4 Association",
+    },
+    {
+      id: 10,
+      name: "5 Association",
+    },
   ];
 };
