@@ -2,7 +2,8 @@ module.exports = () => {
   return {
     productId: 1,
     productName: "Test Product",
-    policyType: { id: 1, name: "Base Policy" },
+    providerName: "abc",
+    policyType: { id: 1, name: "BasePolicy" },
     basePolicy: null,
     isSpouseCoverage: true,
     isHandicappedChildrenCoverage: true,

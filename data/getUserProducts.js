@@ -3,7 +3,7 @@ module.exports = () => {
     {
       productId: 1,
       productName: "Test Product",
-      policyType: { id: 1, name: "Base Policy" },
+      policyType: { id: 1, name: "BasePolicy" },
       basePolicy: null,
       isSpouseCoverage: true,
       isHandicappedChildrenCoverage: true,
@@ -46,8 +46,8 @@ module.exports = () => {
       productId: 2,
       productName: "Car insurance",
       providerName: "LIC",
-      policyType: { id: 2, name: "Top Up Policy" },
-      basePolicy: { id: 1, name: "Base policy 1" },
+      policyType: { id: 2, name: "TopupPolicy" },
+      basePolicy: { id: 1, name: "BasePolicy 1" },
       isSpouseCoverage: true,
       isHandicappedChildrenCoverage: true,
       isParentsCoverage: true,
@@ -71,7 +71,7 @@ module.exports = () => {
           topUpOptions: [
             {
               productPremiumId: 311,
-              sumInsured: 10000,
+              sumInsured: 20000,
               selfOnlyPremium: 5000,
               spousePremium: 3000,
             },

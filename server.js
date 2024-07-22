@@ -2095,7 +2095,14 @@ app.get("/api/authenticate/login", function (req, res) {
 
 app.post("/api/authenticate/verifyotp", function (req, res) {
   console.log("/api/verifyotp");
-  res.status(200).send({ token: "aksd kashd sjdh sldh " });
+  res.status(200).send({
+    token: "abcjdhgfdjhd fdhfjd hfdf",
+    userId: 1,
+    userName: "Avdhoot",
+    isProfileComplete: false,
+    userType: { id: 1, name: "Retiree" },
+  });
+  // res.status(401).send({ message: "Invalid or expired otp" });
 });
 
 // reconciliation
@@ -2119,12 +2126,7 @@ app.post("/api/authenticate/login", function (req, res) {
   res.status(201).send({ message: "Proceed" });
 });
 
-app.post("/api/autheticate/verifyotp", function (req, res) {
-  console.log("/api/verifyotp");
-  res.status(201).send({ message: "login" });
-});
-
-app.post("/api/user/verifycaptcha", function (req, res) {
+app.post("/api/captcha/verifycaptcha", function (req, res) {
   console.log("/api/verifycaptcha");
   res.status(201).send({ isVerified: true });
 });
@@ -2137,8 +2139,8 @@ app.get("/api/product/getbasepolicylist", function (req, res) {
 app.get("/api/product/getpolicytypes", function (req, res) {
   console.log("/api/product/getPolicyTypes");
   res.status(201).send([
-    { id: 1, name: "Base Policy" },
-    { id: 2, name: "Top up policy" },
+    { id: 1, name: "BasePolicy" },
+    { id: 2, name: "Topuppolicy" },
   ]);
 });
 
@@ -2177,7 +2179,7 @@ app.get("/api/customerprofile/getuser", function (req, res) {
   res.status(200).send(getUser());
 });
 
-app.post("/api/customerprofile/saveuser", function (req, res) {
+app.post("/api/customerprofile/createuser", function (req, res) {
   console.log("/api/customerprofile");
   res.status(201).send({ id: 3 });
 });
@@ -2185,6 +2187,7 @@ app.post("/api/customerprofile/saveuser", function (req, res) {
 app.patch("/api/customerprofile/updateuser/:id", function (req, res) {
   console.log("/api/customerprofile/updateuser/:id");
   res.status(201).send({ message: "user updated" });
+  // res.status(401).send({ message: "user updated" });
 });
 
 app.get("/api/customerprofile/getorganisations", function (req, res) {
