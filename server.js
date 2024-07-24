@@ -188,6 +188,9 @@ const getUser = require("./data/getUser");
 const getUserList = require("./data/getUserList");
 const getCountriesKMD = require("./data/getCountriesKMD");
 const getStates = require("./data/getStates");
+const getAllCampaigns = require("./data/getAllCampaigns");
+const getSingleCampaign = require("./data/getSingleCampaign");
+const getAssociationList = require("./data/getAssociationList");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2144,7 +2147,7 @@ app.get("/api/product/getpolicytypes", function (req, res) {
   ]);
 });
 
-app.get("/api/product/getproductlist", function (req, res) {
+app.get("/api/product", function (req, res) {
   console.log("/api/product/getproductlist");
   res.status(201).send(getProductList());
 });
@@ -2227,7 +2230,7 @@ app.get("/api/customerprofile/getusertypes", function (req, res) {
   ]);
 });
 
-app.get("/api/customerprofile/getuserlist", function (req, res) {
+app.get("/api/customerprofile", function (req, res) {
   console.log("/api/customerprofile/getuserlist");
   res.status(200).send(getUserList());
 });
@@ -2250,6 +2253,45 @@ app.post("/api/user/getstates", function (req, res) {
   console.log("/api/getstates");
   res.status(201).send(getStates());
 });
+
+//campaigns
+
+app.get("/api/campaigns", function (req, res) {
+  console.log("/api/campaigns");
+  res.status(200).send(getAllCampaigns());
+});
+
+app.get("/api/campaigns/:id", function (req, res) {
+  console.log("/api/campaigns");
+  res.status(200).send(getSingleCampaign());
+});
+
+app.delete("/api/campaigns/:id", function (req, res) {
+  console.log("/api/campaigns");
+  res.status(201).send({ message: "deleted sucessfully" });
+});
+
+app.post("/api/campaigns", function (req, res) {
+  console.log("/api/campaigns");
+  res.status(201).send({ message: "Campaign created" });
+});
+
+app.patch("/api/campaigns/:id", function (req, res) {
+  console.log("/api/campaigns");
+  res.status(201).send({ message: "Campaign updated" });
+});
+
+app.patch("/api/campaigns/closecampaign/:id", function (req, res) {
+  console.log("/api/closecampaign");
+  res.status(201).send({ message: "Campaign updated" });
+});
+
+//association
+app.get("/api/association", function (req, res) {
+  console.log("/api/association");
+  res.status(200).send(getAssociationList());
+});
+
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
