@@ -2330,6 +2330,11 @@ app.get("api/roles/:id", function (req, res) {
   res.status(200).send({ message: "Role retrieved" });
 });
 
+app.post("/api/roles", function (req, res) {
+  console.log("/api/roles");
+  res.status(200).send({ message: "Role created" });
+});
+
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
