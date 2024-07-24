@@ -191,6 +191,9 @@ const getStates = require("./data/getStates");
 const getAllCampaigns = require("./data/getAllCampaigns");
 const getSingleCampaign = require("./data/getSingleCampaign");
 const getAssociationList = require("./data/getAssociationList");
+const getPermissions = require("./data/getPermissions");
+const getKMDroles = require("./data/getKMDroles");
+const getPermissionView = require("./data/getPermissionView");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2244,12 +2247,12 @@ app.get("/api/roles/getroles/:id", function (req, res) {
   ]);
 });
 
-app.post("/api/user/getcountries", function (req, res) {
+app.get("/api/user/getcountries", function (req, res) {
   console.log("/api/getCountries");
-  res.status(201).send(getCountriesKMD);
+  res.status(200).send(getCountriesKMD());
 });
 
-app.post("/api/user/getstates", function (req, res) {
+app.get("/api/user/getstates", function (req, res) {
   console.log("/api/getstates");
   res.status(201).send(getStates());
 });
@@ -2292,6 +2295,25 @@ app.get("/api/association", function (req, res) {
   res.status(200).send(getAssociationList());
 });
 
+app.get("/api/permissions/", function (req, res) {
+  console.log("/api/getPermissions");
+  res.status(200).send(getPermissions());
+});
+
+app.get("/api/roles/", function (req, res) {
+  console.log("/api/getPermissions");
+  res.status(200).send(getKMDroles());
+});
+
+app.post("/api/permissions", function (req, res) {
+  console.log("/api/permissions");
+  res.status(200).send({ id: 1 });
+});
+
+app.get("/api/roles/getpermissionview", function (req, res) {
+  console.log("/api/roles/getpermissionview");
+  res.status(200).send(getPermissionView());
+});
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
