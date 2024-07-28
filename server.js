@@ -2365,6 +2365,26 @@ app.get("/api/roles/getpermissionview", function (req, res) {
   res.status(200).send(getPermissionView());
 });
 
+app.delete("/api/permissions/:id", function (req, res) {
+  console.log("/api/permissions");
+  res.status(200).send({ message: "Permission deleted" });
+});
+
+app.delete("/api/roles/:id", function (req, res) {
+  console.log("/api/roles");
+  res.status(200).send({ message: "Role deleted" });
+});
+
+app.get("api/roles/:id", function (req, res) {
+  console.log("/api/roles");
+  res.status(200).send({ message: "Role retrieved" });
+});
+
+app.post("/api/roles", function (req, res) {
+  console.log("/api/roles");
+  res.status(200).send({ message: "Role created" });
+});
+
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
