@@ -2350,6 +2350,11 @@ app.post("/api/association/createassociation", function (req, res) {
   res.status(200).send({ message: "Association created successfully" });
 });
 
+app.get("/api/association/:id", function (req, res) {
+  console.log("/api/association");
+  res.status(200).send(getAssociation());
+});
+
 app.get("/api/permissions/", function (req, res) {
   console.log("/api/getPermissions");
   res.status(200).send(getPermissions());
