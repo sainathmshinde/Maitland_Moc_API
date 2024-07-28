@@ -194,6 +194,10 @@ const getAssociationList = require("./data/getAssociationList");
 const getPermissions = require("./data/getPermissions");
 const getKMDroles = require("./data/getKMDroles");
 const getPermissionView = require("./data/getPermissionView");
+const getMessageTemplates = require("./data/getMessageTemplates");
+const getCustomerProductList = require("./data/getCustomerProductList");
+const getPaymentHistory = require("./data/getPaymentHistory");
+const getMyPolicies = require("./data/getMyPolicies");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2099,6 +2103,12 @@ app.get("/api/authenticate/login", function (req, res) {
   res.status(200).send({ message: "logged in successfully" });
 });
 
+app.post("/api/authenticate/login", function (req, res) {
+  console.log("/api/login");
+  res.status(201).send({ message: "Proceed" });
+  // res.status(401).send({ message: "Key missing" });
+});
+
 app.post("/api/authenticate/verifyotp", function (req, res) {
   console.log("/api/verifyotp");
   res.status(200).send({
@@ -2109,6 +2119,7 @@ app.post("/api/authenticate/verifyotp", function (req, res) {
     userType: { id: 1, name: "Retiree" },
   });
   // res.status(401).send({ message: "Invalid or expired otp" });
+  // res.status(404).send({ message: "User not found" });
 });
 
 // reconciliation
@@ -2125,11 +2136,6 @@ app.get("/api/user/getassociations/:id", function (req, res) {
 app.post("/api/user/register", function (req, res) {
   console.log("/api/register");
   res.status(201).send({ message: "User created successfully" });
-});
-
-app.post("/api/authenticate/login", function (req, res) {
-  console.log("/api/login");
-  res.status(201).send({ message: "Proceed" });
 });
 
 app.post("/api/captcha/verifycaptcha", function (req, res) {
@@ -2173,6 +2179,7 @@ app.delete("/api/product/:id", function (req, res) {
 app.post("/api/product", function (req, res) {
   console.log("/api/product");
   res.status(201).send({ id: 3 });
+  // res.status(409).send({ message: "Product already exists" });
 });
 
 app.patch("/api/product/:id", function (req, res) {
@@ -2180,9 +2187,46 @@ app.patch("/api/product/:id", function (req, res) {
   res.status(201).send({ message: "Product updated" });
 });
 
+app.get("/api/customerprofile/getpaymentmodes", function (req, res) {
+  console.log("/api/customerprofile/getpaymentmodes");
+  res.status(200).send([
+    { id: 1, name: "Online" },
+    { id: 2, name: "Offline" },
+  ]);
+});
+
+app.get("/api/customerprofile/getofflinepaymentmodes", function (req, res) {
+  console.log("/api/customerprofile/getofflinepaymentmodes");
+  res.status(200).send([
+    { id: 1, name: "Cheque" },
+    { id: 2, name: "NEFT" },
+    { id: 3, name: "UPI" },
+  ]);
+});
+
+app.get("/api/customerprofile/getpaymenthistory", function (req, res) {
+  console.log("/api/customerprofile/getpaymenthistory");
+  res.status(200).send(getPaymentHistory());
+});
+
+app.get("/api/customerprofile/getmypolicies", function (req, res) {
+  console.log("/api/customerprofile/getmypolicies");
+  res.status(200).send(getMyPolicies());
+});
+
+app.get("/api/customerprofile/getproductlist", function (req, res) {
+  console.log("/api/customerprofile/getproductlist");
+  res.status(200).send(getCustomerProductList());
+});
+
 app.get("/api/customerprofile/getuser", function (req, res) {
   console.log("/api/customerprofile/getuser");
   res.status(200).send(getUser());
+});
+
+app.post("/api/customerprofile/addproductpolicy", function (req, res) {
+  console.log("/api/customerprofile");
+  res.status(201).send({ policyId: 3, beneficiaryId: 4 });
 });
 
 app.post("/api/customerprofile/createuser", function (req, res) {
@@ -2290,6 +2334,12 @@ app.patch("/api/campaigns/closecampaign/:id", function (req, res) {
 });
 
 //association
+
+app.get("/api/association/getmessagetemplates", function (req, res) {
+  console.log("/api/getmessagetemplates");
+  res.status(200).send(getMessageTemplates());
+});
+
 app.get("/api/association", function (req, res) {
   console.log("/api/association");
   res.status(200).send(getAssociationList());
@@ -2314,6 +2364,7 @@ app.get("/api/roles/getpermissionview", function (req, res) {
   console.log("/api/roles/getpermissionview");
   res.status(200).send(getPermissionView());
 });
+
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");

@@ -8,7 +8,7 @@ module.exports = () => {
     contents: [
       {
         campaignId: 1,
-        name: "Summer Promotion",
+        campaignName: "Summer Promotion",
         startDate: "2023-06-01",
         endDate: "2023-08-31",
         products: ["MetLife", "Prudential", "New York Life"],
@@ -18,7 +18,7 @@ module.exports = () => {
       },
       {
         campaignId: 2,
-        name: "Holiday Deals",
+        campaignName: "Holiday Deals",
         startDate: "2023-11-15",
         endDate: "2023-12-31",
         products: ["MetLife", "New York Life"],
@@ -28,7 +28,7 @@ module.exports = () => {
       },
       {
         campaignId: 3,
-        name: "Spring Savings",
+        campaignName: "Spring Savings",
         startDate: "2024-03-01",
         endDate: "2024-05-31",
         products: ["Prudential", "New York Life"],

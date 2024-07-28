@@ -1,0 +1,192 @@
+module.exports = () => {
+  return {
+    statusCode: 200,
+    errorMessage: null,
+    source: "Products",
+    searchTerm: "",
+    resultCount: 1,
+    contents: [
+      {
+        orderId: 1,
+        totalPremium: 50000,
+        orderDate: "12/12/12",
+        paymentStatus: "Pending",
+        amountPaid: 4000,
+        policies: [
+          {
+            orderId: 1,
+            productId: 1,
+            productName: "Life Insurance",
+            sumInsured: 500000,
+            premium: 50.99,
+            premiumReceipt: null,
+          },
+        ],
+      },
+      {
+        orderId: 2,
+        totalPremium: 60000,
+        orderDate: "13/12/12",
+        paymentStatus: "Paid",
+        amountPaid: 60000,
+        policies: [
+          {
+            orderId: 2,
+            productId: 2,
+            productName: "Health Insurance",
+            sumInsured: 600000,
+            premium: 60.99,
+            premiumReceipt: "Receipt2",
+          },
+        ],
+      },
+      {
+        orderId: 3,
+        totalPremium: 70000,
+        orderDate: "14/12/12",
+        paymentStatus: "Pending",
+        amountPaid: 5000,
+        policies: [
+          {
+            orderId: 3,
+            productId: 3,
+            productName: "Car Insurance",
+            sumInsured: 700000,
+            premium: 70.99,
+            premiumReceipt: null,
+          },
+        ],
+      },
+      {
+        orderId: 4,
+        totalPremium: 80000,
+        orderDate: "15/12/12",
+        paymentStatus: "Paid",
+        amountPaid: 80000,
+        policies: [
+          {
+            orderId: 4,
+            productId: 4,
+            productName: "Home Insurance",
+            sumInsured: 800000,
+            premium: 80.99,
+            premiumReceipt: "Receipt4",
+          },
+        ],
+      },
+      {
+        orderId: 5,
+        totalPremium: 90000,
+        orderDate: "16/12/12",
+        paymentStatus: "Pending",
+        amountPaid: 6000,
+        policies: [
+          {
+            orderId: 5,
+            productId: 5,
+            productName: "Travel Insurance",
+            sumInsured: 900000,
+            premium: 90.99,
+            premiumReceipt: null,
+          },
+        ],
+      },
+      {
+        orderId: 6,
+        totalPremium: 100000,
+        orderDate: "17/12/12",
+        paymentStatus: "Paid",
+        amountPaid: 100000,
+        policies: [
+          {
+            orderId: 6,
+            productId: 6,
+            productName: "Pet Insurance",
+            sumInsured: 1000000,
+            premium: 100.99,
+            premiumReceipt: "Receipt6",
+          },
+        ],
+      },
+      {
+        orderId: 7,
+        totalPremium: 110000,
+        orderDate: "18/12/12",
+        paymentStatus: "Pending",
+        amountPaid: 7000,
+        policies: [
+          {
+            orderId: 7,
+            productId: 7,
+            productName: "Business Insurance",
+            sumInsured: 1100000,
+            premium: 110.99,
+            premiumReceipt: null,
+          },
+        ],
+      },
+      {
+        orderId: 8,
+        totalPremium: 120000,
+        orderDate: "19/12/12",
+        paymentStatus: "Paid",
+        amountPaid: 120000,
+        policies: [
+          {
+            orderId: 8,
+            productId: 8,
+            productName: "Disability Insurance",
+            sumInsured: 1200000,
+            premium: 120.99,
+            premiumReceipt: "Receipt8",
+          },
+        ],
+      },
+      {
+        orderId: 9,
+        totalPremium: 130000,
+        orderDate: "20/12/12",
+        paymentStatus: "Pending",
+        amountPaid: 8000,
+        policies: [
+          {
+            orderId: 9,
+            productId: 9,
+            productName: "Renters Insurance",
+            sumInsured: 1300000,
+            premium: 130.99,
+            premiumReceipt: null,
+          },
+        ],
+      },
+      {
+        orderId: 10,
+        totalPremium: 140000,
+        orderDate: "21/12/12",
+        paymentStatus: "Paid",
+        amountPaid: 140000,
+        policies: [
+          {
+            orderId: 10,
+            productId: 10,
+            productName: "Flood Insurance",
+            sumInsured: 1400000,
+            premium: 140.99,
+            premiumReceipt: "Receipt10",
+          },
+        ],
+      },
+    ],
+    paging: {
+      numberOfPages: 10,
+      pageNumber: 1,
+      recordsPerPage: 50,
+      nextPageNumber: 0,
+      previousPageNumber: 0,
+    },
+    sorting: {
+      sortName: "id",
+      sortDirection: "desc",
+    },
+  };
+};
