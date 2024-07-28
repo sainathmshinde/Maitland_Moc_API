@@ -8,7 +8,7 @@ module.exports = () => {
         delete: false,
       },
       name: "permission",
-      id: null,
+      id: 1,
       type: "api",
     },
     {
@@ -19,7 +19,7 @@ module.exports = () => {
         delete: false,
       },
       name: "role",
-      id: null,
+      id: 2,
       type: "api",
     },
   ];
