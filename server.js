@@ -198,6 +198,7 @@ const getMessageTemplates = require("./data/getMessageTemplates");
 const getCustomerProductList = require("./data/getCustomerProductList");
 const getPaymentHistory = require("./data/getPaymentHistory");
 const getMyPolicies = require("./data/getMyPolicies");
+const getAssociation = require("./data/getAssociation");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2345,6 +2346,10 @@ app.get("/api/association/createassociation", function (req, res) {
   res.status(200).send(getAssociationList());
 });
 
+app.get("/api/association", function (req, res) {
+  console.log("/api/association");
+  res.status(200).send(getAssociationList());
+});
 app.post("/api/association/createassociation", function (req, res) {
   console.log("/api/association");
   res.status(200).send({ message: "Association created successfully" });
