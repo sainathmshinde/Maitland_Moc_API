@@ -2367,6 +2367,10 @@ app.get("/api/association", function (req, res) {
   res.status(200).send(getAssociationList());
 });
 
+app.get("/api/association", function (req, res) {
+  console.log("/api/association");
+  res.status(200).send(getAssociationList());
+});
 app.post("/api/association/createassociation", function (req, res) {
   console.log("/api/association");
   res.status(200).send({ message: "Association created successfully" });
