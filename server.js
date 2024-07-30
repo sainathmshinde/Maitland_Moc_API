@@ -2192,7 +2192,7 @@ app.get("/api/customerprofile/getofflinepayments", function (req, res) {
   res.status(200).send(getOfflinePayments());
 });
 
-app.get("/api/customerprofile/getofflinepayment/:id", function (req, res) {
+app.get("/api/customerprofile/offlinepayment/:id", function (req, res) {
   console.log("/api/customerprofile/getofflinepayment/:id");
   res.status(200).send(getOfflinePaymentById());
 });
