@@ -198,6 +198,11 @@ const getMessageTemplates = require("./data/getMessageTemplates");
 const getCustomerProductList = require("./data/getCustomerProductList");
 const getPaymentHistory = require("./data/getPaymentHistory");
 const getMyPolicies = require("./data/getMyPolicies");
+const getAssociation = require("./data/getAssociation");
+const user = require("./data/user");
+const getkmdPermissions = require("./data/getkmdPermissions");
+const getOfflinePayments = require("./data/getOfflinePayments");
+const getOfflinePaymentById = require("./data/getOfflinePaymentById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2111,13 +2116,7 @@ app.post("/api/authenticate/login", function (req, res) {
 
 app.post("/api/authenticate/verifyotp", function (req, res) {
   console.log("/api/verifyotp");
-  res.status(200).send({
-    token: "abcjdhgfdjhd fdhfjd hfdf",
-    userId: 1,
-    userName: "Avdhoot",
-    isProfileComplete: false,
-    userType: { id: 1, name: "Retiree" },
-  });
+  res.status(200).send(user());
   // res.status(401).send({ message: "Invalid or expired otp" });
   // res.status(404).send({ message: "User not found" });
 });
@@ -2187,6 +2186,23 @@ app.patch("/api/product/:id", function (req, res) {
   res.status(201).send({ message: "Product updated" });
 });
 
+//offlinepayments
+app.get("/api/customerprofile/getofflinepayments", function (req, res) {
+  console.log("/api/customerprofile/getofflinepayments");
+  res.status(200).send(getOfflinePayments());
+});
+
+app.get("/api/customerprofile/getofflinepayment/:id", function (req, res) {
+  console.log("/api/customerprofile/getofflinepayment/:id");
+  res.status(200).send(getOfflinePaymentById());
+});
+
+app.get("/api/customerprofile/offlinepayment", function (req, res) {
+  console.log("/api/customerprofile/offlinepayment");
+  res.status(201).send({ messgae: "Payment saved successfully!" });
+});
+
+//payments
 app.get("/api/customerprofile/getpaymentmodes", function (req, res) {
   console.log("/api/customerprofile/getpaymentmodes");
   res.status(200).send([
@@ -2212,6 +2228,12 @@ app.get("/api/customerprofile/getpaymenthistory", function (req, res) {
 app.get("/api/customerprofile/getmypolicies", function (req, res) {
   console.log("/api/customerprofile/getmypolicies");
   res.status(200).send(getMyPolicies());
+});
+
+app.get("/api/customerprofile/getpermissions", function (req, res) {
+  console.log("/api/customerprofile/getpermissions");
+  res.status(200).send(getkmdPermissions());
+  // res.status(500).send({ message: "unable to send permissions" });
 });
 
 app.get("/api/customerprofile/getproductlist", function (req, res) {
@@ -2340,7 +2362,7 @@ app.get("/api/association/getmessagetemplates", function (req, res) {
   res.status(200).send(getMessageTemplates());
 });
 
-app.get("/api/association/createassociation", function (req, res) {
+app.get("/api/association", function (req, res) {
   console.log("/api/association");
   res.status(200).send(getAssociationList());
 });
