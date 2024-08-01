@@ -1,12 +1,24 @@
 module.exports = () => {
   return {
-    associationName: "da test",
-    oraganisationId: 2,
-    parentAssociationId: 2,
-    address1: "Av. dos Andradas, 3000",
-    address2: "Andar 2, Apartamento 1",
-    city: "Belo Horizonte",
-    stateId: 1,
+    mandateFile: null,
+    qrCodeFile: null,
+    id: 1,
+    associationName: "test",
+    organisation: {
+      id: 1,
+      name: "test",
+    },
+    parentAssociation: {
+      id: 0,
+      name: "",
+    },
+    address1: null,
+    address2: null,
+    city: null,
+    state: {
+      id: 1,
+      name: "ANDAMAN AND NICOBAR ISLANDS",
+    },
     pinCode: null,
     countryId: null,
     acceptOnePayPayment: true,
