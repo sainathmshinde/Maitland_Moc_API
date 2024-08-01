@@ -20,6 +20,7 @@ module.exports = () => {
         numberOfParents: 2,
         numberOfInLaws: 2,
         numberOfChildren: 2,
+        productDocumentURL: "http://localhost:8000",
         premiumChart: [
           {
             productPremiumId: 1,
@@ -61,6 +62,7 @@ module.exports = () => {
         numberOfParents: 2,
         numberOfInLaws: 2,
         numberOfChildren: 2,
+        productDocumentURL: "http://localhost:8000",
         premiumChart: [
           {
             productPremiumId: 3,
@@ -110,6 +112,7 @@ module.exports = () => {
         numberOfParents: 1,
         numberOfInLaws: 0,
         numberOfChildren: 1,
+        productDocumentURL: "http://localhost:8000",
         premiumChart: [
           {
             productPremiumId: 5,

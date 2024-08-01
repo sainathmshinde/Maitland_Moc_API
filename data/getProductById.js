@@ -8,11 +8,16 @@ module.exports = () => {
     isSpouseCoverage: true,
     isHandicappedChildrenCoverage: true,
     isParentsCoverage: true,
-    isInlawsCoverage: true,
+    isInLawsCoverage: true,
     numberOfHandicappedChildren: 2,
     numberOfParents: 2,
     numberOfInLaws: 2,
     numberOfChildren: 2,
+    productDocument: {
+      name: "policy document",
+      file: null,
+      url: "http://localhost:5173",
+    },
     premiumChart: [
       {
         productPremiumId: 1,

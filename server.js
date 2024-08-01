@@ -2197,7 +2197,7 @@ app.get("/api/customerprofile/offlinepayment/:id", function (req, res) {
   res.status(200).send(getOfflinePaymentById());
 });
 
-app.get("/api/customerprofile/offlinepayment", function (req, res) {
+app.post("/api/customerprofile/offlinepayment", function (req, res) {
   console.log("/api/customerprofile/offlinepayment");
   res.status(201).send({ messgae: "Payment saved successfully!" });
 });
@@ -2379,6 +2379,7 @@ app.post("/api/association/createassociation", function (req, res) {
 app.get("/api/association/:id", function (req, res) {
   console.log("/api/association");
   res.status(200).send(getAssociation());
+  // res.status(500).send({ message: " unable " });
 });
 
 app.get("/api/permissions/", function (req, res) {

@@ -4,6 +4,6 @@ module.exports = () => {
     userId: 1,
     userName: "Avdhoot",
     isProfileComplete: false,
-    userType: { id: 1, name: "admin" },
+    userType: { id: 1, name: "InternalUser" },
   };
 };
