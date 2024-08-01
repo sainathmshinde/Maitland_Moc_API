@@ -8,20 +8,29 @@ module.exports = () => {
       id: 1,
       name: "test",
     },
-    parentAssociation: {
-      id: 0,
-      name: "",
-    },
-    address1: null,
-    address2: null,
-    city: null,
+    parentAssociation: null,
+    address1: "df",
+    address2: "ff",
+    city: "ff",
     state: {
       id: 1,
       name: "ANDAMAN AND NICOBAR ISLANDS",
     },
-    pinCode: null,
-    countryId: null,
-    acceptOnePayPayment: true,
+    pinCode: "334353",
+    country: {
+      id: 1,
+      name: "India",
+    },
+    acceptOnePayPayment: false,
+    associationContactDetails: [
+      {
+        id: 1,
+        firstName: "test",
+        lastName: "eee",
+        email: "test@gmail.com",
+        phone: "1234567890",
+      },
+    ],
     bank: {
       id: "",
       bankName: "abc bank",
@@ -33,12 +42,13 @@ module.exports = () => {
       mandateFile: {},
       qrCode: {},
     },
-
-    id: 3,
-    isActive: true,
-    createdAt: "2024-07-26T14:12:29.1538444",
-    updatedAt: "2024-07-26T14:12:29.1538474",
-    createdBy: 1,
-    updatedBy: 1,
+    associationMessages: [
+      {
+        id: 1,
+        name: "test",
+        template: "test",
+      },
+    ],
+    onePayId: null,
   };
 };
