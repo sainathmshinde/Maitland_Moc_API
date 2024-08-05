@@ -203,6 +203,7 @@ const user = require("./data/user");
 const getkmdPermissions = require("./data/getkmdPermissions");
 const getOfflinePayments = require("./data/getOfflinePayments");
 const getOfflinePaymentById = require("./data/getOfflinePaymentById");
+const getPaymentById = require("./data/getPaymentById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2211,6 +2212,11 @@ app.get("/api/customerprofile/getpaymentmodes", function (req, res) {
   ]);
 });
 
+app.get("/api/customerprofile/getpaymentbyid/:id", function (req, res) {
+  console.log("/api/customerprofile/getpaymentbyid/:id");
+  res.status(200).send(getPaymentById());
+});
+
 app.get("/api/customerprofile/getofflinepaymentmodes", function (req, res) {
   console.log("/api/customerprofile/getofflinepaymentmodes");
   res.status(200).send([
@@ -2374,6 +2380,11 @@ app.get("/api/association", function (req, res) {
 app.post("/api/association/createassociation", function (req, res) {
   console.log("/api/association");
   res.status(200).send({ message: "Association created successfully" });
+});
+
+app.patch("/api/association/updateassociation/:id", function (req, res) {
+  console.log("/api/association");
+  res.status(200).send({ message: "Association updated successfully" });
 });
 
 app.get("/api/association/:id", function (req, res) {
