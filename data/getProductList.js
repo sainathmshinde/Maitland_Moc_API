@@ -20,7 +20,12 @@ module.exports = () => {
         numberOfParents: 2,
         numberOfInLaws: 2,
         numberOfChildren: 2,
-        productDocumentURL: "http://localhost:8000",
+        productDocument: {
+          id: 1,
+          name: "policy.pdf",
+          file: null,
+          url: "test url",
+        },
         premiumChart: [
           {
             productPremiumId: 1,
@@ -62,7 +67,12 @@ module.exports = () => {
         numberOfParents: 2,
         numberOfInLaws: 2,
         numberOfChildren: 2,
-        productDocumentURL: "http://localhost:8000",
+        productDocument: {
+          id: 1,
+          name: "policy.pdf",
+          file: null,
+          url: "test url",
+        },
         premiumChart: [
           {
             productPremiumId: 3,

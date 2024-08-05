@@ -14,6 +14,7 @@ module.exports = () => {
     numberOfInLaws: 2,
     numberOfChildren: 2,
     productDocument: {
+      id: 1,
       name: "policy document",
       file: null,
       url: "http://localhost:5173",
