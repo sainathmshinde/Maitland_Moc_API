@@ -21,7 +21,7 @@ module.exports = () => {
       id: 1,
       name: "India",
     },
-    acceptOnePayPayment: false,
+    acceptOnePayPayment: true,
     associationContactDetails: [
       {
         id: 1,
@@ -32,15 +32,13 @@ module.exports = () => {
       },
     ],
     bank: {
-      id: "",
+      id: 1,
       bankName: "abc bank",
       branchName: "abc branch",
       accountName: "test Association",
       accountNumber: "505402010913496",
       ifscCode: "ubin0550540",
       micrCode: "5505540",
-      mandateFile: {},
-      qrCode: {},
     },
     associationMessages: [
       {
