@@ -2,7 +2,7 @@
 [
     {
         paymentId:1,
-        retireeName : "gangaprasad",
+        retireeName : "avdhoot",
         amount : 3423,
         date:"isostring",
         assoicationName : "ICICI Bank",

@@ -98,5 +98,12 @@ module.exports = () => {
       delete: true,
       update: true,
     },
+    {
+      pageName: "organisations",
+      read: true,
+      create: true,
+      delete: true,
+      update: true,
+    },
   ];
 };

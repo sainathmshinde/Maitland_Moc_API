@@ -204,6 +204,9 @@ const getkmdPermissions = require("./data/getkmdPermissions");
 const getOfflinePayments = require("./data/getOfflinePayments");
 const getOfflinePaymentById = require("./data/getOfflinePaymentById");
 const getPaymentById = require("./data/getPaymentById");
+const getOfflinePaymentsDashboard = require("./data/getOfflinePaymentsDashboard");
+const getOrganisationsKMD = require("./data/getOrganisationsKMD");
+const getOrganisation = require("./data/getOrganisation");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2433,6 +2436,37 @@ app.post("/api/roles", function (req, res) {
   res.status(200).send({ message: "Role created" });
 });
 
+//kmd dashboard
+app.get("api/dashboard/getofflinepayments", function (req, res) {
+  console.log("/api/dashboard/getofflinepayments");
+  res.status(200).send(getOfflinePaymentsDashboard());
+});
+
+//organisations
+app.get("/api/organisation/getorganisations", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send(getOrganisationsKMD());
+});
+
+app.get("/api/organisation/:id", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send(getOrganisation());
+});
+
+app.post("/api/organisation", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send({ message: "Organisation created successfully" });
+});
+
+app.patch("/api/organisation/:id", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send({ message: "Organisation updated successfully" });
+});
+
+app.delete("/api/organisation/:id", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send({ message: "Organisation deleted successfully" });
+});
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");

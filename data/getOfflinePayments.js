@@ -8,7 +8,7 @@ module.exports = () => {
     contents: [
       {
         paymentId: 1,
-        retireeName: "gangaprasad",
+        retireeName: "avdhoot",
         amount: 3423,
         date: "2023-07-01T10:00:00Z",
         associationName: "ICICI Bank",

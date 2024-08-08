@@ -6,8 +6,8 @@ module.exports = () => {
     searchTerm: "",
     resultCount: 1,
     contents: [
-      { id: 1, name: "API", description: "Read Users" },
-      { id: 2, name: "UI", description: "Manage Dashboard" },
+      { id: 1, name: "api", description: "Read Users" },
+      { id: 2, name: "ui", description: "Manage Dashboard" },
     ],
     paging: {
       numberOfPages: 10,
