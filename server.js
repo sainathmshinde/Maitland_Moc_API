@@ -207,6 +207,8 @@ const getPaymentById = require("./data/getPaymentById");
 const getOfflinePaymentsDashboard = require("./data/getOfflinePaymentsDashboard");
 const getOrganisationsKMD = require("./data/getOrganisationsKMD");
 const getOrganisation = require("./data/getOrganisation");
+const getRefundRequests = require("./data/getRefundRequests");
+const getRefundRequestById = require("./data/getRefundRequestById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2311,6 +2313,22 @@ app.get("/api/customerprofile/getusertypes", function (req, res) {
 app.get("/api/customerprofile", function (req, res) {
   console.log("/api/customerprofile/getuserlist");
   res.status(200).send(getUserList());
+});
+
+//refund requests
+app.get("/api/customerprofile/getrefundrequests", function (req, res) {
+  console.log("/api/customerprofile/getrefundrequests");
+  res.status(200).send(getRefundRequests());
+});
+
+app.get("/api/customerprofile/getrefundrequest", function (req, res) {
+  console.log("/api/customerprofile/getrefundrequest/:id");
+  res.status(200).send(getRefundRequestById());
+});
+
+app.post("/api/customerprofile/refundrequest", function (req, res) {
+  console.log("/api/customerprofile/refundrequest");
+  res.status(200).send({ message: "Refund request created successfully" });
 });
 
 app.get("/api/roles/getroles/:id", function (req, res) {
