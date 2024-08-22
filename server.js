@@ -210,6 +210,7 @@ const getOrganisation = require("./data/getOrganisation");
 const getRefundRequests = require("./data/getRefundRequests");
 const getRefundRequestById = require("./data/getRefundRequestById");
 const getAssociationWisePayment = require("./data/getAssociationWisePayment");
+const getPaymentStatus = require("./data/getPaymentStatus");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2341,6 +2342,10 @@ app.get("/api/roles/getroles/:id", function (req, res) {
   ]);
 });
 
+app.get("/api/customerprofile/getpaymentstatus", function (req, res) {
+  console.log("/api/customerprofile/getpaymentstatus");
+  res.status(200).send(getPaymentStatus());
+});
 app.get("/api/user/getcountries", function (req, res) {
   console.log("/api/getCountries");
   res.status(200).send(getCountriesKMD());

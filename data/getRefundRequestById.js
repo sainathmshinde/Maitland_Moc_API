@@ -2,7 +2,7 @@ module.exports = () => {
   return {
     id: "1",
     refundRequestNumber: 100,
-    isAccepted: true,
+    isAccepted: false,
     orderNumber: "123456789",
     retireeName: "John Doe",
     refundAmount: 100,
