@@ -7,7 +7,7 @@ module.exports = () => {
     retireeName: "John Doe",
     refundAmount: 100,
     refundRequestDate: new Date(),
-    status: "initiated",
+    refundRequestStatus: "initiated",
     isActive: true,
   };
 };
