@@ -211,6 +211,8 @@ const getRefundRequests = require("./data/getRefundRequests");
 const getRefundRequestById = require("./data/getRefundRequestById");
 const getAssociationWisePayment = require("./data/getAssociationWisePayment");
 const getPaymentStatus = require("./data/getPaymentStatus");
+const getPaymentModesDashboard = require("./data/getPaymentModesDashboard");
+const getOfflinePaymentDashboard = require("./data/getOfflinePaymentDashboard");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2463,7 +2465,12 @@ app.post("/api/roles", function (req, res) {
 //kmd dashboard
 app.get("/api/dashboard/getofflinepayments", function (req, res) {
   console.log("/api/dashboard/getofflinepayments");
-  res.status(200).send(getOfflinePaymentsDashboard());
+  res.status(200).send(getOfflinePaymentDashboard(req, res));
+});
+
+app.get("/api/dashboard/getpaymentmodes", function (req, res) {
+  console.log("/api/dashboard/getpaymentmodes");
+  res.status(200).send(getPaymentModesDashboard());
 });
 
 app.get("/api/dashboard/getassociationwisepayment", function (req, res) {
