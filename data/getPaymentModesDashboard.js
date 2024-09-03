@@ -2,11 +2,11 @@ module.exports = () => {
   return [
     {
       mode: "online",
-      count: 130,
+      count: 109,
     },
     {
       mode: "offline",
-      count: 140,
+      count: 125,
     },
   ];
 };
