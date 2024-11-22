@@ -213,6 +213,12 @@ const getAssociationWisePayment = require("./data/getAssociationWisePayment");
 const getPaymentStatus = require("./data/getPaymentStatus");
 const getPaymentModesDashboard = require("./data/getPaymentModesDashboard");
 const getOfflinePaymentDashboard = require("./data/getOfflinePaymentDashboard");
+const getAllUsers = require("./data/getAllUsers");
+const getTaxbuddiUserById = require("./data/getTaxbuddiUserById");
+const getAllTaxbuddiRoles = require("./data/getAllTaxbuddiRoles");
+const getTaxbuddiRoleById = require("./data/getTaxbuddiRoleById");
+const getAllCustomerProfiles = require("./data/getAllCustomerProfiles");
+const getCustomerProfileById = require("./data/getCustomerProfileById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2503,6 +2509,164 @@ app.delete("/api/organisation/:id", function (req, res) {
   console.log("/api/organisations");
   res.status(200).send({ message: "Organisation deleted successfully" });
 });
+
+//tax buddi
+
+//auth endpoints
+// app.post("/api/auth/createpassword", function (req, res) {
+app.post("/api/webauthentication/createwebuserpassword", function (req, res) {
+  console.log("/api/createwebuserpassword");
+  res.status(200).send({
+    message: ["Password created successfully."],
+  });
+
+  // res.status(400).send({
+  //   message: "Invalid model state",
+  //   errors: {
+  //     Email: ["The email field is required"],
+  //   },
+  //   statusCode: 400,
+  // });
+
+  // res.status(400).send({
+  //   id: 0,
+  //   statusCode: 110,
+  //   message: "Provided Email address not registered.",
+  // });
+});
+
+// app.post("/api/auth/login", function (req, res) {
+app.post("/api/webauthentication/webuserlogin", function (req, res) {
+  console.log("/api/login");
+  res.status(200).send({
+    userId: 1,
+    userName: "Avdhoot",
+    token: "abc123",
+    refreshToken: "xyz123",
+    roleName: "Admin",
+  });
+
+  // res.status(401).send({
+  //   message: ["Either email or password is incorrect."],
+  // });
+});
+
+app.post("/api/auth/forgetpassword", function (req, res) {
+  console.log("/api/forgetpassword");
+  res.status(200).send({
+    message: ["Email exists"],
+  });
+
+  // res.status(404).send({
+  //   message: ["Email does not exists"],
+  // });
+});
+
+app.post("/api/auth/resetpassword", function (req, res) {
+  console.log("/api/resetpassword");
+  res.status(200).send({
+    message: ["Password reset successfully."],
+  });
+});
+
+app.post("/api/auth/refreshtoken", function (req, res) {
+  console.log("/api/refreshtoken");
+  res.status(200).send({
+    userId: 1,
+    userName: "snow",
+    token: "qwert123",
+    refreshToken: "abc123445",
+    roleName: "Admin",
+  });
+  // res.status(401).send({ message: "You are unauthorized" });
+});
+
+//users endpoint
+app.get("/api/users/getallusers", function (req, res) {
+  console.log("/api/getallusers");
+  res.status(200).send(getAllUsers());
+  // res.status(401).send({ message: "You are unauthorized" });
+});
+
+app.get("/api/users/getuser/:id", function (req, res) {
+  console.log("/api/getuser");
+  res.status(200).send(getTaxbuddiUserById());
+});
+
+app.post("/api/users/saveuser", function (req, res) {
+  console.log("/api/saveuser");
+  res.status(200).send({ message: "Usere created successfully" });
+});
+
+app.put("/api/users/updateuser/:id", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send({ message: "User updated successfully" });
+});
+
+app.delete("/api/users/deleteuser/:id", function (req, res) {
+  console.log("/api/organisations");
+  res.status(200).send({ message: "User deleted succefully" });
+});
+
+app.put("/api/users/updateuserstatus/:id", function (req, res) {
+  console.log("/api/updateuserstatus");
+  res.status(200).send({ message: " Status has been updated successfully" });
+});
+
+//roles endpoint
+app.get("/api/roles/getallroles", function (req, res) {
+  console.log("/api/getallroles");
+  res.status(200).send(getAllTaxbuddiRoles());
+  // res.status(500).send({
+  //   messgae: ["Unable to get roles"],
+  // });
+});
+
+app.get("/api/roles/getrole/:id", function (req, res) {
+  console.log("/api/getrole");
+  res.status(200).send(getTaxbuddiRoleById());
+});
+
+app.post("/api/roles/saverole", function (req, res) {
+  console.log("/api/saverole");
+  res.status(200).send({ message: "Role saved successfully" });
+});
+
+app.put("/api/roles/updaterole/:id", function (req, res) {
+  console.log("/api/updaterole");
+  res.status(200).send({ message: "Role updated successfully" });
+});
+
+app.delete("/api/roles/deleterole/:id", function (req, res) {
+  console.log("/api/deleterole");
+  res.status(200).send({ message: "Role deleted succefully" });
+});
+
+//customer profile
+app.get("/api/customerprofile/getallprofiles", function (req, res) {
+  console.log("/api/getallprofiles/ :id");
+  res.status(200).send(getAllCustomerProfiles());
+});
+
+app.get("/api/customerprofile/getprofile/:id", function (req, res) {
+  console.log("/api/getprofile/:id");
+  res.status(200).send(getCustomerProfileById());
+});
+
+app.put("/api/customerprofile/updateaccountant/:id", function (req, res) {
+  console.log("/api/updateprofile/:id");
+  res.status(200).send({ messgae: "Profile updated successfully." });
+});
+
+app.put("/api/customerprofile/updateprofile/:id", function (req, res) {
+  console.log("/api/updateprofile/:id");
+  // res.status(200).send(getAllTaxbuddiRoles());
+});
+
+//upload document
+// approve/reject document
+// doenload document
+
 //server port
 app.listen(5002, () => {
   console.log("Server started at 5002");
