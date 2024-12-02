@@ -2513,7 +2513,6 @@ app.delete("/api/organisation/:id", function (req, res) {
 //tax buddi
 
 //auth endpoints
-// app.post("/api/auth/createpassword", function (req, res) {
 app.post("/api/webauthentication/createwebuserpassword", function (req, res) {
   console.log("/api/createwebuserpassword");
   res.status(200).send({
@@ -2535,13 +2534,12 @@ app.post("/api/webauthentication/createwebuserpassword", function (req, res) {
   // });
 });
 
-// app.post("/api/auth/login", function (req, res) {
 app.post("/api/webauthentication/webuserlogin", function (req, res) {
   console.log("/api/login");
   res.status(200).send({
     userId: 1,
     userName: "Avdhoot",
-    token: "abc123",
+    accessToken: "abc123",
     refreshToken: "xyz123",
     roleName: "Admin",
   });
@@ -2551,7 +2549,7 @@ app.post("/api/webauthentication/webuserlogin", function (req, res) {
   // });
 });
 
-app.post("/api/auth/forgetpassword", function (req, res) {
+app.post("/api/webauthentication/forgotpassword", function (req, res) {
   console.log("/api/forgetpassword");
   res.status(200).send({
     message: ["Email exists"],
@@ -2562,38 +2560,40 @@ app.post("/api/auth/forgetpassword", function (req, res) {
   // });
 });
 
-app.post("/api/auth/resetpassword", function (req, res) {
+app.post("/api/webauthentication/resetpassword", function (req, res) {
   console.log("/api/resetpassword");
   res.status(200).send({
     message: ["Password reset successfully."],
   });
 });
 
-app.post("/api/auth/refreshtoken", function (req, res) {
+app.post("/api/webauthentication/getwebaccesstoken", function (req, res) {
   console.log("/api/refreshtoken");
   res.status(200).send({
-    userId: 1,
-    userName: "snow",
-    token: "qwert123",
-    refreshToken: "abc123445",
-    roleName: "Admin",
+    userId: 8,
+    refreshToken: "d717253f-821d-4f4a-a0b5-c9e80eb8aba6",
+    accessToken:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4IiwibmJmIjoxNzMyNzc5MjQ4LCJleHAiOjE3MzI3NzkzNjgsImlhdCI6MTczMjc3OTI0OH0.qhbWAAgWS6lC9Lim0G6egvK8m1bPIUHVlx4J8AqQL1s",
+    statusCode: 200,
+    message: "Success",
+    currentRegistrationStep: null,
   });
   // res.status(401).send({ message: "You are unauthorized" });
 });
 
 //users endpoint
-app.get("/api/users/getallusers", function (req, res) {
+app.get("/api/webuser/getwebusers", function (req, res) {
   console.log("/api/getallusers");
   res.status(200).send(getAllUsers());
   // res.status(401).send({ message: "You are unauthorized" });
 });
 
-app.get("/api/users/getuser/:id", function (req, res) {
+app.get("/api/webuser/getwebuserbyid", function (req, res) {
   console.log("/api/getuser");
   res.status(200).send(getTaxbuddiUserById());
 });
 
-app.post("/api/users/saveuser", function (req, res) {
+app.post("/api/users/createuser", function (req, res) {
   console.log("/api/saveuser");
   res.status(200).send({ message: "Usere created successfully" });
 });
@@ -2608,9 +2608,42 @@ app.delete("/api/users/deleteuser/:id", function (req, res) {
   res.status(200).send({ message: "User deleted succefully" });
 });
 
-app.put("/api/users/updateuserstatus/:id", function (req, res) {
+app.put("/api/users/updatestatus/:id", function (req, res) {
   console.log("/api/updateuserstatus");
   res.status(200).send({ message: " Status has been updated successfully" });
+});
+
+app.put("/api/users/generatelink/:id", function (req, res) {
+  console.log("/api/generatelink");
+  res.status(200).send({ message: " Status has been updated successfully" });
+});
+
+app.get("/api/webuser/getgenders", function (req, res) {
+  console.log("/api/getgenders");
+  res.status(200).send([
+    {
+      genderId: 1,
+      genderName: "Male",
+    },
+    {
+      genderId: 2,
+      genderName: "Female",
+    },
+  ]);
+});
+
+app.get("/api/webuser/getroles", function (req, res) {
+  console.log("/api/getroles");
+  res.status(200).send([
+    {
+      roleId: 1,
+      roleName: "Admin",
+    },
+    {
+      roleId: 2,
+      roleName: "Accountant",
+    },
+  ]);
 });
 
 //roles endpoint
