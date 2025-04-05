@@ -219,6 +219,19 @@ const getAllTaxbuddiRoles = require("./data/getAllTaxbuddiRoles");
 const getTaxbuddiRoleById = require("./data/getTaxbuddiRoleById");
 const getAllCustomerProfiles = require("./data/getAllCustomerProfiles");
 const getCustomerProfileById = require("./data/getCustomerProfileById");
+const getDictricts = require("./data/getDictricts");
+const getBlocks = require("./data/getBlocks");
+const getPanchayats = require("./data/getPanchayats");
+const getDesignations = require("./data/getDesignations");
+const getDeaprtments = require("./data/getDeaprtments");
+const getDistrictAdmins = require("./data/getDistrictAdmins");
+const getDistrictUsers = require("./data/getDistrictUsers");
+const getBlockAdmins = require("./data/getBlockAdmins");
+const getBlockUsers = require("./data/getBlockUsers");
+const getGramsevakList = require("./data/getGramsevakList");
+const getGramsevak = require("./data/getGramsevak");
+const getDocumentTypes = require("./data/getDocumentTypes");
+const getUploadedDocuments = require("./data/getUploadedDocuments");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -2699,6 +2712,131 @@ app.put("/api/customerprofile/updateprofile/:id", function (req, res) {
 //upload document
 // approve/reject document
 // doenload document
+
+//geamsevak app
+app.get("/v1/preset/getdesignations", function (req, res) {
+  console.log("/v1/getdesignations");
+  res.status(200).send(getDesignations());
+});
+
+app.get("/v1/preset/getdistricts", function (req, res) {
+  console.log("/v1/getdistricts");
+  res.status(200).send(getDictricts());
+});
+
+app.get("/v1/preset/getBlocksByDictrictId", function (req, res) {
+  console.log("/v1/getBlocksByDictrictId");
+  res.status(200).send(getBlocks());
+});
+
+app.get("/v1/preset/getgrampanchayatsbyblockid", function (req, res) {
+  console.log("/v1/getgrampanchayatsbyblockid");
+  res.status(200).send(getPanchayats());
+});
+
+app.get("/v1/preset/getdepartments", function (req, res) {
+  console.log("/v1/getdepartments");
+  res.status(200).send(getDeaprtments());
+});
+
+app.post("/v1/auth/register", function (req, res) {
+  console.log("/v1/saverole");
+  res.status(201).send({ message: "User registration successfull" });
+});
+
+app.post("/v1/auth/sendotp", function (req, res) {
+  console.log("/v1/sendotp");
+  res.status(201).send({ message: "OTP sent successfully" });
+});
+
+app.post("/v1/auth/login", function (req, res) {
+  console.log("/v1/login");
+  res.status(201).send({
+    message: "login successfully",
+    userId: 1,
+    accessToken: "skdbaskdjb",
+    roleId: 1,
+    roleName: "gramSevak",
+    // roleName: "superAdmin",
+    // roleName: "blockAdmin",
+    // roleName: "districtAdmin",
+    userEmail: "",
+    blockId: 1,
+    blockName: "haveli",
+    districtId: 1,
+    distrcictName: "Pune",
+    isApprovalPending: false,
+    isDocumentUploadComplete: true,
+  });
+});
+
+app.get("/v1/district/getdistrictadmins", function (req, res) {
+  console.log("/v1/getdistrictadmins");
+  res.status(201).send(getDistrictAdmins());
+});
+
+//-----------------
+app.get("/v1/user/getUsersByDistrictID", function (req, res) {
+  console.log("/v1/getusers");
+  res.status(201).send(getDistrictUsers());
+});
+
+app.get("/v1/user/getUsersByBlockID", function (req, res) {
+  console.log("/v1/getusers");
+  res.status(201).send(getBlockUsers());
+});
+
+//------------------------
+app.post("/v1/district/updatedistrictadmin", function (req, res) {
+  console.log("/v1/updatedistrictadmin");
+  res.status(201).send({ message: "User registration successfull" });
+});
+
+app.get("/v1/block/getblockadmins", function (req, res) {
+  console.log("/v1/getblockadmins");
+  res.status(201).send(getBlockAdmins());
+});
+
+app.get("/v1/block/getusers", function (req, res) {
+  console.log("/v1/getusers");
+  res.status(201).send(getBlockUsers());
+});
+
+app.post("/v1/block/updateblockadmin", function (req, res) {
+  console.log("/v1/updateblockadmins");
+  res.status(201).send({ message: "User registration successfull" });
+});
+
+//gramsevaks
+app.get("/v1/gramsevak/getgramsevaklist", function (req, res) {
+  console.log("/v1/getgramsevaklist");
+  res.status(201).send(getGramsevakList());
+});
+
+app.get("/v1/gramsevak/getgramsevakbyid", function (req, res) {
+  console.log("/v1/getgramsevakbyid");
+  res.status(201).send(getGramsevak());
+});
+
+app.patch("/v1/gramsevak/changestatus", function (req, res) {
+  console.log("/v1/changestatus");
+  res.status(201).send({ message: "Approved" });
+});
+
+app.get("/v1/upload/getDocumentType", function (req, res) {
+  console.log("/v1/getDocumentType");
+  res.status(201).send(getDocumentTypes());
+});
+
+app.get("/v1/governmentdoc/getdocs", function (req, res) {
+  console.log("/v1/getdocs");
+  res.status(201).send(getUploadedDocuments());
+});
+
+app.post("/v1/gramsevak/docupload", function (req, res) {
+  console.log("/v1/docupload");
+  res.status(201).send({ message: "uploaded" });
+});
 
 //server port
 app.listen(5002, () => {
