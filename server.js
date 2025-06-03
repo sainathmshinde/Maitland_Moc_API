@@ -2744,29 +2744,44 @@ app.post("/v1/auth/register", function (req, res) {
   res.status(201).send({ message: "User registration successfull" });
 });
 
-app.post("/v1/auth/sendotp", function (req, res) {
+app.post("/v1/auth/sendOtp", function (req, res) {
   console.log("/v1/sendotp");
   res.status(201).send({ message: "OTP sent successfully" });
 });
 
 app.post("/v1/auth/login", function (req, res) {
   console.log("/v1/login");
+  // res.status(201).send({
+  //   message: "login successfully",
+  //   userId: 1,
+  //   accessToken: "skdbaskdjb",
+  //   roleId: 1,
+  //   // roleName: "gramSevak",
+  //   roleName: "superAdmin",
+  //   // roleName: "blockAdmin",
+  //   // roleName: "districtAdmin",
+  //   userEmail: "",
+  //   blockId: 1,
+  //   blockName: "haveli",
+  //   districtId: 1,
+  //   distrcictName: "Pune",
+  //   isApprovalPending: false,
+  //   isDocumentUploadComplete: true,
+  // });
+
   res.status(201).send({
-    message: "login successfully",
-    userId: 1,
     accessToken: "skdbaskdjb",
+    message: "Logged in Successfully",
+    userId: 2,
     roleId: 1,
-    roleName: "gramSevak",
-    // roleName: "superAdmin",
-    // roleName: "blockAdmin",
-    // roleName: "districtAdmin",
-    userEmail: "",
+    roleName: "superAdmin",
+    userEmail: "shreyash.k@example.com",
     blockId: 1,
-    blockName: "haveli",
-    districtId: 1,
-    distrcictName: "Pune",
+    blockName: "मावळ",
+    districtId: 34,
+    distrcictName: "पुणे",
     isApprovalPending: false,
-    isDocumentUploadComplete: true,
+    isDocumentUploadComplete: null,
   });
 });
 
