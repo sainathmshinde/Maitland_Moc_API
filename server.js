@@ -2713,7 +2713,7 @@ app.put("/api/customerprofile/updateprofile/:id", function (req, res) {
 // approve/reject document
 // doenload document
 
-//geamsevak app
+//gramsevak app
 app.get("/v1/preset/getdesignations", function (req, res) {
   console.log("/v1/getdesignations");
   res.status(200).send(getDesignations());
@@ -2751,38 +2751,38 @@ app.post("/v1/auth/sendOtp", function (req, res) {
 
 app.post("/v1/auth/login", function (req, res) {
   console.log("/v1/login");
+  res.status(201).send({
+    message: "login successfully",
+    userId: 1,
+    accessToken: "skdbaskdjb",
+    roleId: 1,
+    roleName: "gramSevak",
+    // roleName: "superAdmin",
+    // roleName: "blockAdmin",
+    // roleName: "districtAdmin",
+    userEmail: "",
+    blockId: 1,
+    blockName: "haveli",
+    districtId: 1,
+    distrcictName: "Pune",
+    isApprovalPending: false,
+    isDocumentUploadComplete: true,
+  });
+
   // res.status(201).send({
-  //   message: "login successfully",
-  //   userId: 1,
   //   accessToken: "skdbaskdjb",
+  //   message: "Logged in Successfully",
+  //   userId: 2,
   //   roleId: 1,
-  //   // roleName: "gramSevak",
   //   roleName: "superAdmin",
-  //   // roleName: "blockAdmin",
-  //   // roleName: "districtAdmin",
-  //   userEmail: "",
+  //   userEmail: "shreyash.k@example.com",
   //   blockId: 1,
-  //   blockName: "haveli",
-  //   districtId: 1,
-  //   distrcictName: "Pune",
-  //   isApprovalPending: false,
+  //   blockName: "मावळ",
+  //   districtId: 34,
+  //   distrcictName: "पुणे",
+  //   isApprovalPending: true,
   //   isDocumentUploadComplete: true,
   // });
-
-  res.status(201).send({
-    accessToken: "skdbaskdjb",
-    message: "Logged in Successfully",
-    userId: 2,
-    roleId: 1,
-    roleName: "superAdmin",
-    userEmail: "shreyash.k@example.com",
-    blockId: 1,
-    blockName: "मावळ",
-    districtId: 34,
-    distrcictName: "पुणे",
-    isApprovalPending: false,
-    isDocumentUploadComplete: null,
-  });
 });
 
 app.get("/v1/district/getdistrictadmins", function (req, res) {
